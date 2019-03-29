@@ -5,20 +5,18 @@ ms.custom: ''
 ms.date: 12/17/2018
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- liveshare
 ms.topic: reference
 author: chuxel
 ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 0bc97691ca7733f694190e86140b930e68657ade
-ms.sourcegitcommit: 4f733c9053848f26da03d47050bcb734f6c98b31
+ms.openlocfilehash: 754a740118ef9e6de2463fb3bb0537af350409aa
+ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57255551"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58640196"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -223,7 +221,7 @@ Pour en savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscod
 
 Lors du codébogage, il peut être très utile de pouvoir accéder aux différentes parties de l’application prise en charge par l’hôte pendant la session de débogage. Voulez-vous accéder à l’application dans un navigateur, accéder à une base de données locale ou appuyez sur un point de terminaison REST à partir de vos outils. Partage en direct vous permet de « partage un serveur » qui mappe un port local sur l’ordinateur de l’hôte sur le même port exact sur l’ordinateur de l’invité. En tant qu’invité, vous pouvez alors interagir avec l’application comme s’il s’exécutait localement sur votre ordinateur (par exemple, l’hôte et l’invité peuvent à la fois accéder à une application web s’exécutant sur http://localhost:3000).
 
-Toutefois, en tant qu’hôte, vous devez **être très sélective avec les ports que vous partagez** avec les invités et de partage uniquement application ports plutôt des ports système. Pour les invités, des ports partagés seront comportent exactement comme il le ferait si le service/serveur était en cours d’exécution sur leur propre ordinateur. Cela est très utile, mais si le port incorrect est partagé permettre également être à risque. Pour cette raison, le partage en direct ne fait pas d’hypothèses concernant ce qui doit ou ne doit pas être partagé sans un paramètre de configuration et de l’hôte qui effectue une action.
+Toutefois, en tant qu’hôte, vous devez **être très sélective avec les ports que vous partagez** avec les invités et de partage uniquement application ports plutôt des ports système. Du côté des invités, les ports partagés se comportent exactement comme si le serveur/service était en cours d’exécution sur leur propre ordinateur. Cette fonction est très utile, mais il faut éviter tout risque de partager le mauvais port. Pour cette raison, le partage en direct ne fait pas d’hypothèses concernant ce qui doit ou ne doit pas être partagé sans un paramètre de configuration et de l’hôte qui effectue une action.
 
 Dans Visual Studio, le **port de l’application web** spécifié dans les projets ASP.NET est **automatiquement partagés pendant le débogage uniquement** pour faciliter l’accès invité à l’application web lors de l’exécution. Toutefois, vous pouvez désactiver cette automatisation en définissant des outils > Options > Partage Live > « Partage web app sur debug » sur « False » si vous préférez.
 
@@ -237,9 +235,9 @@ Pour plus d’informations sur la configuration de la fonctionnalité ici : [![
 
 ## <a name="sharing-a-terminal"></a>Partage d’un terminal
 
-Aujourd’hui, le développement utilise couramment un large éventail d’outils en ligne de commande. Heureusement, Live Share vous permet de « partager un terminal » avec vos invités en tant qu’hôte. Le terminal partagé peut être en lecture seule ou entièrement collaborative afin de vous et les invités peuvent exécuter des commandes et voir les résultats. En tant que l’ordinateur hôte, vous êtes en mesure d’autoriser les autres collaborateurs soit voir simplement la sortie ou pour utiliser n’importe quel numéro de ligne de commande Outils pour exécuter des tests, builds, ou même de triage des problèmes spécifiques à l’environnement.
+Aujourd’hui, le développement utilise couramment un large éventail d’outils en ligne de commande. Heureusement, Live Share vous permet de « partager un terminal » avec vos invités en tant qu’hôte. Le terminal partagé peut fonctionner en lecture seule ou en collaboration totale, auquel cas tant l’hôte que les invités ont la possibilité d’exécuter des commandes et de voir les résultats. En tant que l’ordinateur hôte, vous êtes en mesure d’autoriser les autres collaborateurs soit voir simplement la sortie ou pour utiliser n’importe quel numéro de ligne de commande Outils pour exécuter des tests, builds, ou même de triage des problèmes spécifiques à l’environnement.
 
-Seuls les ordinateurs hôtes peuvent démarrer des terminaux partagées pour empêcher les invités à partir d’un démarrage et de faire quelque chose vous ne sont pas attendu ou l’observation des. Lorsque vous démarrez un terminal partagé en tant qu’hôte, vous pouvez spécifier si elle doit être en lecture seule ou lecture/écriture. Lorsque le terminal est en lecture/écriture, tout le monde peut taper dans le terminal, y compris l’hôte, ce qui facilite l’intervenir si un invité fait quelque chose que vous n’aimez pas. Toutefois, pour plus de sécurité, vous devez **donner uniquement un accès en lecture/écriture aux invités lorsque vous savez ils en ont réellement besoin** cap et gardez-le terminaux en lecture seule pour les scénarios où vous voulez juste l’invité pour voir le résultat de toutes les commandes que vous exécutez.
+Seuls les ordinateurs hôtes peuvent démarrer des terminaux partagées pour empêcher les invités à partir d’un démarrage et de faire quelque chose vous ne sont pas attendu ou l’observation des. Lorsque vous démarrez un terminal partagé en tant qu’hôte, vous pouvez spécifier si elle doit être en lecture seule ou lecture/écriture. Dans le deuxième cas, tout le monde, y compris l’hôte, peut taper dans le terminal, ce qui permet d’intervenir si un invité effectue une action indésirable. Dans un souci de sécurité toutefois, **ne donnez un accès en lecture/écriture qu’aux invités qui en ont réellement besoin** et tenez-vous-en aux terminaux en lecture seule si vous souhaitez simplement qu’ils voient le résultat des commandes exécutées.
 
 Dans Visual Studio, les terminaux ne sont pas partagées par défaut. Dans VS Code, terminaux sont automatiquement partagées **en lecture seule** par défaut. Toutefois, vous pouvez le désactiver en ajoutant le code suivant à settings.json :
 
@@ -266,8 +264,8 @@ Cela aurait uniquement besoin d’être effectuée qu’une fois pour toute pers
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Comment : Collaborer à l’aide de Visual Studio Code](../use/vscode.md)
-* [Comment : Collaborer à l’aide de Visual Studio](../use/vs.md)
+* [Guide pratique : Collaborer à l’aide de Visual Studio Code](../use/vscode.md)
+* [Guide pratique : Collaborer à l’aide de Visual Studio](../use/vs.md)
 * [Exigences de connectivité pour Live Share](connectivity.md)
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting.md) ou [fournir des commentaires](../support.md).

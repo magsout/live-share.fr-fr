@@ -5,20 +5,18 @@ ms.custom: ''
 ms.date: 03/22/2018
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- liveshare
 ms.topic: troubleshooting
 author: chuxel
 ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 8d20ec73d9cadfefced65c04b1ef18f6e844167d
-ms.sourcegitcommit: 4f733c9053848f26da03d47050bcb734f6c98b31
+ms.openlocfilehash: 5fc611714d148a9ba1d5a6848e0399af753d1a37
+ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57255512"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58640209"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -28,7 +26,7 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # <a name="troubleshooting-visual-studio-live-share"></a>Résolution des problèmes de partage en direct de Visual Studio
 
-Cet article couvre la résolution des problèmes des conseils, des solutions de contournement et des réponses pour les questions et problèmes courants. Vous pouvez également jeter un coup de œil à la [FAQ](faq.md).
+Cet article couvre la résolution des problèmes des conseils, des solutions de contournement et des réponses pour les questions et problèmes courants. Vous pouvez également jeter un coup de œil à la [FAQ](faq.md). 
 
 ## <a name="installation--tool-requirements"></a>Installation / configuration requise de l’outil
 
@@ -66,8 +64,8 @@ Les éléments suivants sont des conseils de dépannage pour les problèmes de c
 |------|----------------|------------|
 | Tous | <strong>Partage/jointure :</strong> Vous obtenez un délai d’attente ou une erreur sur ne pas pouvoir se connecter. | Consultez [la résolution des problèmes de connectivité](#connectivity). |
 | VS Code | <strong>Jointure :</strong> Vous étiez <strong>non demandées par invite / en mesure de lancer VS Code</strong> après l’ouverture de la page d’inscription dans un navigateur. |  Conseils : <ul><li>Vérifiez que vous avez <i>démarré le Code de Visual Studio au moins une fois et a attendu pour l’installation dans la barre d’état.</i></li><li>Si cela ne fonctionne pas, essayez d’exécuter le « partage en direct : Commande du Lanceur de l’installation ».</li><li>**Les utilisateurs Linux**: Si vous êtes invité à entrer votre mot de passe administrateur (sudo) lors de l’exécution de la commande ci-dessus, veuillez le faire.</li><li>Enfin, consultez [joindre manuellement](reference/manual-join.md) comme solution de contournement.</li></ul> Si vous rencontrez ce problème, nous aimerions voir ce qui peut se produire, donc Veuillez [enregistrer un bogue](https://aka.ms/vsls-new-issue). |
-| VS | <strong>Jointure :</strong> Vous étiez <strong>non demandées par invite / en mesure de lancer Visual Studio</strong>  après l’ouverture de la page d’inscription dans un navigateur. |  Consultez [joindre manuellement des](reference/manual-join.md).<br /><br /> Nous aimerions également afficher vos journaux, donc Veuillez [enregistrer un bogue](https://aka.ms/vsls-problem) à l’aide « Rapport un problème... » de Visual Studio fonctionnalité. |
-| Tous | <strong>Jointure :</strong> Vous préférez <strong>coller directement le lien de jointure dans Visual Studio / VS Code</strong> au lieu de cliquer sur le lien web. | Consultez [joindre manuellement des](reference/manual-join.md). |
+| VS | <strong>Jointure :</strong> Vous étiez <strong>non demandées par invite / en mesure de lancer Visual Studio</strong>  après l’ouverture de la page d’inscription dans un navigateur. |  Consultez la section [Accès manuel](reference/manual-join.md).<br /><br /> Nous aimerions également afficher vos journaux, donc Veuillez [enregistrer un bogue](https://aka.ms/vsls-problem) à l’aide « Rapport un problème... » de Visual Studio fonctionnalité. |
+| Tous | <strong>Jointure :</strong> Vous préférez <strong>coller directement le lien de jointure dans Visual Studio / VS Code</strong> au lieu de cliquer sur le lien web. | Consultez la section [Accès manuel](reference/manual-join.md). |
 | Tous | <strong>Jointure :</strong> Vous voyez un message indiquant, «**le propriétaire de l’espace de travail semble être hors connexion**, « lors de la jointure via le navigateur. | Solutions de contournement possibles :<br /><ul><li>Essayez [joindre manuellement](reference/manual-join.md). Nous avons noté des problèmes avec plusieurs régions (par exemple, est et ouest des États-Unis) jointures en raison de problèmes de service qui n’affectent pas les jointures manuelles.</li><li>Partage en direct peut être impossible d’acheminer directement à l’hôte lors de l’exécution en mode de connexion « auto ». Essayez [mode relais](reference/connectivity.md).</li></ul>Consultez [la résolution des problèmes de connectivité](#connectivity) pour plus de possibilités |
 | VS Code | <strong>Jointure :</strong> Vous avez rejoint via le navigateur <strong>avant de vous connecter</strong>, n’étaient pas invité à vous connecter</strong>et la jointure s’est jamais effectuée. |  Il s’agit d’un [bogue connu](https://github.com/MicrosoftDocs/live-share/issues/167). Cliquez sur le signe dans l’élément de barre d’état pour vous connecter, puis joignez à nouveau. |
 
@@ -102,7 +100,7 @@ Articles Comment faire
 
 Référence
 
-- [Tous les bogues majeurs, demandes de fonctionnalités et limitations](https://aka.ms/vsls-issues)
+- [Tous les bogues majeurs, toutes les demandes de fonctionnalités et toutes les limitations](https://aka.ms/vsls-issues)
 - [Toutes les demandes de fonctionnalités et limitations](https://aka.ms/vsls-feature-requests)
 - [Exigences de connectivité pour Live Share](reference/connectivity.md)
 - [Détails d’installation pour Linux](reference/linux.md)

@@ -5,20 +5,18 @@ ms.custom: ''
 ms.date: 10/6/2018
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- liveshare
 ms.topic: reference
 author: chuxel
 ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 013eb234e5acca02a39e90f0697a146039bb2a89
-ms.sourcegitcommit: 4f733c9053848f26da03d47050bcb734f6c98b31
+ms.openlocfilehash: 9ac16b0e598fb07446c2b682397684b7e2e4709a
+ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57255539"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58640131"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -28,17 +26,17 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # <a name="linux-installation-details"></a>Détails de l’installation Linux
 
-Linux est un environnement très variable et le nombre d’environnements de bureau et des distributions peut être compliqué à mettre en œuvre. Si vous respectez les versions prises en charge de **bureau Ubuntu** (16.04 +), **CentOS 7**, ou **station de travail Fedora** (27 +) et utilisent uniquement **distributions officielles de VS Code**, vous devez rechercher le processus simple. Toutefois, dans le cas où vous utilisez une configuration non standard ou la distribution en aval, vous pouvez ou peut ne pas fonctionner dans certaines interruptions. Ce document fournit des informations sur la configuration requise et des informations de dépannage qui peuvent vous aider à être opérationnel et en cours d’exécution même si vous configuration est la seule Communauté pris en charge. Notez que le partage Live prend uniquement en charge **Linux 64 bits**.
+Linux est un environnement très variable et le grand nombre d’environnements de bureau et de distributions peut compliquer le travail. Si vous respectez les versions prises en charge de **bureau Ubuntu** (16.04 +), **CentOS 7**, ou **station de travail Fedora** (27 +) et utilisent uniquement **distributions officielles de VS Code**, vous devez rechercher le processus simple. Toutefois, si vous utilisez une configuration non standard ou une distribution en aval, il n’est pas exclu que vous rencontriez des difficultés. Ce document fournit des informations sur la configuration requise et des informations de dépannage qui peuvent vous aider à être opérationnel et en cours d’exécution même si vous configuration est la seule Communauté pris en charge. Notez que le partage Live prend uniquement en charge **Linux 64 bits**.
 
-## <a name="install-linux-prerequisites"></a>Installez les composants requis Linux
+## <a name="install-linux-prerequisites"></a>Installer les composants requis pour Linux
 
-Certaines distributions de Linux n’ont pas de bibliothèques que Partage Live a besoin pour fonctionner. Par défaut, Partage Live tente de détecter et installer les composants requis Linux pour vous. Vous verrez une notification toast lorsque Partage Live rencontre un problème peut provenir de bibliothèques manquants demandant l’autorisation de les installer.
+Certaines distributions de Linux n’ont pas de bibliothèques dont Live Share a besoin pour fonctionner. Par défaut, Live Share tente de détecter et d’installer les composants requis pour Linux pour vous. Lorsque Live Share rencontre un problème pouvant être dû à des bibliothèques manquantes, vous voyez une notification toast qui vous demande l’autorisation de les installer.
 
 ![Message de montrant notification toast manquent des conditions préalables de Linux](../media/vscode-linux-prereq-missing.png)
 
-Lorsque vous cliquez sur « Installer », une fenêtre de terminal s’affiche dans lequel votre système d’exploitation vous demandera d’entrer votre administrateur / racine (sudo) le mot de passe pour continuer. En supposant que le script se termine correctement, recharger Visual Studio Code, lorsque vous êtes invité à vous devrait être prêt ! Vous pouvez également extraire **[conseils par distribution](#tips-by-distribution)** pour d’autres indicateurs et les solutions de contournement s’il en existe.
+Lorsque vous cliquez sur « Installer », une fenêtre de terminal s’affiche dans lequel votre système d’exploitation vous demandera d’entrer votre administrateur / racine (sudo) le mot de passe pour continuer. En supposant que le script se termine correctement, recharger Visual Studio Code, lorsque vous êtes invité à vous devrait être prêt ! Vous souhaitez également peut-être consulter **[Conseils par distribution](#tips-by-distribution)** pour voir d’autres conseils et des solutions de contournement s’il y en a.
 
-Si vous voyez un message indiquant le script ne prend pas en charge votre distribution, consultez **[conseils pour les distributions de communauté pris en charge](#tips-for-unsupported-distros)** pour plus d’informations, la Communauté a partagé avec nous.
+Si vous voyez un message indiquant que le script ne prend pas en charge votre distribution, consultez **[Conseils pour les distributions de la communauté prises en charge](#tips-for-unsupported-distros)** pour lire les informations que la communauté a partagées avec nous.
 
 Si vous **pour ne plus avoir de VS Code, exécutez la commande pour vous**, vous pouvez aussi pour réexécuter la toute dernière version de ce script à tout moment manuellement à l’aide de la commande suivante dans une fenêtre de Terminal :
 
@@ -147,13 +145,13 @@ Comme un **solution de contournement**, vous pouvez ajouter le texte suivant dan
 
 Consultez [ci-dessus](#tips-for-community-supported-distros) pour plus d’informations sur indique si la distribution que vous utilisez est connue pour fonctionner.
 
-## <a name="linux-browser-integration"></a>Intégration de navigateur Linux
+## <a name="linux-browser-integration"></a>Intégration du navigateur Linux
 
-Visual Studio Live partagent généralement **ne nécessite pas d’étapes d’installation supplémentaires** pour activer l’intégration de navigateur sur Linux.
+Généralement, Visual Studio Live Share **ne nécessite pas d’étapes d’installation supplémentaires** pour activer l’intégration d’un navigateur sur Linux.
 
 Pour ce faire, Partage Live place automatiquement un fichier de bureau dans `~/.local/share/applications` et le Lanceur requis lui-même dans `~/.local/share/vsliveshare` lorsque l’extension initialise tout d’abord. Si cette opération réussit, aucune action n’est requise de votre part.
 
-Dans certains cas, les distributions ne pas prendre en charge cet emplacement ou nécessitent des ajustements pour qu’il fonctionne avec leurs installations vanille. Dans ce cas, Partage Live revient à l’utilisation `/usr/local/share` à la place. Par conséquent, **vous avertit que votre mot de passe administrateur (sudo) est requise** pour terminer le processus d’installation. Une fenêtre de terminal s’affiche vous indiquant où le service de lancement du navigateur sera installée. Entrez simplement votre mot de passe lorsque vous y êtes invité et appuyez sur entrée une fois l’installation terminée pour fermer la fenêtre de terminal.
+Dans certains cas, les distributions ne pas prendre en charge cet emplacement ou nécessitent des ajustements pour qu’il fonctionne avec leurs installations vanille. Dans ce cas, Partage Live revient à l’utilisation `/usr/local/share` à la place. Par conséquent, **vous avertit que votre mot de passe administrateur (sudo) est requise** pour terminer le processus d’installation. Une fenêtre de terminal vous indiquant où le lanceur du navigateur sera installé s’affiche. Entrez simplement votre mot de passe lorsque vous y êtes invité et appuyez sur Entrée une fois l’installation terminée pour fermer la fenêtre de terminal.
 
 Si vous préférez exécuter la commande vous-même au lieu de cela, vous pouvez cliquer sur « À la place les copier » qui copie la commande de terminal dans le Presse-papiers à la place.
 
@@ -161,7 +159,7 @@ Enfin, si vous choisissez d’ignorer cette étape entièrement, vous pouvez tou
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Comment : Collaborer à l’aide de Visual Studio Code](../use/vscode.md)
+- [Guide pratique : Travailler en collaboration à l’aide de Visual Studio Code](../use/vscode.md)
 - [Exigences de connectivité pour Live Share](connectivity.md)
 - [Fonctionnalités de sécurité de Live Share](security.md)
 
