@@ -11,12 +11,12 @@ ms.author: joncart
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: a97ca693a0a60125c5376e444c9fba1ee7442d67
-ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
+ms.openlocfilehash: 1b68dc90f4bac5e21c04c555ab2d8fc7f59aad55
+ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640157"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58853597"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -27,15 +27,16 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 # <a name="frequently-asked-questions"></a>Questions fréquemment posées
 
 ## <a name="what-is-live-share"></a>Quel est le partage en direct ?
-Partage en direct permet aux développeurs de partager une base de code et son contexte afin d’avoir une collaboration instantanée bidirectionnelle, directement à partir de vos outils existants (Visual Studio 2017 ou Visual Studio Code). Avec le partage Live, votre collègue peut lire, Parcourir, modifier et déboguer le projet que vous avez partagé avec eux, à la fois et en toute transparence.
+Live Share vous permet d’éditer et de déboguer en collaboration avec d’autres utilisateurs en temps réel, quels que soient les langages de programmation que vous utilisez ou les types d’applications que vous créez. Il vous permet (instantanément et en toute sécurité) qui partagent votre projet actuel et partager ensuite selon les besoins, les sessions de débogage, les instances de terminal, les applications web localhost et bien plus encore ! Les développeurs qui joignent vos sessions bénéficiez de l’ensemble de leur contexte de l’éditeur à partir de votre environnement (par exemple, services de langage, le débogage), ce qui garantit qu’ils puissent commencer productive collaborer immédiatement, sans devoir cloner les dépôts ou installer des kits de développement logiciel.
 
 ## <a name="what-are-the-tooling-requirements-for-using-live-share"></a>Quelles sont les exigences d’outils pour l’utilisation dynamique de partage ?
 Le [fonctionnalités principales](#what-are-the-core-capabilities-of-live-share) de partage en direct sont entièrement pris en charge dans les outils suivants :
 
-* [Visual Studio 2017 15.6 +)](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio 2017 15.6 +)](https://visualstudio.microsoft.com/vs/older-downloads/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-La version préliminaire, Partage Live va parcourir rapidement pour répondre aux commentaires des utilisateurs, qui peuvent nous amener à tirer parti des fonctionnalités dans Visual Studio et Visual Studio Code sont uniquement accessibles dans leurs versions preview/insider respectifs. Nous indiquons les fonctionnalités qui nécessitent des versions plus récentes de Visual Studio ou VS Code dans la documentation. Par exemple, prise en charge de l’annulation/de rétablissement local nécessite Visual Studio 2017 15.7 +.
+Nous itérer rapidement pour répondre aux commentaires des utilisateurs. Cela nous oblige à tirer parti des fonctionnalités dans Visual Studio et Visual Studio Code sont uniquement accessibles dans leurs versions preview/insider respectifs. Nous indiquons les fonctionnalités qui nécessitent des versions plus récentes de Visual Studio ou VS Code dans la documentation. Par exemple, prise en charge de l’annulation/de rétablissement local nécessite Visual Studio 2017 15.7 +.
 
 ## <a name="what-are-the-core-capabilities-of-live-share"></a>Quelles sont les principales fonctionnalités de partage en direct ?
 Partage en direct vous permet de partager votre base de code avec les membres de votre équipe via une connexion sécurisée. Avec le partage en direct, vous êtes en mesure de plusieurs fichiers dans un espace de travail de manière collaborative et plus important encore de déboguer votre application avec vos collègues. Pendant la même modification vos modifications sont immédiatement visibles par vos collègues. Au cours du même emplacement de débogage vous partagent la même session de débogage de votre application. Cela signifie que vous et vos coéquipiers peuvent contrôler l’exécution du programme avec des points d’arrêt et des étapes, mais vous pouvez inspecter indépendamment REPLs (par exemple, la fenêtre exécution dans Visual Studio), les espions, les variables locales et les variables.
@@ -52,7 +53,7 @@ Constitue la seule exigence du partage en direct est que la personne qui partage
 Partage en direct ne transfère pas toutes les entrées clavier et souris. Il communique uniquement les données nécessaires pour chaque activité de collaboration pour les ordinateurs de vos collègues. Par exemple, lorsque vous partagez votre espace de travail, votre structure de dossier est partagé. Lorsque vous modifiez en collaboration un fichier, que le contenu du fichier est partagés. Lorsque vous effectuez un débogage en collaboration, actions de débogage (par exemple, exécution pas à pas) et l’état (par exemple, pile des appels et variables locales) sont partagées.
 
 ## <a name="when-will-live-share-be-released"></a>Quand Partage Live sera-t-il disponible ?
-Partage en direct est désormais disponible en version préliminaire publique ! Nous avons l’intention de travailler en étroite collaboration aux développeurs les bits de la version préliminaire, de test afin de collecter des commentaires et vérifier que nous pouvons ainsi offrir la meilleure expérience possible, avant d’ouvrir le service plus largement.
+Partage en direct est désormais disponible ! Vous pouvez [prise en main Partage Live](https://aka.ms/vsls-start) dès aujourd'hui.
 
 ## <a name="how-much-will-it-cost"></a>Combien cela coûte-t-il ?
 Nous nous engageons à un niveau gratuit au fond de Visual Studio Live Share pour les développeurs à utiliser en continu. Nous sera évalué l’introduction des niveaux payants avec des fonctionnalités avancées que nous comprenons mieux les besoins de la Communauté.
@@ -82,21 +83,25 @@ Si cela peut être souhaitable dans de nombreux scénarios, les développeurs so
 
 Partage en direct va une étape plus loin et vous permet de partager une session de débogage.  Cela rend particulièrement utile dans l’inscription d’autres pour vous aider à identifier les problèmes qui ne se produisent sur votre ordinateur sans modifier leur flux de travail de développement, ni avoir à modifier la conception de l’application.
 
-## <a name="which-languages-and-platforms-will-be-supported-in-the-preview"></a>Les langages et les plateformes seront pris en charge dans la version préliminaire ?
-Toutefois, notre objectif est de prendre en charge le paysage de divers langages et plateformes, afin de que nous pouvons bénéficier d’une collaboration riche, quel que soit le type d’application en cours de développement. Consultez le [langage et plateforme prise en charge](reference/platform-support.md) article pour plus d’informations sur ce qui fonctionne aujourd'hui. C’est que le début, et nous prévoyons d’améliorer cette image de déplacement vers l’avant en fonction des commentaires.
+## <a name="which-languages-and-platforms-will-be-supported"></a>Les langages et les plateformes sont prises en charge ?
+Notre objectif est de prendre en charge le paysage de divers langages et plateformes, afin de que nous pouvons bénéficier d’une collaboration riche, quel que soit le type d’application en cours de développement. Consultez le [langage et plateforme prise en charge](reference/platform-support.md) article pour plus d’informations sur ce qui fonctionne aujourd'hui.
 
 ## <a name="how-many-developers-can-join-a-collaboration-session"></a>Combien de développeurs permettre rejoindre une session de collaboration ?
-Nous prenons en charge cinq invités simultanées, le développeur qui partage (« hébergement ») en plus de leur projet. Par conséquent, une session de collaboration peut contenir un total de 6 développeurs à un moment donné. Ceci dit, c’est un domaine nous recherchons des commentaires, donc si vous avez un cas d’usage qui nécessite une limite plus élevée, veuillez [faites-nous savoir](https://github.com/MicrosoftDocs/live-share/issues/229)!
+Nous prenons en charge 30 invités simultanées, le développeur qui partage (« hébergement ») en plus de leur projet. Par défaut, nous activons invités jusqu'à 5 dans une session. 
+
+Pour activer la limite de l’invité accrue : 
+- **VS Code :** Ajoutez « liveshare.increasedGuestLimit":"true » à settings.json.
+- **VISUAL STUDIO :** Définir des outils > Options > Partage Live > augmentation de la limite invité sur « True »
 
 ## <a name="what-is-the-roadmap"></a>Quelle est la feuille de route ?
 Vous pouvez afficher l’ensemble des problèmes connus et éléments de la feuille de route [ici](https://aka.ms/vsls-issues). Si vous souhaitez voir les demandes de fonctionnalités uniquement, plutôt que tous les problèmes, consultez [ici](https://aka.ms/vsls-feature-requests). Nous vous encourageons à voter pour des éléments existants, demandes de nouvelles fonctionnalités de fichiers et enregistrer des rapports de bogues, afin de nous aider à la direction du produit plus tard, de forme.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en charge de langues et de plateformes](platform-support.md)
-- [Exigences de connectivité pour Live Share](reference/connectivity.md)
-- [Fonctionnalités de sécurité de Live Share](reference/security.md)
-- [Tous les bogues majeurs, toutes les demandes de fonctionnalités et toutes les limitations](https://aka.ms/vsls-issues)
+- [Prise en charge de langage et plateforme](platform-support.md)
+- [Exigences de connectivité pour le partage en direct](reference/connectivity.md)
+- [Fonctionnalités de sécurité de partage en direct](reference/security.md)
+- [Tous les bogues majeurs, demandes de fonctionnalités et limitations](https://aka.ms/vsls-issues)
 - [Toutes les demandes de fonctionnalités et limitations](https://aka.ms/vsls-feature-requests)
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](troubleshooting.md) ou [fournir des commentaires](support.md).

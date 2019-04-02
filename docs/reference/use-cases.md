@@ -11,12 +11,12 @@ ms.author: joncart
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: d4dc3f2a6dfd8e0951a944cf4f487cedc49e4370
-ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
+ms.openlocfilehash: 1b6ecafc933c6521f6c21ec0dcd38c25e889a0e2
+ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640144"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58853571"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -26,7 +26,7 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # <a name="common-use-cases"></a>Cas d’utilisation courants
 
-L’objectif principal de partage en direct de Visual Studio consiste à permettre aux développeurs de collaborer entre eux plus facilement, sans introduire de tout avis sur quand et comment le faire (par exemple, quel outil de communication à utiliser, la méthodologie de logiciels « droite » ou le flux de travail SCM). De cette façon, vos outils peuvent prendre en charge les interactions qui se produisent **naturellement**et en tant que **fréquemment*en fonction des besoins, mais d’une manière qui **avec les compliments*comment vous préférez déjà travailler.
+L’objectif principal de partage en direct de Visual Studio consiste à permettre aux développeurs de collaborer entre eux plus facilement, sans introduire de tout avis sur quand et comment le faire (par exemple, quel outil de communication à utiliser, la méthodologie de logiciels « droite » ou le flux de travail SCM). De cette façon, vos outils peuvent prendre en charge les interactions qui se produisent **naturellement**et en tant que **fréquemment** en fonction des besoins, mais d’une manière qui **avec les compliments** comment vous préférez déjà travailler.
 
 Met en surbrillance ce document certaines des utilisations que partage en direct de Visual Studio est déjà utilisé pour et décrit la manière dont nous prenons en charge, ainsi que les façons nous prévoyons de les optimiser davantage (en fonction de vos commentaires !). Si vous utilisez le partage en direct pour quelque chose qui n’est pas déjà abordés ci-dessous, ou vous pensez que nous pouvons faire encore mieux pour prendre en charge d’un cas d’usage spécifique, veuillez [faites-nous savoir](https://github.com/MicrosoftDocs/live-share/issues/new).
 
@@ -71,21 +71,23 @@ Les plus couramment utilisés de scénarios de partage en direct de Visual Studi
 
 Partage en direct a été conçu pour être indépendant de tous les problèmes mentionnés ci-dessus et au lieu de cela, il s’efforce de prendre en charge la programmation par paire qui est totalement « opportuniste » et la technologie Microsoft à votre situation. Ceci dit, contrairement aux deux développeurs partage un ensemble clavier et écran, Partage Live permet une forme de programmation par paire qui permet aux développeurs de travailler sur un objectif commun, sans supprimer leur autonomie individuel ou les préférences de l’environnement. Vous pouvez travailler indépendamment ou ensemble, ce qui permet chaque participant afficher leurs propres pensé processus pour la collaboration.
 
-Pour davantage prennent en charge la programmation par paire et autoriser chaque « invité » effectuer des actions couramment requises, nous avons travail sur notre feuille de route pour continuer à augmenter le contexte et les fonctionnalités qui sont partagées dans une session de partage en direct : tâches ([#40](https://github.com/MicrosoftDocs/live-share/issues/40)), sortie de la génération ([#48](https://github.com/MicrosoftDocs/live-share/issues/48)), débogage piloté par l’invité ([#32](https://github.com/MicrosoftDocs/live-share/issues/32)) et bien plus encore. Faites-le nous savoir laquelle de ces expériences sont importantes pour vous !
-
 Pour décomposer ce cas d’usage encore plus loin, les éléments suivants représentent des formes de paire de programmation que nous avons observé des personnes à l’aide d’un partage de Live pour :
 
 ### <a name="mob-programming"></a>MOB par programmation
 
 [MOB par programmation](https://en.wikipedia.org/wiki/Mob_programming) (ou swarm programmation) est essentiellement de paire de programmation, mais avec plus de deux personnes. Par conséquent, tous les avantages de partage en direct pour la programmation par paire également s’appliquer également. En outre, certaines équipes faire « l’ESSAIMAGE » sur une en fonction des besoins (par exemple, l’équipe rassembler autour d’incendie) par opposition à plein temps.
 
-Actuellement, Partage Live prend en charge jusqu'à cinq invités au sein d’une session, ce qui peut ou ne peut-être pas prendre en charge la taille de votre équipe. Toutefois, il s’agit d’un élément nous prévoir d’augmenter (pour les différents cas d’utilisation) et recherchez des commentaires ([Vote 👍 ici](https://github.com/MicrosoftDocs/live-share/issues/229))
+Actuellement, Partage Live prend en charge jusqu'à 30 invités au sein d’une session.
+> [!TIP]
+> Pour activer les 30 invités dans une session :
+> - **VS Code :** ajouter « liveshare.increasedGuestLimit":"true » à settings.json
+> - **VISUAL STUDIO :** Définir des outils > Options > Partage Live > augmentation de la limite invité sur « True » 
 
 ### <a name="coding-competitions--hack-a-thons"></a>Concours de codage / Hack-A-Thons
 
 Concours de codage et de pirater un thons sont des variations efficacement à court terme, la tâche unique de la programmation de mob. Les membres de l’équipe et leur rôle actuel, sont également potentiellement dynamiques. Étant donné que ce cas d’utilisation est généralement également de temps, la capacité de collaborer en temps réel sans avoir à adopter un outil entièrement nouveau et la possibilité de travailler ensemble, sans être limités à un seul écran ou le clavier, peut accéder un moyen de journal par ordre croissant rapidité.
 
-Dans la mesure où les participants dans cet environnement ne seront pas toujours entièrement « fiables », nous avons entendu pour autoriser les demandes (en supprimant et blocage) un invité d’une session à tout moment, chose que nous prévoyons d’activation ([#398](https://github.com/MicrosoftDocs/live-share/issues/398)) et prend en charge l’objectif de fournir des « hôtes » avec contrôle total sur leur environnement.
+Dans la mesure où les participants dans cet environnement ne seront pas toujours entièrement « fiables », vous pouvez supprimer (et bloquer) un invité d’une session à tout moment. Cela fournit des « hôtes » avec contrôle total sur leur environnement.
 
 ### <a name="school-group-projects"></a>Projets de groupe de l’école
 
@@ -117,14 +119,14 @@ Lorsque les formateurs sont enseigne une leçon, ils permettent Partage Live pou
 
 Pour faciliter les paramètres de la classe, Partage Live permet le partage en mode lecture seule. Formateurs peuvent utiliser mode lecture seule pour activer leur permet de partager leurs projets avec les étudiants sans avoir à vous soucier des modifications accidentelles ou inutiles adressées.
 
-En outre, le partage Live a prise en charge expérimentale pour activer jusqu'à 30 invités rassemblant sous la forme d’une session de collaboration. De cette façon, formateurs peuvent avoir leur ensemble de la classe join dans une session et afficher le code.
+En outre, le partage Live a prise en charge pour activer jusqu'à 30 invités rassemblant sous la forme d’une session de collaboration. De cette façon, formateurs peuvent avoir leur ensemble de la classe join dans une session et afficher le code.
 
-Pour activer cette fonctionnalité expérimentale :
+Pour activer cette fonctionnalité :
 
-- **VS Code :** Ajoutez « liveshare.features":"experimental » à settings.json.
-- **VISUAL STUDIO :** Définir des outils > Options > Live partage > fonctionnalités à « Expérimental »
+- **VS Code :** Ajoutez « liveshare.increasedGuestLimit":"true » à settings.json.
+- **VISUAL STUDIO :** Définir des outils > Options > Partage Live > augmentation de la limite invité sur « True »
 
-Afin d’optimiser le partage en direct pour ce scénario, nous devons encore augmenter la limite actuelle de l’invité ([#229](https://github.com/MicrosoftDocs/live-share/issues/229)) et simplifier la façon dont que les sessions sont lancées ([#422](https://github.com/MicrosoftDocs/live-share/issues/422)).
+Afin d’optimiser le partage en direct pour ce scénario, nous avons besoin pour simplifier la façon que les sessions sont lancées ([#422](https://github.com/MicrosoftDocs/live-share/issues/422)).
 
 ## <a name="code-reviews"></a>Révisions de code
 
@@ -144,10 +146,10 @@ En outre, développement réel est plus que simplement écrire du code. Étant d
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en charge de langues et de plateformes](platform-support.md)
-- [Exigences de connectivité pour Live Share](connectivity.md)
-- [Fonctionnalités de sécurité de Live Share](security.md)
-- [Tous les bogues majeurs, toutes les demandes de fonctionnalités et toutes les limitations](https://aka.ms/vsls-issues)
+- [Prise en charge de langage et plateforme](platform-support.md)
+- [Exigences de connectivité pour le partage en direct](connectivity.md)
+- [Fonctionnalités de sécurité de partage en direct](security.md)
+- [Tous les bogues majeurs, demandes de fonctionnalités et limitations](https://aka.ms/vsls-issues)
 - [Toutes les demandes de fonctionnalités et limitations](https://aka.ms/vsls-feature-requests)
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting.md) ou [fournir des commentaires](../support.md).
