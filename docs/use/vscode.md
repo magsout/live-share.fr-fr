@@ -5,20 +5,18 @@ ms.custom: ''
 ms.date: 04/27/2018
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- liveshare
 ms.topic: conceptual
 author: chuxel
 ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 9285fef38fea9bb164892775521ed2a28fe9ef1b
-ms.sourcegitcommit: 4f733c9053848f26da03d47050bcb734f6c98b31
+ms.openlocfilehash: ed96ba572a58b8d3bfda7b634f1052a1b4e73051
+ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57255556"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58853636"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -67,7 +65,7 @@ Ensuite, le téléchargement et l’installation de l’extension Visual Studio 
 
 En téléchargeant et en utilisant Visual Studio Live Share, vous acceptez les [termes du contrat de licence](https://aka.ms/vsls-license) et la [déclaration de confidentialité](https://www.microsoft.com/en-us/privacystatement/EnterpriseDev/default.aspx). Si vous rencontrez des problèmes, consultez la section [dépannage](../troubleshooting.md).
 
-[![Télécharger](../media/download.png)](https://aka.ms/vsls-dl/vscode)
+[![D[télécharger](../media/download.png)](https://aka.ms/vsls-dl/vscode)
 
 ### <a name="linux-install-steps"></a>Étapes d’installation pour Linux
 
@@ -99,7 +97,7 @@ Vous pouvez en apprendre plus sur la raison pour laquelle cela est nécessaire e
 
 Pour pouvoir collaborer, vous devez vous connecter à Visual Studio Live Share afin que tout le monde sache qui vous êtes. Cette simple mesure de sécurité ne vaut **pas** consentement à des actions marketing ou à d’autres activités de recherche. Vous pouvez utiliser un compte personnel Microsoft (par exemple, @outlook.com), un compte professionnel ou scolaire soutenu par Microsoft (AAD) ou un compte GitHub. Il est facile de se connecter.
 
-**Cliquez** sur l’élément « Partage » de la barre élément, ou appuyez sur **Ctrl+Maj+P/Cmd+Maj+ P** et sélectionnez la commande : « Live Share : se connecter avec le navigateur ».
+**Cliquez** sur l’élément « Live Share » de la barre élément, ou appuyez sur **Ctrl+Maj+P/Cmd+Maj+ P** et sélectionnez la commande : « Live Share : se connecter avec le navigateur ».
 
 ![Bouton de connexion de VS Code](../media/vscode-sign-in-button.png)
 
@@ -174,7 +172,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
 4. **Démarrer une session de collaboration**
 
-    Maintenant, il suffit de **cliquer** sur l’élément « Partage » de la barre d’état ou d’appuyer sur **Ctrl+Maj+P/Cmd+Maj+P** et de sélectionner « Live Share : démarrer une session de collaboration (Share) ».
+    Maintenant, il suffit de **cliquer** sur l’élément « Live Share » de la barre d’état ou d’appuyer sur **Ctrl+Maj+P/Cmd+Maj+P** et de sélectionner « Live Share : démarrer une session de collaboration (Share) ».
 
     ![Partager le bouton](../media/vscode-share-button.png)
 
@@ -183,7 +181,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
     Un lien d’invitation est automatiquement copié dans votre Presse-papiers. Une fois ouvert dans un navigateur, il permet à d’autres utilisateurs de rejoindre une nouvelle session de collaboration qui partage le contenu de ces dossiers avec eux.
 
-    Vous voyez également l’élément de barre d’état « Partage » changer pour représenter l’état de session. Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
+    Vous voyez également l’élément de barre d’état « Live Share » changer pour représenter l’état de session. Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
 
     Notez que pour accéder à nouveau au lien d'invitation après avoir commencé le partage, il suffit de cliquer sur l'icône de la barre d'état de la session et de sélectionner « Inviter d’autres personnes (Copier le lien) ».
 
@@ -197,9 +195,9 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
 6. **Envoyer le lien**
 
-    Envoyez le lien par courrier électronique, Slack, Skype, etc. à ceux que vous souhaitez inviter. Notez que, étant donné le niveau d’accès que les sessions Live Share peuvent fournir aux invités, **vous devez partager ce contenu uniquement avec des personnes dignes de confiance** et réfléchir aux implications de ce que vous partagez.
+    Envoyez le lien par courrier électronique, Slack, Skype, etc. à ceux que vous souhaitez inviter. Étant donné le niveau d’accès que les sessions Live Share peuvent offrir aux invités, **limitez les partages aux personnes de confiance** et pensez aux implications de ce que vous partagez.
 
-    > **Conseil en sécurité :** Vous voulez comprendre les implications de sécurité de certaines fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
+    > **Conseil de sécurité :** Vous voulez comprendre les implications de sécurité de certaines fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
 
     Si un invité a des questions, l’article « [Guide de démarrage rapide : Rejoindre votre première session](../quickstart/join.md) » fournit des informations supplémentaires sur la position d’invité.
 
@@ -258,11 +256,11 @@ Pour rejoindre une session de collaboration, le plus simple est d’ouvrir le li
     > [!NOTE]
     > Vérifiez que vous avez **démarré l’outil au moins une fois** après l’installation de l’extension Visual Studio Live Share et laissé l’installation se terminer avant l’ouverture/la réouverture de la page d’invitation. Le problème persiste ? Consultez la section [Accès manuel](#join-manually).
 
-3. **Collaborez**
+3. **Collaborer**
 
     C’est tout ! Dans quelques instants, vous serez connecté et vous pourrez commencer à collaborer.
 
-    Le bouton « Partager » changera pour indiquer un « État de session ». Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
+    Le bouton « Live Share » changera pour indiquer un « État de session ». Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
 
     Vous accédez alors automatiquement au fichier en cours de modification par l’hôte.
 
@@ -284,11 +282,11 @@ Vous pouvez également opter pour un accès manuel sans navigateur web, ce qui p
 
     Collez l’URL de l’invitation que vous avez reçue et tapez sur Entrée pour confirmer.
 
-4. **Collaborez !**
+4. **Collaborez !**
 
     C’est tout ! Vous avez momentanément accès à la session de collaboration.
 
-    Le bouton « Partager » changera pour indiquer un « État de session ». Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
+    Le bouton « Live Share » changera pour indiquer un « État de session ». Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
 
     Vous accédez alors automatiquement au fichier en cours de modification par l’hôte.
 
@@ -398,11 +396,11 @@ Il leur suffit de cliquer sur « Suivre » dans la notification pour placer le
 
 ## <a name="co-debugging"></a>Codébogage
 
-La fonctionnalité de débogage collaboratif de Visual Studio Live Share est un moyen puissant et unique de déboguer un problème. Au-delà de l’expérience collaborative de dépannage, elle offre également à tous les participants de la session la possibilité d’examiner des problèmes potentiellement propres à l’environnement en proposant une session de débogage partagée sur l’ordinateur de l’hôte.
+La fonctionnalité de débogage collaboratif de Visual Studio Live Share est un moyen puissant et unique de déboguer un problème. Au-delà de l’expérience collaborative de dépannage, elle offre également à vous et à tous les participants de la session la possibilité d’examiner des problèmes potentiellement propres à l’environnement en proposant une session de débogage partagée sur l’ordinateur de l’hôte.
 
 > **Conseil de sécurité :** étant donné que tous les participants peuvent accéder aux fichiers et les modifier de manière indépendante, vous pouvez, en tant qu’hôte, limiter les fichiers accessibles dans votre projet au moyen d’un fichier vsls.json. Sachez également que l’accès Console/REPL permet aux participants d’exécuter des commandes sur votre ordinateur ; de ce fait, limitez le débogage collaboratif aux personnes de confiance. Les invités doivent aussi bien comprendre qu’ils ne pourront pas forcément suivre le débogueur s’il entre dans des fichiers restreints par ces paramètres. Consultez [Contrôler l’accès au fichier et la visibilité](../reference/security.md#controlling-file-access-and-visibility) pour plus d’informations.
 
-La procédure est simple.
+Son utilisation est très simple.
 
 1. Veillez à ce que l’hôte et tous les invités aient l’extension de débogage appropriée installée. (Techniquement, ça n’est pas toujours nécessaire, mais c’est généralement une bonne idée.)
 
@@ -546,9 +544,9 @@ Tandis que les invités risquent encore de rencontrer quelques défauts dans les
 
 Pour plus d’informations, voir ces articles complémentaires.
 
-- [Démarrage rapide : Partager un projet](../quickstart/share.md)
+- [Démarrage rapide : Partager votre premier projet](../quickstart/share.md)
 - [Démarrage rapide : Rejoindre une session](../quickstart/share.md)
-- [Guide pratique : Collaborer à l’aide de Visual Studio](vs.md)
+- [Guide pratique : Travailler en collaboration à l’aide de Visual Studio](vs.md)
 - [Exigences de connectivité pour Live Share](../reference/connectivity.md)
 - [Fonctionnalités de sécurité de Live Share](../reference/security.md)
 - [Détails de l’installation de Linux](../reference/linux.md)

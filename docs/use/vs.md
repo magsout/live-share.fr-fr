@@ -5,20 +5,18 @@ ms.custom: ''
 ms.date: 04/25/2018
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- liveshare
 ms.topic: conceptual
 author: chuxel
 ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 995c9e16d24328bb2680deb99cd7e7d421af945c
-ms.sourcegitcommit: 4f733c9053848f26da03d47050bcb734f6c98b31
+ms.openlocfilehash: 55eb4b0a5e819b00754d75e4682dd1aa97bbf576
+ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57256132"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58853623"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -39,17 +37,23 @@ Sachez que toutes les activités de collaboration décrites ici impliquent un se
 
 ## <a name="installation"></a>Installation
 
-Avant de commencer, il faut installer **Visual Studio 2017 15.6 (ou version ultérieure)** sur Windows 7, 8.1 ou 10. *Toutefois, une version au moins égale à Visual Studio 15.7 est recommandée pour prendre en charge les annulations/restaurations locales.*
+Avant de commencer, il faut installer **Visual Studio 2019** ou **Visual Studio 2017 15.6 ou version ultérieure** sur Windows 7, 8.1 ou 10. *Toutefois, une version au moins égale à Visual Studio 15.7 est recommandée pour prendre en charge les annulations/restaurations locales.*
 
 La procédure est simple :
 
-1. Installez une édition de [Visual Studio 2017](https://visualstudio.microsoft.com/vs/) au moins égale à la version 15.6.
+Pour Visual Studio 2019
+1. Installez une édition de [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+2. Installez une [charge de travail prise en charge](../reference/platform-support.md). (par exemple, ASP.NET, .NET Core, C++ et/ou Node.js)
+3. Visual Studio Live Share est installé par défaut avec ces charges de travail.
+
+Pour Visual Studio 2017
+1. Installez une édition de [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/) au moins égale à la version 15.6.
 2. Installez une [charge de travail prise en charge](../reference/platform-support.md). (par exemple, ASP.NET, .NET Core, C++ et/ou Node.js)
 3. [Téléchargez](https://aka.ms/vsls-dl/vs) et installez l’extension Visual Studio Live Share sur la marketplace.
 
 En téléchargeant et en utilisant Visual Studio Live Share, vous acceptez les [termes du contrat de licence](https://aka.ms/vsls-license) et la [déclaration de confidentialité](https://www.microsoft.com/en-us/privacystatement/EnterpriseDev/default.aspx). Si vous rencontrez des problèmes, consultez la section [dépannage](../troubleshooting.md).
 
-[![Télécharger](../media/download.png)](https://aka.ms/vsls-dl/vs)
+[![D[télécharger](../media/download.png)](https://aka.ms/vsls-dl/vs)
 
 ## <a name="sign-in"></a>Se connecter
 
@@ -79,42 +83,42 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
 2. **Ouvrir une solution, un projet ou un dossier**
 
-    Suivez votre workflow habituel pour ouvrir le dossier, le projet ou la solution que vous souhaitez partager avec vos invités.
+    Suivez votre flux de travail habituel pour ouvrir le dossier, le projet ou la solution que vous souhaitez partager avec vos invités.
 
 3. **[Facultatif] Mettre à jour des fichiers masqués ou exclus**
 
-    Par défaut, Live Share **masque** aux invités tous les fichiers/dossiers auxquels font référence les fichiers .gitignore du projet. Un fichier **masqué** n’apparaît pas dans l’arborescence des fichiers, tandis qu’un fichier **exclu** n’est jamais transmis, même pendant des opérations comme le débogage. Pour masquer/exclure différents fichiers, ajoutez à votre projet un fichier **.vsls.json** comportant ces paramètres. Pour plus d’informations, voir [Contrôler l’accès aux fichiers et leur visibilité](../reference/security.md#controlling-file-access-and-visibility).
+    Par défaut, Live Share **masque** aux invités tous les fichiers/dossiers auxquels font référence les fichiers .gitignore du projet. Un fichier **masqué** n’apparaît pas dans l’arborescence des fichiers, tandis qu’un fichier **exclu** n’est jamais transmis, même pendant des opérations comme le débogage. Pour masquer/exclure différents fichiers, ajoutez à votre projet un fichier **.vsls.json** comportant ces paramètres. Consultez [Contrôler l’accès au fichier et la visibilité](../reference/security.md#controlling-file-access-and-visibility) pour plus d’informations.
 
-4. **Lancer une session de collaboration**
+4. **Démarrer une session de collaboration**
 
-    Maintenant, cliquez simplement sur le bouton « Partager » en haut à droite.
+    Maintenant, cliquez simplement sur le bouton « Live Share » en haut à droite.
 
     ![Bouton Partager de Visual Studio](../media/vs-share-button.png)
 
     > [!NOTE]
-    > Votre logiciel de pare-feu de bureau pourra vous demander d’autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation, entièrement facultative, donne accès à un « mode direct » sécurisé qui permet d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
+    > Vous pouvez être invité par votre logiciel de pare-feu de bureau à autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation est entièrement facultative mais permet à un « mode direct » sécurisé d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
 
-    Un lien d’invitation est automatiquement copié dans le Presse-papiers. Une fois ouvert dans un navigateur, il permet à d’autres utilisateurs de rejoindre une nouvelle session de collaboration qui partage le contenu de ces dossiers avec eux.
+    Un lien d’invitation est automatiquement copié dans votre Presse-papiers. Une fois ouvert dans un navigateur, il permet à d’autres utilisateurs de rejoindre une nouvelle session de collaboration qui partage le contenu de ces dossiers avec eux.
 
-    Le bouton « Partager » change également pour indiquer un « État de session ». Pour savoir comment il se présente, voir les informations [État de session](#session-states) ci-dessous.
+    Le bouton « Live Share » change également pour indiquer un « État de session ». Pour savoir comment il se présente, voir les informations [État de session](#session-states) ci-dessous.
 
     Sachez que, pour accéder à nouveau au lien d’invitation après avoir commencé le partage, vous pouvez cliquer sur le bouton Partager/État de session et sélectionner « Copier le lien ».
 
 5. **[Facultatif] Activer le mode lecture seule**
 
-    Une fois la session de collaboration lancée, vous pouvez la configurer en mode lecture seule pour empêcher les invités d’apporter des modifications au code partagé.
+    Une fois la session de collaboration démarrée, vous pouvez configurer la session afin qu’elle soit en mode lecture seule, pour empêcher les invités d’apporter des modifications au code partagé.
 
-    Après le partage, vous recevrez une notification vous informant que le lien d’invitation a été copié dans le Presse-papiers. Vous pourrez alors sélectionner l’option permettant de passer la session en lecture seule.
+    Après le partage, vous recevez une notification vous informant que le lien d’invitation a été copié dans le Presse-papiers. Vous pourrez alors sélectionner l’option permettant de passer la session en lecture seule.
 
     ![Mode Lecture seule de Visual Studio](../media/vs-read-only-notification.png)
 
 6. **Envoyer le lien**
 
-    Envoyez le lien par e-mail, Slack, Skype, etc. à ceux que vous souhaitez inviter. Étant donné le niveau d’accès que les sessions Live Share peuvent offrir aux invités, **limitez les partages aux personnes de confiance** et pensez aux implications de ce que vous partagez.
+    Envoyez le lien par courrier électronique, Slack, Skype, etc. à ceux que vous souhaitez inviter. Étant donné le niveau d’accès que les sessions Live Share peuvent offrir aux invités, **limitez les partages aux personnes de confiance** et pensez aux implications de ce que vous partagez.
 
-    > **Conseil de sécurité :** pour comprendre les implications de certaines fonctionnalités Live Share sur la sécurité, voir l’article [Sécurité](../reference/security.md).
+    > **Conseil de sécurité :** Vous voulez comprendre les implications de sécurité de certaines fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
 
-    Si un invité a des questions, l’article [Guide de démarrage rapide : Rejoindre une session](../quickstart/join.md) donne des informations sur la position d’invité.
+    Si un invité a des questions, l’article « [Guide de démarrage rapide : Rejoindre votre première session](../quickstart/join.md) » fournit des informations supplémentaires sur la position d’invité.
 
 7. **[Facultatif] Approuver l’invité**
 
@@ -134,7 +138,7 @@ En tant qu’hôte, vous pouvez arrêter complètement le partage et mettre fin 
 
 ![Arrêter le partage](../media/vs-stop-sharing.png)
 
-Tous les invités recevront une notification les informant que la session est terminée. Ils ne pourront plus accéder au contenu ; tous les fichiers temporaires seront automatiquement nettoyés.
+Tous les invités reçoivent une notification les informant que la session est terminée. Ils ne pourront plus accéder au contenu ; tous les fichiers temporaires sont automatiquement nettoyés.
 
 En cas de problème de partage, voir [Résolution des problèmes](../troubleshooting.md#share-and-join).
 
@@ -142,7 +146,7 @@ En cas de problème de partage, voir [Résolution des problèmes](../troubleshoo
 
 Une fois Visual Studio Live Share téléchargé et installé, les invités peuvent rejoindre une session de collaboration hébergée en seulement deux ou trois étapes. Deux solutions s’offrent à eux : [par le navigateur](#join-via-the-browser) et [manuellement](#join-manually).
 
-> **Conseil de sécurité :** les invités qui rejoignent une session de collaboration doivent bien comprendre que les hôtes peuvent restreindre leur accès à certains fichiers ou à certaines fonctionnalités. Pour connaître les implications de certaines fonctionnalités et certains paramètres Live Share sur la sécurité, voir l’article [Sécurité](../reference/security.md).
+> **Conseil de sécurité :** En tant qu’invité rejoignant une session de collaboration, il est important de comprendre que les hôtes peuvent restreindre votre accès à certains fichiers ou fonctionnalités. Vous voulez comprendre les implications de sécurité de certains paramètres et fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
 
 ### <a name="join-via-the-browser"></a>Accès par le navigateur
 
@@ -156,30 +160,30 @@ Pour rejoindre une session de collaboration, le plus simple est d’ouvrir le li
 
 2. **Cliquer sur le lien d’invitation/ouvrir l’invitation dans le navigateur**
 
-    Maintenant, (r)ouvrez simplement le lien d’invitation dans un navigateur.
+    À présent, ouvrez simplement (ou rouvrez) le lien d’invitation dans un navigateur.
 
-    > **Remarque** : si vous n’avez pas encore installé l’extension Live Share, des liens vers la marketplace des extensions apparaissent. Installez l’extension, redémarrez votre outil et réessayez.
+    > **Remarque** : Si vous n’avez pas encore installé l’extension Live Share, des liens vers la Place de marché des extensions apparaîtront. Installez l’extension, redémarrez votre outil et réessayez.
 
-    Vous devriez recevoir une notification vous informant que le navigateur souhaite lancer un outil compatible Live Share. Si vous le laissez faire, vous aurez accès à la session de collaboration dès qu’elle commencera.
+    Vous devriez être averti que le navigateur souhaite lancer un outil Live Share activé. Si vous le laissez lancer l’outil sélectionné, vous serez connecté à la session de collaboration lors du démarrage.
 
     ![Page Rejoindre](../media/join-page.png)
 
-    Si l’hôte est hors connexion, vous recevrez une notification à ce moment-là. Vous pourrez alors le contacter et lui demander de relancer le partage.
+    Si l’hôte est hors connexion, vous serez averti à ce moment-là. Vous pourrez alors le contacter et lui demander de relancer le partage.
 
     > [!NOTE]
-    > Si le problème persiste, consultez la section [Accès manuel](#join-manually).
+    > Le problème persiste ? Consultez la section [Accès manuel](#join-manually).
 
-3. **Travailler en collaboration**
+3. **Collaborer**
 
-    C'est tout ! Dans quelques instants, vous aurez accès à la session de collaboration.
+    C'est tout ! Dans quelques instants, vous serez connecté et vous pourrez commencer à collaborer.
 
-    Le bouton « Partager » changera pour indiquer un « État de session ». Pour savoir comment il se présente, voir les informations [État de session](#session-states) ci-dessous.
+    Le bouton « Live Share » changera pour indiquer un « État de session ». Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
 
-    Vous accéderez automatiquement au fichier en cours de modification par l’hôte.
+    Vous accédez alors automatiquement au fichier en cours de modification par l’hôte.
 
 ### <a name="join-manually"></a>Accès manuel
 
-Vous pouvez également opter pour un accès manuel sans navigateur web, ce qui peut être utile dans différentes situations : l’outil que vous souhaitez utiliser est déjà en cours d’exécution, vous voulez recourir à un autre outil que d’habitude ou vous avez du mal à faire fonctionner les liens d’invitation. La procédure est simple :
+Vous pouvez également opter pour un accès manuel sans navigateur web, ce qui peut être utile dans différentes situations : l’outil que vous souhaitez utiliser est déjà en cours d’exécution, vous voulez recourir à un autre outil que d’habitude ou vous avez du mal à faire fonctionner les liens d’invitation. La procédure est simple :
 
 1. **Se connecter**
 
@@ -189,7 +193,7 @@ Vous pouvez également opter pour un accès manuel sans navigateur web, ce qui p
 
 2. **Utiliser la commande d’accès**
 
-    Accédez simplement à **Fichier > Rejoindre une session de collaboration**.
+    Accédez à **Fichier > Rejoindre la session Live Share**
 
     ![Menu Rejoindre de Visual Studio](../media/vs-join.png)
 
@@ -197,11 +201,11 @@ Vous pouvez également opter pour un accès manuel sans navigateur web, ce qui p
 
     Collez l’URL de l’invitation que vous avez reçue et confirmez.
 
-4. **Travailler en collaboration**
+4. **Collaborez !**
 
     C’est tout ! Vous avez momentanément accès à la session de collaboration.
 
-    Le bouton « Partager » changera pour indiquer un « État de session ». Pour savoir comment il se présente, voir les informations [État de session](#session-states) ci-dessous.
+    Le bouton « Live Share » changera pour indiquer un « État de session ». Pour savoir à quoi cela ressemble, consultez les informations [État de session](#session-states) ci-dessous.
 
     Vous accéderez automatiquement au document en cours de modification par l’hôte.
 
@@ -217,7 +221,7 @@ En cas de problème d’accès, voir [Résolution des problèmes](../troubleshoo
 
 ## <a name="co-editing"></a>Coédition
 
-Une fois qu’ils ont rejoint une session de collaboration, tous les collaborateurs voient immédiatement et en temps réel les modifications et les sélections des autres. Il vous suffit de choisir un fichier dans l’Explorateur de fichiers et de l’éditer. Tant les hôtes que les invités voient vos modifications et fur et à mesure et peuvent y contribuer eux-mêmes, ce qui facilite les itérations et permet de fixer rapidement les solutions.
+Une fois qu’ils ont rejoint une session de collaboration, tous les collaborateurs voient immédiatement et en temps réel les modifications et les sélections des autres. Il vous suffit de choisir un fichier dans l’Explorateur de fichiers et de l’éditer. Tant les hôtes que les invités voient vos modifications au fur et à mesure et peuvent y contribuer eux-mêmes, ce qui facilite les itérations et permet trouver rapidement des solutions concrètes.
 
 > [!NOTE]
 > Dans les sessions de collaboration en lecture seule, les invités ne peuvent pas apporter de modifications aux fichiers. L’hôte a la possibilité [d’activer le mode lecture seule lors du partage](#share-a-project). Pour savoir, en tant qu’invité, si vous avez rejoint une session en lecture seule, examinez votre [État de session](#session-states).
@@ -227,7 +231,7 @@ Une fois qu’ils ont rejoint une session de collaboration, tous les collaborate
 > [!NOTE]
 > Le travail en mode collaboratif présente quelques limitations pour certains langages. Voir la section [plateforme prise en charge](../reference/platform-support.md) pour connaître l’état des fonctionnalités par langue.
 
-De même que les curseurs et les modifications, les sélections effectuées dans le fichier sont visibles par tous les participants, ce qui permet de surligner les endroits posant problème et de communiquer des idées.
+De même que les curseurs et les modifications, les sélections effectuées dans le fichier sont visibles par tous les participants, ce qui permet de surligner les endroits posant un problème ou de communiquer des idées.
 
 ![Capture d’écran du surlignement](../media/vs-highlight.png)
 
@@ -236,13 +240,13 @@ Mieux encore, tous les participants peuvent accéder à chacun des fichiers du p
 > [!NOTE]
 > Par défaut, Live Share partage également les fichiers ouverts extérieurs à la solution partagée. Si vous souhaitez désactiver cette fonctionnalité, définissez Partager les fichiers externes dans Outils &gt; Options &gt; Live Share sur Non.
 
-Comme les modifications effectuées sont conservées sur l’ordinateur de l’hôte à l’enregistrement, il n’est pas nécessaire de synchroniser, de transmettre ou d’envoyer les fichiers une fois l’édition terminée. Les modifications sont déjà prises en compte.
+Comme les modifications effectuées sont conservées sur l’ordinateur de l’hôte lors de l’enregistrement, il n’est pas nécessaire de synchroniser, de transmettre ou d’envoyer les fichiers une fois la modification terminée. Les modifications sont déjà prises en compte.
 
-> **Conseil de sécurité :** étant donné que tous les participants peuvent accéder aux fichiers et les modifier de manière indépendante, vous pouvez, en tant qu’hôte, limiter les fichiers accessibles dans votre projet au moyen d’un fichier vsls.json. Les invités doivent bien comprendre que ces paramètres sont susceptibles de les empêcher de voir certains fichiers. Pour plus d’informations, voir [Contrôler l’accès aux fichiers et leur visibilité](../reference/security.md#controlling-file-access-and-visibility).
+> **Conseil de sécurité :** étant donné que tous les participants peuvent accéder aux fichiers et les modifier de manière indépendante, vous pouvez, en tant qu’hôte, limiter les fichiers accessibles dans votre projet au moyen d’un fichier vsls.json. Les invités doivent bien comprendre que ces paramètres sont susceptibles de les empêcher de voir certains fichiers. Consultez [Contrôler l’accès au fichier et la visibilité](../reference/security.md#controlling-file-access-and-visibility) pour plus d’informations.
 
-### <a name="changing-participant-flag-behaviors"></a>Modifier le comportement de l’indicateur des participants
+### <a name="changing-participant-flag-behaviors"></a>Modification du comportement de l’indicateur des participants
 
-Par défaut, Visual Studio Live Share affiche automatiquement un « indicateur » à côté du curseur d’un participant au passage de la souris et lors de l’édition et du surlignement. Il est possible de modifier ce comportement. Pour ce faire :
+Par défaut, Visual Studio Live Share affiche automatiquement un « indicateur » à côté du curseur d’un participant au passage de la souris et lors de la modification et du surlignement. Il est possible de modifier ce comportement. Pour ce faire :
 
 1. Accédez à **Outils > Options > Live Share**.
 2. Modifiez l’option **Visibilité de l’indicateur** :
@@ -293,7 +297,7 @@ Il leur suffit de cliquer sur « Suivre » dans la notification pour placer le
 
 La fonctionnalité de débogage collaboratif de Visual Studio Live Share est un moyen puissant et unique de déboguer un problème. Au-delà de l’expérience collaborative de dépannage, elle offre également à tous les participants de la session la possibilité d’examiner des problèmes potentiellement propres à l’environnement en proposant une session de débogage partagée sur l’ordinateur de l’hôte.
 
-> **Conseil de sécurité :** étant donné que tous les participants peuvent accéder aux fichiers et les modifier de manière indépendante, vous pouvez, en tant qu’hôte, limiter les fichiers accessibles dans votre projet au moyen d’un fichier vsls.json. Sachez également que l’accès Console/REPL permet aux participants d’exécuter des commandes sur votre ordinateur ; de ce fait, limitez le débogage collaboratif aux personnes de confiance. Les invités doivent aussi bien comprendre qu’ils ne pourront pas forcément suivre le débogueur s’il effectue un pas à pas détaillé dans des fichiers restreints par ces paramètres. Pour plus d’informations, voir [Contrôler l’accès aux fichiers et leur visibilité](../reference/security.md#controlling-file-access-and-visibility).
+> **Conseil de sécurité :** étant donné que tous les participants peuvent accéder aux fichiers et les modifier de manière indépendante, vous pouvez, en tant qu’hôte, limiter les fichiers accessibles dans votre projet au moyen d’un fichier vsls.json. Sachez également que l’accès Console/REPL permet aux participants d’exécuter des commandes sur votre ordinateur ; de ce fait, limitez le débogage collaboratif aux personnes de confiance. Les invités doivent aussi bien comprendre qu’ils ne pourront pas forcément suivre le débogueur s’il effectue un pas à pas détaillé dans des fichiers restreints par ces paramètres. Pour plus d’informations, voir [Contrôler l’accès aux fichiers et leur visibilité](../reference/security.md#controlling-file-access-and-visibility).
 
 La procédure est simple. Il suffit à l’hôte de session de collaboration de lancer le débogage comme d’habitude dans Visual Studio.
 
@@ -361,7 +365,7 @@ De temps en temps, il peut être utile à un hôte de session de collaboration d
 
 Les invités pourront alors accéder au serveur partagé sur ce même port, avec leur propre ordinateur local. Par exemple, si vous avez partagé un serveur web **qui s’exécute sur le port 3000**, l’invité peut y accéder sur son **propre ordinateur** à l’emplacement http://localhost:3000 ! La connexion est établie via un tunnel SSH ou SSL sécurisé entre l’hôte et les invités, et authentifiée via le service, ce qui garantit que seuls les participants de la session de collaboration y ont accès.
 
-> **Conseil de sécurité :** en tant qu’hôte, choisissez soigneusement les ports que vous partagez avec les invités et tenez-vous-en aux ports d’application (par opposition aux ports système). Du côté des invités, les ports partagés se comportent exactement comme si le serveur/service était en cours d’exécution sur leur propre ordinateur. Cette fonction est très utile, mais il faut éviter tout risque de partager le mauvais port.
+> **Conseil de sécurité :** en tant qu’hôte, choisissez soigneusement les ports que vous partagez avec les invités et tenez-vous-en aux ports d’application (par opposition aux ports système). Du côté des invités, les ports partagés se comportent exactement comme si le serveur/service était en cours d’exécution sur leur propre ordinateur. Cette fonction est très utile, mais il faut éviter tout risque de partager le mauvais port.
 
 Pour des raisons de sécurité, seuls les serveurs qui s’exécutent sur les ports spécifiés sont accessibles aux autres invités. Il est facile pour un **hôte** de session de collaboration d’en ajouter un. Voici comment :
 
@@ -406,7 +410,7 @@ Pour mettre fin à votre session de terminal, tapez simplement exit ou fermez la
 
 ## <a name="session-states"></a>États de session
 
-Lorsque vous lancez ou rejoignez une session de collaboration et que vous avez accès au contenu partagé, le bouton « Partager » en haut à droite se met à jour pour refléter l’état de la session de collaboration active.
+Lorsque vous lancez ou rejoignez une session de collaboration et que vous avez accès au contenu partagé, le bouton « Live Share » en haut à droite se met à jour pour refléter l’état de la session de collaboration active.
 
 Voici les états les plus courants :
 
@@ -433,9 +437,9 @@ Tandis que les invités risquent encore de rencontrer quelques défauts dans les
 
 Pour plus d’informations, voir ces articles complémentaires.
 
-- [Démarrage rapide : Partager un projet](../quickstart/share.md)
+- [Démarrage rapide : Partager votre premier projet](../quickstart/share.md)
 - [Démarrage rapide : Rejoindre une session](../quickstart/join.md)
-- [Guide pratique : Travailler en collaboration à l’aide de Visual Studio Code](vscode.md)
+- [Guide pratique : Collaborer à l’aide de Visual Studio Code](vscode.md)
 - [Exigences de connectivité pour Live Share](../reference/connectivity.md)
 - [Fonctionnalités de sécurité de Live Share](../reference/security.md)
 
