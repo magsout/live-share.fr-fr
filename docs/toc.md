@@ -3,9 +3,9 @@
 ## [Qu’est-ce que Visual Studio Live Share ?](index.md)
 # Démarrages rapides
 ## [Partager votre premier projet](quickstart/share.md)
-## [Rejoindre votre première session](quickstart/join.md)
+## [Rejoindre une session](quickstart/join.md)
 # Guides pratiques : VS Code
-## [Vue d’ensemble](use/vscode.md)
+## [Vue d'ensemble](use/vscode.md)
 ## [Installation](use/vscode.md#installation)
 ## [Connexion](use/vscode.md#sign-in)
 ## [Partager un projet](use/vscode.md#share-a-project)
@@ -16,7 +16,7 @@
 ## [Partager un serveur](use/vscode.md#share-a-server)
 ## [Partager un terminal](use/vscode.md#share-a-terminal)
 # Guides pratiques : Visual Studio
-## [Vue d’ensemble](use/vs.md)
+## [Vue d'ensemble](use/vs.md)
 ## [Installation](use/vs.md#installation)
 ## [Connexion](use/vs.md#sign-in)
 ## [Partager un projet](use/vs.md#share-a-project)
@@ -29,13 +29,14 @@
 # Référence
 ## [Sécurité](reference/security.md)
 ## [Connectivité](reference/connectivity.md)
-## [Langages pris en charge](reference/platform-support.md)
+## [Prise en charge linguistique](reference/platform-support.md)
 ## [Extensions prises en charge](reference/extensions.md)
 ## [Cas d’usage courants](reference/use-cases.md)
 ## [Détails d’installation pour Linux](reference/linux.md)
+## [Membres du programme Insider](reference/insiders.md)
 ## [Notes de publication](https://aka.ms/vsls-releases)
 # Ressources
 ## [Résolution des problèmes](troubleshooting.md)
 ## [Fournir des commentaires](support.md)
-## [FAQ](faq.md)
+## [Questions fréquentes (FAQ)](faq.md)
 ## [Profil utilisateur](user-profile.md)
