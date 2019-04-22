@@ -15,7 +15,7 @@ ms.openlocfilehash: 1b6ecafc933c6521f6c21ec0dcd38c25e889a0e2
 ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853571"
 ---
 <!--
@@ -24,7 +24,7 @@ All rights reserved.
 Creative Commons Attribution 4.0 License (International): https://creativecommons.org/licenses/by/4.0/legalcode
 -->
 
-# <a name="common-use-cases"></a>Cas d’utilisation courants
+# <a name="common-use-cases"></a>Cas d’usage courants
 
 L’objectif principal de partage en direct de Visual Studio consiste à permettre aux développeurs de collaborer entre eux plus facilement, sans introduire de tout avis sur quand et comment le faire (par exemple, quel outil de communication à utiliser, la méthodologie de logiciels « droite » ou le flux de travail SCM). De cette façon, vos outils peuvent prendre en charge les interactions qui se produisent **naturellement**et en tant que **fréquemment** en fonction des besoins, mais d’une manière qui **avec les compliments** comment vous préférez déjà travailler.
 
@@ -146,10 +146,10 @@ En outre, développement réel est plus que simplement écrire du code. Étant d
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en charge de langage et plateforme](platform-support.md)
-- [Exigences de connectivité pour le partage en direct](connectivity.md)
-- [Fonctionnalités de sécurité de partage en direct](security.md)
-- [Tous les bogues majeurs, demandes de fonctionnalités et limitations](https://aka.ms/vsls-issues)
+- [Prise en charge de langues et de plateformes](platform-support.md)
+- [Exigences de connectivité pour Live Share](connectivity.md)
+- [Fonctionnalités de sécurité de Live Share](security.md)
+- [Tous les bogues majeurs, toutes les demandes de fonctionnalités et toutes les limitations](https://aka.ms/vsls-issues)
 - [Toutes les demandes de fonctionnalités et limitations](https://aka.ms/vsls-feature-requests)
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting.md) ou [fournir des commentaires](../support.md).

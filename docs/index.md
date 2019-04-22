@@ -15,7 +15,7 @@ ms.openlocfilehash: 5f67086e9040a477e082cbd3ef27a1789c6406c5
 ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853584"
 ---
 <!--
@@ -50,8 +50,8 @@ Ensuite, le téléchargement et l’installation de l’extension Visual Studio 
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="media/vs-code.svg" width="128px" alt="Visual Studio Code logo"/></td>
     <td style="border:none;">
         <strong>Visual Studio Code (1.22.0+)</strong><br />
-        1. Installez <a href="https://code.visualstudio.com/">Visual Studio Code</a> pour Windows (7, 8.1 ou 10), macOS <b>(Sierra+)</b>, Linux 64 bits Linux <b>(<a href="use/vscode.md#installation">détails</a>)</b><br />
-        2. Téléchargez et installez l’extension Visual Studio Live Share à partir du Marketplace. <br />
+        1.Installez <a href="https://code.visualstudio.com/">Visual Studio Code</a> pour Windows (7, 8.1 ou 10), macOS <b>(Sierra+)</b>, Linux 64 bits <b>(<a href="use/vscode.md#installation">détails</a>)</b><br />
+        2. Téléchargez et installez l’extension Visual Studio Live Share depuis le Marketplace. <br />
         3. Rechargez et attendez que les dépendances soient téléchargées et installées (voir la barre d’état).<br />
         4. <strong>Linux</strong> : Si vous êtes invité à <a href="reference/linux.md#install-linux-prerequisites">installer les bibliothèques</a>, cliquez sur Installer, saisissez le mot de passe et redémarrez VS Code lorsque vous avez terminé.<br />
         <a href="https://aka.ms/vsls-dl/vscode"><img src="media/download.png" alt="Download button"></a>
@@ -60,8 +60,8 @@ Ensuite, le téléchargement et l’installation de l’extension Visual Studio 
 <tr style="border:none;">
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="media/vs-ide-2019.svg" width="128px" alt="Visual Studio 2019 logo" /></td>
     <td  style="border:none;">
-        <strong>Visual Studio 2019 </strong><br />
-        1. Installez <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019</a>.<br/>
+        <strong>Visual Studio 2019 </strong><br />
+        1.Installez <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019</a>.<br/>
         2. Installez une <a href="reference/platform-support.md">charge de travail prise en charge</a>. (par exemple, ASP.NET, .NET Core, C++ et/ou Node.js)<br />
         3. Visual Studio Live Share est installé par défaut avec ces charges de travail. <br />
     </td>
@@ -70,9 +70,9 @@ Ensuite, le téléchargement et l’installation de l’extension Visual Studio 
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="media/vs-ide-2017.svg" width="128px" alt="Visual Studio 2017 logo" /></td>
     <td  style="border:none;">
         <strong>Visual Studio 2017 15.6 ou une version ultérieure</strong><br />
-        1. Installez la dernière version de <a href="https://visualstudio.microsoft.com/vs/older-downloads/">Visual Studio 2017</a> (15.6+) sur Windows (7, 8.1 ou 10).<br/>
+        1. Installez la dernière version de <a href="https://visualstudio.microsoft.com/vs/older-downloads/">Visual Studio 2017</a>. (15.6+) sous Windows (7, 8.1 ou 10).<br/>
         2. Installez une <a href="reference/platform-support.md">charge de travail prise en charge</a>. (par exemple, ASP.NET, .NET Core, C++ et/ou Node.js)<br />
-        3. Téléchargez et installez l’extension Visual Studio Live Share à partir du Marketplace. <br />
+        3. Téléchargez et installez l’extension Visual Studio Live Share depuis le Marketplace. <br />
         <a href="https://aka.ms/vsls-dl/vs"><img style="padding: 0; spacing: 0;" src="media/download.png" alt="Download button" ></a><br />
     </td>
 </tr>
@@ -159,12 +159,12 @@ Pour garantir des performances optimales, Visual Studio Live Share prend en char
 Démarrages rapides
 
 - [Partager votre premier projet](quickstart/share.md)
-- [Rejoindre une session](quickstart/join.md)
+- [Rejoindre votre première session](quickstart/join.md)
 
 Articles Comment faire
 
 - [Collaborer à l’aide de Visual Studio Code](use/vscode.md)
-- [Travailler en collaboration à l’aide de Visual Studio](use/vs.md)
+- [Collaborer à l’aide de Visual Studio](use/vs.md)
 
 Référence
 

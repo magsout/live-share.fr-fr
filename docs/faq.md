@@ -15,7 +15,7 @@ ms.openlocfilehash: 1b68dc90f4bac5e21c04c555ab2d8fc7f59aad55
 ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853597"
 ---
 <!--
@@ -32,7 +32,7 @@ Live Share vous permet d’éditer et de déboguer en collaboration avec d’aut
 ## <a name="what-are-the-tooling-requirements-for-using-live-share"></a>Quelles sont les exigences d’outils pour l’utilisation dynamique de partage ?
 Le [fonctionnalités principales](#what-are-the-core-capabilities-of-live-share) de partage en direct sont entièrement pris en charge dans les outils suivants :
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [Visual Studio 2017 15.6 +)](https://visualstudio.microsoft.com/vs/older-downloads/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -98,10 +98,10 @@ Vous pouvez afficher l’ensemble des problèmes connus et éléments de la feui
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Prise en charge de langage et plateforme](platform-support.md)
-- [Exigences de connectivité pour le partage en direct](reference/connectivity.md)
-- [Fonctionnalités de sécurité de partage en direct](reference/security.md)
-- [Tous les bogues majeurs, demandes de fonctionnalités et limitations](https://aka.ms/vsls-issues)
+- [Prise en charge de langues et de plateformes](platform-support.md)
+- [Exigences de connectivité pour Live Share](reference/connectivity.md)
+- [Fonctionnalités de sécurité de Live Share](reference/security.md)
+- [Tous les bogues majeurs, toutes les demandes de fonctionnalités et toutes les limitations](https://aka.ms/vsls-issues)
 - [Toutes les demandes de fonctionnalités et limitations](https://aka.ms/vsls-feature-requests)
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](troubleshooting.md) ou [fournir des commentaires](support.md).
