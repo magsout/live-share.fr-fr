@@ -15,7 +15,7 @@ ms.openlocfilehash: c5c86b158facfe1fe8fa7f5ae14a9511c55e0877
 ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853545"
 ---
 <!--
@@ -44,8 +44,8 @@ L’extension est facile à installer. Procédez comme suit :
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="../media/vs-code.svg" width="128px" alt="Visual Studio Code logo"/></td>
     <td style="border:none;">
         <strong>Visual Studio Code (1.22.0+)</strong><br />
-        1. Installez <a href="https://code.visualstudio.com/">Visual Studio Code</a> pour Windows (7, 8.1 ou 10), macOS <b>(Sierra+)</b>, Linux 64 bits Linux <b>(<a href="../use/vscode.md#installation">détails</a>)</b><br />
-        2. Téléchargez et installez l’extension Visual Studio Live Share à partir du Marketplace. <br />
+        1.Installez <a href="https://code.visualstudio.com/">Visual Studio Code</a> pour Windows (7, 8.1 ou 10), macOS <b>(Sierra+)</b>, Linux 64 bits <b>(<a href="../use/vscode.md#installation">détails</a>)</b><br />
+        2. Téléchargez et installez l’extension Visual Studio Live Share depuis le Marketplace. <br />
         3. Rechargez et attendez que les dépendances soient téléchargées et installées (voir la barre d’état).<br />
         4. <strong>Linux</strong> : Si vous êtes invité à <a href="../reference/linux.md#install-linux-prerequisites">installer les bibliothèques</a>, cliquez sur Installer, saisissez le mot de passe et redémarrez VS Code lorsque vous avez terminé.<br />
         <a href="https://aka.ms/vsls-dl/vscode" alt="Download button"><img src="../media/download.png"></a>
@@ -54,8 +54,8 @@ L’extension est facile à installer. Procédez comme suit :
 <tr style="border:none;">
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="../media/vs-ide-2019.svg" width="128px" alt="Visual Studio 2019 logo" /></td>
     <td  style="border:none;">
-        <strong>Visual Studio 2019 </strong><br />
-        1. Installez <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019</a>.<br/>
+        <strong>Visual Studio 2019 </strong><br />
+        1.Installez <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019</a>.<br/>
         2. Installez une <a href="../reference/platform-support.md">charge de travail prise en charge</a>. (par exemple, ASP.NET, .NET Core, C++ et/ou Node.js)<br />
         3. Visual Studio Live Share est installé par défaut avec ces charges de travail. <br />
     </td>
@@ -64,9 +64,9 @@ L’extension est facile à installer. Procédez comme suit :
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="../media/vs-ide-2017.svg" width="128px" alt="Visual Studio 2017 logo" /></td>
     <td  style="border:none;">
         <strong>Visual Studio 2017 15.6 ou une version ultérieure</strong><br />
-        1. Installez la dernière version de <a href="https://visualstudio.microsoft.com/vs/older-downloads/">Visual Studio 2017</a> (15.6+) sur Windows (7, 8.1 ou 10).<br/>
+        1. Installez la dernière version de <a href="https://visualstudio.microsoft.com/vs/older-downloads/">Visual Studio 2017</a>. (15.6+) sous Windows (7, 8.1 ou 10).<br/>
         2. Installez une <a href="../reference/platform-support.md">charge de travail prise en charge</a>. (par exemple, ASP.NET, .NET Core, C++ et/ou Node.js)<br />
-        3. Téléchargez et installez l’extension Visual Studio Live Share à partir du Marketplace. <br />
+        3. Téléchargez et installez l’extension Visual Studio Live Share depuis le Marketplace. <br />
         <a href="https://aka.ms/vsls-dl/vs"><img style="padding: 0; spacing: 0;" src="../media/download.png" alt="Download button" ></a><br />
     </td>
 </tr>
@@ -140,7 +140,7 @@ Si l’hôte est hors connexion, vous serez averti à ce moment-là. Vous pourre
 
 C’est tout ! Dans quelques instants, vous serez connecté à la session de collaboration de votre collègue. Par défaut, l’hôte accepte automatiquement les personnes qui rejoignent la session, mais si l’hôte est configuré pour [demander l’approbation de l’invité](../reference/security.md#requiring-guest-approval), vous verrez une mention sur la barre d’état/dans la boîte de dialogue « Rejoindre » indiquant que Live Share attend que l’hôte approuve votre demande de participation.
 
-> **Conseil de sécurité :** En tant qu’invité rejoignant une session de collaboration, il est important de comprendre que les hôtes peuvent restreindre votre accès à certains fichiers ou fonctionnalités. Vous voulez comprendre les implications de sécurité de certains paramètres et fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
+> **Conseil en sécurité :** En tant qu’invité rejoignant une session de collaboration, il est important de comprendre que les hôtes peuvent restreindre votre accès à certains fichiers ou fonctionnalités. Vous voulez comprendre les implications de sécurité de certains paramètres et fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
 
 Voici quelques éléments à essayer :
 
@@ -159,8 +159,8 @@ Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting
 Pour plus d’informations, voir ces articles complémentaires.
 
 - [Démarrage rapide : Partager votre premier projet](share.md)
-- [Guide pratique : Collaborer à l’aide de Visual Studio Code](../use/vscode.md)
-- [Guide pratique : Travailler en collaboration à l’aide de Visual Studio](../use/vs.md)
+- [Guide pratique : Collaborer à l’aide de Visual Studio Code](../use/vscode.md)
+- [Guide pratique : Collaborer à l’aide de Visual Studio](../use/vs.md)
 
 Référence
 

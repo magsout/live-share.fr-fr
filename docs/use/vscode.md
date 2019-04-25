@@ -15,7 +15,7 @@ ms.openlocfilehash: ed96ba572a58b8d3bfda7b634f1052a1b4e73051
 ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853636"
 ---
 <!--
@@ -65,7 +65,7 @@ Ensuite, le téléchargement et l’installation de l’extension Visual Studio 
 
 En téléchargeant et en utilisant Visual Studio Live Share, vous acceptez les [termes du contrat de licence](https://aka.ms/vsls-license) et la [déclaration de confidentialité](https://www.microsoft.com/en-us/privacystatement/EnterpriseDev/default.aspx). Si vous rencontrez des problèmes, consultez la section [dépannage](../troubleshooting.md).
 
-[![D[télécharger](../media/download.png)](https://aka.ms/vsls-dl/vscode)
+[![Télécharger](../media/download.png)](https://aka.ms/vsls-dl/vscode)
 
 ### <a name="linux-install-steps"></a>Étapes d’installation pour Linux
 
@@ -197,7 +197,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
     Envoyez le lien par courrier électronique, Slack, Skype, etc. à ceux que vous souhaitez inviter. Étant donné le niveau d’accès que les sessions Live Share peuvent offrir aux invités, **limitez les partages aux personnes de confiance** et pensez aux implications de ce que vous partagez.
 
-    > **Conseil de sécurité :** Vous voulez comprendre les implications de sécurité de certaines fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
+    > **Conseil en sécurité :** Vous voulez comprendre les implications de sécurité de certaines fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
 
     Si un invité a des questions, l’article « [Guide de démarrage rapide : Rejoindre votre première session](../quickstart/join.md) » fournit des informations supplémentaires sur la position d’invité.
 
@@ -256,7 +256,7 @@ Pour rejoindre une session de collaboration, le plus simple est d’ouvrir le li
     > [!NOTE]
     > Vérifiez que vous avez **démarré l’outil au moins une fois** après l’installation de l’extension Visual Studio Live Share et laissé l’installation se terminer avant l’ouverture/la réouverture de la page d’invitation. Le problème persiste ? Consultez la section [Accès manuel](#join-manually).
 
-3. **Collaborer**
+3. **Collaborez**
 
     C’est tout ! Dans quelques instants, vous serez connecté et vous pourrez commencer à collaborer.
 
@@ -282,7 +282,7 @@ Vous pouvez également opter pour un accès manuel sans navigateur web, ce qui p
 
     Collez l’URL de l’invitation que vous avez reçue et tapez sur Entrée pour confirmer.
 
-4. **Collaborez !**
+4. **Collaborez !**
 
     C’est tout ! Vous avez momentanément accès à la session de collaboration.
 
@@ -544,9 +544,9 @@ Tandis que les invités risquent encore de rencontrer quelques défauts dans les
 
 Pour plus d’informations, voir ces articles complémentaires.
 
-- [Démarrage rapide : Partager votre premier projet](../quickstart/share.md)
+- [Démarrage rapide : Partager un projet](../quickstart/share.md)
 - [Démarrage rapide : Rejoindre une session](../quickstart/share.md)
-- [Guide pratique : Travailler en collaboration à l’aide de Visual Studio](vs.md)
+- [Guide pratique : Collaborer à l’aide de Visual Studio](vs.md)
 - [Exigences de connectivité pour Live Share](../reference/connectivity.md)
 - [Fonctionnalités de sécurité de Live Share](../reference/security.md)
 - [Détails de l’installation de Linux](../reference/linux.md)

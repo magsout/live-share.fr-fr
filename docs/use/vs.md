@@ -15,7 +15,7 @@ ms.openlocfilehash: 55eb4b0a5e819b00754d75e4682dd1aa97bbf576
 ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853623"
 ---
 <!--
@@ -53,7 +53,7 @@ Pour Visual Studio 2017
 
 En téléchargeant et en utilisant Visual Studio Live Share, vous acceptez les [termes du contrat de licence](https://aka.ms/vsls-license) et la [déclaration de confidentialité](https://www.microsoft.com/en-us/privacystatement/EnterpriseDev/default.aspx). Si vous rencontrez des problèmes, consultez la section [dépannage](../troubleshooting.md).
 
-[![D[télécharger](../media/download.png)](https://aka.ms/vsls-dl/vs)
+[![Télécharger](../media/download.png)](https://aka.ms/vsls-dl/vs)
 
 ## <a name="sign-in"></a>Se connecter
 
@@ -83,7 +83,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
 2. **Ouvrir une solution, un projet ou un dossier**
 
-    Suivez votre flux de travail habituel pour ouvrir le dossier, le projet ou la solution que vous souhaitez partager avec vos invités.
+    Suivez votre workflow habituel pour ouvrir le dossier, le projet ou la solution que vous souhaitez partager avec vos invités.
 
 3. **[Facultatif] Mettre à jour des fichiers masqués ou exclus**
 
@@ -96,7 +96,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
     ![Bouton Partager de Visual Studio](../media/vs-share-button.png)
 
     > [!NOTE]
-    > Vous pouvez être invité par votre logiciel de pare-feu de bureau à autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation est entièrement facultative mais permet à un « mode direct » sécurisé d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
+    > Votre logiciel de pare-feu de bureau pourra vous demander d’autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation est entièrement facultative mais permet à un « mode direct » sécurisé d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
 
     Un lien d’invitation est automatiquement copié dans votre Presse-papiers. Une fois ouvert dans un navigateur, il permet à d’autres utilisateurs de rejoindre une nouvelle session de collaboration qui partage le contenu de ces dossiers avec eux.
 
@@ -116,7 +116,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
     Envoyez le lien par courrier électronique, Slack, Skype, etc. à ceux que vous souhaitez inviter. Étant donné le niveau d’accès que les sessions Live Share peuvent offrir aux invités, **limitez les partages aux personnes de confiance** et pensez aux implications de ce que vous partagez.
 
-    > **Conseil de sécurité :** Vous voulez comprendre les implications de sécurité de certaines fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
+    > **Conseil en sécurité :** Vous voulez comprendre les implications de sécurité de certaines fonctionnalités Live Share ? Consultez l’article [Sécurité](../reference/security.md).
 
     Si un invité a des questions, l’article « [Guide de démarrage rapide : Rejoindre votre première session](../quickstart/join.md) » fournit des informations supplémentaires sur la position d’invité.
 
@@ -138,7 +138,7 @@ En tant qu’hôte, vous pouvez arrêter complètement le partage et mettre fin 
 
 ![Arrêter le partage](../media/vs-stop-sharing.png)
 
-Tous les invités reçoivent une notification les informant que la session est terminée. Ils ne pourront plus accéder au contenu ; tous les fichiers temporaires sont automatiquement nettoyés.
+Tous les invités recevront une notification les informant que la session est terminée. Ils ne pourront plus accéder au contenu ; tous les fichiers temporaires sont automatiquement nettoyés.
 
 En cas de problème de partage, voir [Résolution des problèmes](../troubleshooting.md#share-and-join).
 
@@ -171,9 +171,9 @@ Pour rejoindre une session de collaboration, le plus simple est d’ouvrir le li
     Si l’hôte est hors connexion, vous serez averti à ce moment-là. Vous pourrez alors le contacter et lui demander de relancer le partage.
 
     > [!NOTE]
-    > Le problème persiste ? Consultez la section [Accès manuel](#join-manually).
+    > Si le problème persiste, Consultez la section [Accès manuel](#join-manually).
 
-3. **Collaborer**
+3. **Travailler en collaboration**
 
     C'est tout ! Dans quelques instants, vous serez connecté et vous pourrez commencer à collaborer.
 
@@ -201,7 +201,7 @@ Vous pouvez également opter pour un accès manuel sans navigateur web, ce qui p
 
     Collez l’URL de l’invitation que vous avez reçue et confirmez.
 
-4. **Collaborez !**
+4. **Travailler en collaboration**
 
     C’est tout ! Vous avez momentanément accès à la session de collaboration.
 
@@ -240,13 +240,13 @@ Mieux encore, tous les participants peuvent accéder à chacun des fichiers du p
 > [!NOTE]
 > Par défaut, Live Share partage également les fichiers ouverts extérieurs à la solution partagée. Si vous souhaitez désactiver cette fonctionnalité, définissez Partager les fichiers externes dans Outils &gt; Options &gt; Live Share sur Non.
 
-Comme les modifications effectuées sont conservées sur l’ordinateur de l’hôte lors de l’enregistrement, il n’est pas nécessaire de synchroniser, de transmettre ou d’envoyer les fichiers une fois la modification terminée. Les modifications sont déjà prises en compte.
+Comme les modifications effectuées sont conservées sur l’ordinateur de l’hôte à l’enregistrement, il n’est pas nécessaire de synchroniser, de transmettre ou d’envoyer les fichiers une fois l’édition terminée. Les modifications sont déjà prises en compte.
 
 > **Conseil de sécurité :** étant donné que tous les participants peuvent accéder aux fichiers et les modifier de manière indépendante, vous pouvez, en tant qu’hôte, limiter les fichiers accessibles dans votre projet au moyen d’un fichier vsls.json. Les invités doivent bien comprendre que ces paramètres sont susceptibles de les empêcher de voir certains fichiers. Consultez [Contrôler l’accès au fichier et la visibilité](../reference/security.md#controlling-file-access-and-visibility) pour plus d’informations.
 
 ### <a name="changing-participant-flag-behaviors"></a>Modification du comportement de l’indicateur des participants
 
-Par défaut, Visual Studio Live Share affiche automatiquement un « indicateur » à côté du curseur d’un participant au passage de la souris et lors de la modification et du surlignement. Il est possible de modifier ce comportement. Pour ce faire :
+Par défaut, Visual Studio Live Share affiche automatiquement un « indicateur » à côté du curseur d’un participant au passage de la souris et lors de l’édition et du surlignement. Il est possible de modifier ce comportement. Pour ce faire :
 
 1. Accédez à **Outils > Options > Live Share**.
 2. Modifiez l’option **Visibilité de l’indicateur** :
@@ -437,9 +437,9 @@ Tandis que les invités risquent encore de rencontrer quelques défauts dans les
 
 Pour plus d’informations, voir ces articles complémentaires.
 
-- [Démarrage rapide : Partager votre premier projet](../quickstart/share.md)
+- [Démarrage rapide : Partager un projet](../quickstart/share.md)
 - [Démarrage rapide : Rejoindre une session](../quickstart/join.md)
-- [Guide pratique : Collaborer à l’aide de Visual Studio Code](vscode.md)
+- [Guide pratique : Travailler en collaboration à l’aide de Visual Studio Code](vscode.md)
 - [Exigences de connectivité pour Live Share](../reference/connectivity.md)
 - [Fonctionnalités de sécurité de Live Share](../reference/security.md)
 
