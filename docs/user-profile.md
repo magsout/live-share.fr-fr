@@ -11,12 +11,12 @@ ms.author: joncart
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 38fb6fada1030bddac8f3437f19f0ae259f5626e
-ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
+ms.openlocfilehash: 1d3b4977745e33ba0ee1b599ea4257c4a49d970d
+ms.sourcegitcommit: bfa1020882095fcc7d31cd71cf1f2e601e3bea06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640027"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66224700"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -28,8 +28,8 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 Lorsque vous authentifiez avec partage en direct de Visual Studio, il crée un profil utilisateur, ce qui permet de participants avec lequel vous collaborez à voir avec qui vous sont (par exemple, votre adresse de messagerie, l’avatar). À un moment donné, vous pouvez afficher les informations de profil qui partage Live a stocké sur votre nom, en accédant à une des pages suivantes (selon le fournisseur d’identité que vous avez utilisé) :
 
-- [Compte Microsoft / Azure Active Directory](https://insiders.liveshare.vsengsaas.visualstudio.com/auth/identity/microsoft/viewprofile)
-- [GitHub](https://insiders.liveshare.vsengsaas.visualstudio.com/auth/identity/github/viewprofile)
+- [Compte Microsoft / Azure Active Directory](https://prod.liveshare.vsengsaas.visualstudio.com/auth/identity/microsoft/viewprofile)
+- [GitHub](https://prod.liveshare.vsengsaas.visualstudio.com/auth/identity/github/viewprofile)
 
 La page vous demander de vous connecter à vérifier votre identité et puis afficher la sortie JSON brute de votre profil utilisateur.
 
@@ -43,8 +43,8 @@ Si un profil stocké pour l’identité que vous êtes connecté ne contient pas
 
 Si vous souhaitez supprimer votre profil utilisateur, vous pouvez cliquer sur le lien intitulé `Click here to get your data removed from our systems` sur le [page de profil utilisateur](#user-profile). Vous pouvez visiter un de ces pages directement (selon le fournisseur d’identité que vous avez utilisé) :
 
-- [Compte Microsoft / Azure Active Directory](https://insiders.liveshare.vsengsaas.visualstudio.com/auth/identity/microsoft/deleteme)
-- [GitHub](https://insiders.liveshare.vsengsaas.visualstudio.com/auth/identity/github/deleteme)
+- [Compte Microsoft / Azure Active Directory](https://prod.liveshare.vsengsaas.visualstudio.com/auth/identity/microsoft/deleteme)
+- [GitHub](https://prod.liveshare.vsengsaas.visualstudio.com/auth/identity/github/deleteme)
 
 Sinon, partage en direct de Visual Studio supprime automatiquement votre profil de 30 jours après votre dernière réussite de connexion à. Dans ce contexte, un réussie de « connexion » fait référence à ce qui suit (en fonction de l’outil que vous utilisez) :
 

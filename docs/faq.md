@@ -11,12 +11,12 @@ ms.author: joncart
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 1b68dc90f4bac5e21c04c555ab2d8fc7f59aad55
-ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
+ms.openlocfilehash: 91ffc42c06e70839dbadbd2487cd02970ded3346
+ms.sourcegitcommit: bfa1020882095fcc7d31cd71cf1f2e601e3bea06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58853597"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66224712"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -87,11 +87,7 @@ Partage en direct va une étape plus loin et vous permet de partager une session
 Notre objectif est de prendre en charge le paysage de divers langages et plateformes, afin de que nous pouvons bénéficier d’une collaboration riche, quel que soit le type d’application en cours de développement. Consultez le [langage et plateforme prise en charge](reference/platform-support.md) article pour plus d’informations sur ce qui fonctionne aujourd'hui.
 
 ## <a name="how-many-developers-can-join-a-collaboration-session"></a>Combien de développeurs permettre rejoindre une session de collaboration ?
-Nous prenons en charge 30 invités simultanées, le développeur qui partage (« hébergement ») en plus de leur projet. Par défaut, nous activons invités jusqu'à 5 dans une session. 
-
-Pour activer la limite de l’invité accrue : 
-- **VS Code :** Ajoutez « liveshare.increasedGuestLimit":"true » à settings.json.
-- **VISUAL STUDIO :** Définir des outils > Options > Partage Live > augmentation de la limite invité sur « True »
+Nous prenons en charge 30 invités simultanées, le développeur qui partage (« hébergement ») en plus de leur projet. 
 
 ## <a name="what-is-the-roadmap"></a>Quelle est la feuille de route ?
 Vous pouvez afficher l’ensemble des problèmes connus et éléments de la feuille de route [ici](https://aka.ms/vsls-issues). Si vous souhaitez voir les demandes de fonctionnalités uniquement, plutôt que tous les problèmes, consultez [ici](https://aka.ms/vsls-feature-requests). Nous vous encourageons à voter pour des éléments existants, demandes de nouvelles fonctionnalités de fichiers et enregistrer des rapports de bogues, afin de nous aider à la direction du produit plus tard, de forme.
