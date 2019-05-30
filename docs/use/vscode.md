@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: ed96ba572a58b8d3bfda7b634f1052a1b4e73051
-ms.sourcegitcommit: 1706889dd48377932868a03e88fbd2b4512a3729
+ms.openlocfilehash: bda0ca256af4a561724d96777e640eec1ca0f0fb
+ms.sourcegitcommit: bfa1020882095fcc7d31cd71cf1f2e601e3bea06
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58853636"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66224723"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -91,7 +91,7 @@ Généralement, Visual Studio Live Share **ne nécessite pas d’étapes d’ins
 
 Même si ce n’est pas courant, certaines distributions **peuvent vous informer que votre mot de passe d’administrateur (sudo) est nécessaire** pour terminer le processus d’installation. Une fenêtre de terminal vous indiquant où le lanceur du navigateur sera installé s’affiche. Entrez simplement votre mot de passe lorsque vous y êtes invité et appuyez sur Entrée une fois l’installation terminée pour fermer la fenêtre de terminal.
 
-Vous pouvez en apprendre plus sur la raison pour laquelle cela est nécessaire et sur l’endroit où Live Share place fichiers  **[ici](../reference/linux.md#linux-browser-integration)**. Notez que même si vous n’arrivez pas à faire fonctionner l’intégration du navigateur, vous pouvez toujours **[rejoindre les sessions de collaboration manuellement](../use/vscode.md#join-manually)**.
+Vous pouvez en apprendre plus sur la raison pour laquelle cela est nécessaire et sur l’endroit où Live Share place fichiers  **[ici](../reference/linux.md#linux-browser-integration)** . Notez que même si vous n’arrivez pas à faire fonctionner l’intégration du navigateur, vous pouvez toujours **[rejoindre les sessions de collaboration manuellement](../use/vscode.md#join-manually)** .
 
 ## <a name="sign-in"></a>Se connecter
 
@@ -106,6 +106,12 @@ Une notification vous demandant de vous connecter à l’aide de votre navigateu
 ![Notification toast demandant de se connecter à l’aide d’un navigateur Web](../media/vscode-sign-in-toast.png)
 
 > **Utilisateurs Linux :** Vous pouvez être invité à entrer un code utilisateur si vous utilisez une version antérieure de Live Share (v0.3.295 ou postérieure). Mettez à jour vers la dernière version de l’extension ou cliquez sur le lien « Vous rencontrez des problèmes ? » après vous être connecté pour afficher le code. Consultez [ce qui suit pour plus d'informations](#sign-in-using-a-user-code).
+
+#
+
+> **Conseil avancé :** Les paramètres `liveshare.account` et `liveshare.accountProvider` vous permettent de sélectionner le compte qui doit être utilisé pour la connexion automatique dans le cas où vous avez mis en cache des informations d’identification pour plusieurs comptes disponibles. 
+
+> Par exemple, imaginez que vous travaillez sur 2 projets avec lesquels vous voulez vous connecter avec des identités différentes. Dans les paramètres de votre espace de travail VSCode, vous pouvez définir le paramètre `liveshare.account` sur différentes adresses e-mail dans le répertoire de chaque projet pour garantir qu’ils se connectent chacun automatiquement avec le compte approprié. Le paramètre `liveshare.accountProvider` peut être défini sur `"microsoft"` ou sur `"github"` dans le cas où vous utilisez la même adresse e-mail avec plusieurs fournisseurs.
 
 Si Visual Studio Code ne reprend pas vos informations d’identification lorsque vous avez terminé le processus de connexion dans le navigateur, consultez [Connexion avec un code utilisateur](#sign-in-using-a-user-code). Vous pouvez également consulter la page [Résolution des problèmes](../troubleshooting.md#sign-in) pour plus de conseils.
 
