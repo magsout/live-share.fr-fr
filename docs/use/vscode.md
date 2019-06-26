@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: bda0ca256af4a561724d96777e640eec1ca0f0fb
-ms.sourcegitcommit: bfa1020882095fcc7d31cd71cf1f2e601e3bea06
+ms.openlocfilehash: 079662c94f22497f5d96b4a3c6e35e4f13db2fa1
+ms.sourcegitcommit: c702aafb65b0fc43cb210e1bb7340cef48b57f35
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66224723"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67322827"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -109,8 +109,7 @@ Une notification vous demandant de vous connecter à l’aide de votre navigateu
 
 #
 
-> **Conseil avancé :** Les paramètres `liveshare.account` et `liveshare.accountProvider` vous permettent de sélectionner le compte qui doit être utilisé pour la connexion automatique dans le cas où vous avez mis en cache des informations d’identification pour plusieurs comptes disponibles. 
-
+> **Conseil avancé :** Les paramètres `liveshare.account` et `liveshare.accountProvider` vous permettent de sélectionner le compte qui doit être utilisé pour la connexion automatique dans le cas où vous avez mis en cache des informations d’identification pour plusieurs comptes disponibles.
 > Par exemple, imaginez que vous travaillez sur 2 projets avec lesquels vous voulez vous connecter avec des identités différentes. Dans les paramètres de votre espace de travail VSCode, vous pouvez définir le paramètre `liveshare.account` sur différentes adresses e-mail dans le répertoire de chaque projet pour garantir qu’ils se connectent chacun automatiquement avec le compte approprié. Le paramètre `liveshare.accountProvider` peut être défini sur `"microsoft"` ou sur `"github"` dans le cas où vous utilisez la même adresse e-mail avec plusieurs fournisseurs.
 
 Si Visual Studio Code ne reprend pas vos informations d’identification lorsque vous avez terminé le processus de connexion dans le navigateur, consultez [Connexion avec un code utilisateur](#sign-in-using-a-user-code). Vous pouvez également consulter la page [Résolution des problèmes](../troubleshooting.md#sign-in) pour plus de conseils.
@@ -180,7 +179,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
     Maintenant, il suffit de **cliquer** sur l’élément « Live Share » de la barre d’état ou d’appuyer sur **Ctrl+Maj+P/Cmd+Maj+P** et de sélectionner « Live Share : démarrer une session de collaboration (Share) ».
 
-    ![Partager le bouton](../media/vscode-share-button.png)
+    ![Partager le bouton](../media/vscode-share-button-new.png)
 
     > [!NOTE]
     > Vous pouvez être invité par votre logiciel de pare-feu de bureau à autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation est entièrement facultative mais permet à un « mode direct » sécurisé d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
