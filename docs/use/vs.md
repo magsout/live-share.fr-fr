@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 657b5079ba5669b6d01d732257b40444a8fa82d2
-ms.sourcegitcommit: cab8df5c29f9d91e702ef514def53944ee7701ba
+ms.openlocfilehash: eb631d2f3fecb07cb16b02d1cd02127221b0183d
+ms.sourcegitcommit: 94a6ec64e0054fe4829d554b7023a17a8c58a462
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64987191"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67501424"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -59,15 +59,18 @@ En téléchargeant et en utilisant Visual Studio Live Share, vous acceptez les [
 
 Pour pouvoir travailler en collaboration, vous devez vous connecter à Visual Studio Live Share ; ainsi, tout le monde saura qui vous êtes. Cette simple mesure de sécurité ne vaut **pas** consentement à des actions marketing ou autres activités de recherche. Vous pouvez utiliser un compte personnel Microsoft (par exemple, @outlook.com), un compte professionnel ou scolaire soutenu par Microsoft (AAD) ou un compte GitHub. Il est facile de se connecter.
 
-Par défaut, Visual Studio utilise votre [compte de personnalisation](https://docs.microsoft.com/en-us/visualstudio/ide/signing-in-to-visual-studio) ; si vous avez déjà ouvert une session dans Visual Studio, vous pourrez peut-être ignorer cette étape. Sinon, connectez-vous normalement.
+Par défaut, Visual Studio utilise votre [compte de personnalisation](https://docs.microsoft.com/en-us/visualstudio/ide/signing-in-to-visual-studio), ainsi, si vous avez déjà ouvert une session dans Visual Studio, vous pourrez peut-être ignorer cette étape. Sinon, connectez-vous normalement.
 
 ![Bouton de connexion de Visual Studio](../media/vs-sign-in-button.png)
 
+
 Si vous souhaitez utiliser d’autres informations d’identification que votre [compte de personnalisation](https://docs.microsoft.com/en-us/visualstudio/ide/signing-in-to-visual-studio) Visual Studio, accédez à **Outils &gt; Options &gt; Live Share &gt; Compte d’utilisateur** pour effectuer la modification.
 
-![Options Visual Studio Tools Live Share](../media/vs-tools-options.png)
+![Options Visual Studio Tools Live Share](../media/vs-tools-options-new.png)
 
 **Compte externe** permet de sélectionner un compte non pris en charge par la fonctionnalité de personnalisation de Visual Studio, comme GitHub. Un navigateur s’affiche automatiquement la première fois que vous utilisez une fonctionnalité Live Share pour vous permettre de vous connecter.
+>[!Tip]
+>Saviez-vous que vous pouvez aller à **Outils &gt; Options &gt; Visual Studio Live Share &gt; Général** pour afficher tous les paramètres Visual Studio Live Share par défaut ? Personnalisez votre expérience de collaboration selon vos besoins ! Vous pouvez également essayer toutes les nouvelles fonctionnalités Visual Studio Live Share en choisissant **Avancé &gt; Fonctionnalités &gt; Insiders** à partir de l’intérieur des paramètres Visual Studio Live Share Général !  
 
 En cas de problème, voir [Résolution des problèmes](../troubleshooting.md#sign-in) pour obtenir des conseils.
 
@@ -77,9 +80,8 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
 1. **Se connecter**
 
-    Après avoir installé l’extension Live Share, connectez-vous pour indiquer qui vous êtes aux autres collaborateurs. Par défaut, Visual Studio utilise votre compte de personnalisation ; de ce fait, vous pourrez peut-être ignorer totalement cette étape.
-
-    Pour plus d'informations, voir [Se connecter](#sign-in).
+    Maintenant que vous êtes connecté, vous êtes prêt à démarrer votre session de collaboration.
+    Vous n’êtes pas connecté ? Pour plus d'informations, cochez [Se connecter](#sign-in).
 
 2. **Ouvrir une solution, un projet ou un dossier**
 
@@ -91,18 +93,16 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
 4. **Démarrer une session de collaboration**
 
-    Maintenant, cliquez simplement sur le bouton « Live Share » en haut à droite.
+    Maintenant, cliquez sur le bouton « Live Share » en haut à droite pour démarrer la session Visual Studio Live Share.     Un lien partageable vers votre session de collaboration est automatiquement copié dans le Presse-papiers. 
 
     ![Bouton Partager de Visual Studio](../media/vs-share-button.png)
 
+    Une fois votre session de collaboration démarrée pour la première fois, vous verrez une fenêtre d’outil Visual Studio Live Share. Vérifiez que vous ancrez bien cette fenêtre pour vous assurer qu’elle s’affichera la prochaine fois que vous démarrerez une session Visual Studio Live Share.
+
+   ![Fenêtre Outil Visual Studio Live Share 72 x 561, 50 %](../media/vs-live-share-tool-window.png)
+
     > [!NOTE]
-    > Votre logiciel de pare-feu de bureau pourra vous demander d’autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation est entièrement facultative mais permet à un « mode direct » sécurisé d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
-
-    Un lien d’invitation est automatiquement copié dans votre Presse-papiers. Une fois ouvert dans un navigateur, il permet à d’autres utilisateurs de rejoindre une nouvelle session de collaboration qui partage le contenu de ces dossiers avec eux.
-
-    Le bouton « Live Share » change également pour indiquer un « État de session ». Pour savoir comment il se présente, voir les informations [État de session](#session-states) ci-dessous.
-
-    Sachez que, pour accéder à nouveau au lien d’invitation après avoir commencé le partage, vous pouvez cliquer sur le bouton Partager/État de session et sélectionner « Copier le lien ».
+    > Vous pouvez être invité par votre logiciel de pare-feu de bureau à autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation est entièrement facultative mais permet à un « mode direct » sécurisé d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
 
 5. **[Facultatif] Activer le mode lecture seule**
 
@@ -130,7 +130,16 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
     Pour plus d’informations sur la sécurité des invitations, voir [Invitations et accès aux sessions](../reference/security.md#invitations-and-join-access).
 
-C'est tout !
+8. **Gérer votre session Visual Studio Live Share**
+    
+    Une fois que votre invité a ouvert le lien vers votre session partagée dans VS Code ou Visual Studio vous les voyez répertoriés sous les participants dans la fenêtre Outil Visual Studio Live Share. Vous êtes maintenant en mesure de voir quel fichier se trouve actuellement en regard du nom de votre invité.  
+    
+    ![Fenêtre Outil Visual Studio Live Share](../media/vs-live-share-tool-window-participant.png)
+
+    La fenêtre Outil Visual Studio Live Share vous permet d’accéder à toutes les fonctionnalités clés pour gérer votre session au même endroit. 
+
+    > [!TIP]
+    > Vous ne pouvez plus voir la fenêtre Outil Visual Studio Live Share lors de vos sessions ? Vous pouvez toujours aller à **Afficher &gt; Autres fenêtres &gt; Live Share** et la retrouver !
 
 ### <a name="ending-the-collaboration-session"></a>Mettre fin à la session de collaboration
 
