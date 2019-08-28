@@ -1,6 +1,6 @@
 ---
-title: Insiders - partage en direct de Visual Studio | Microsoft Docs
-description: Description du canal « Initiés » au sein de partage en direct de Visual Studio.
+title: Insiders-Visual Studio Live Share | Microsoft Docs
+description: Description du canal «Insiders» dans Visual Studio Live Share.
 ms.custom: ''
 ms.date: 04/02/2019
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.author: joncart
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: a79effc25c09851301bb2231511a8a9d8a9f549b
-ms.sourcegitcommit: 6e84bf17eedd616417f474551344c2161700c4d3
+ms.openlocfilehash: 04bfb314ebae711566a8bab8b0ada8f2fbd2e940
+ms.sourcegitcommit: 6b46e300d76eda661ab34c67a3b909d5c162cd9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67192724"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70062278"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -26,37 +26,68 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # <a name="insiders"></a>Membres du programme Insider
 
-L’équipe le Partage Live Visual Studio essaie d’itérer rapidement dans l’ordre pour répondre aux besoins utilisateur, et ce cadre, nous proposons deux fonction distincte « canaux » vous permettent de déterminer la vitesse à laquelle vous recevez les nouvelles fonctionnalités. Par défaut, après avoir installé l’extension de le Partage Live Visual Studio, vous utilisez la `Stable` ensemble, ce qui inclut toutes les fonctionnalités de prêt pour la production (par exemple, même modification, partagé débogage, terminaux) des fonctionnalités. Toutefois, si vous souhaitez obtenir un accès précoce aux fonctionnalités que nous travaillons, vous pouvez participer à la `Insiders` ensemble de fonctionnalités en modifiant le paramètre suivant dans votre IDE :
+L’équipe Visual Studio Live Share est l’itération rapide, l’essai de nouvelles idées et l’écoute de nos clients. Les insiders offrent à nos utilisateurs la possibilité de tester toutes nos nouvelles fonctionnalités tout d’abord et d’apporter leurs précieux commentaires! Découvrez comment [devenir un](#BecomeanInsider) Insider ci-dessous et aidez-nous à mettre l’avenir en collaboration avec les développeurs. 
 
-* Visual Studio
+## <a name="new-to-insiders"></a>✨ Les nouvelles ✨
 
-    ![set-fonctionnalité-vs](../media/feature-set-vs.png)
 
-* Visual Studio Code 
+### <a name="reusable-sessions-vs-code"></a>**Sessions réutilisables (VS Code)**
 
-    ![feature-set-vscode](../media/feature-set-vscode.png)
+Live Share pouvez désormais héberger des sessions réutilisables! Les sessions réutilisables vous permettent de réutiliser une session Live Share pour différents scénarios. Cela signifie que vous pouvez planifier une session Live Share à l’avance pour vos entretiens techniques, la session hebdomadaire de programmation Mob, utiliser la même session tout en parrainant un ami, et bien plus encore.
 
-Les sections suivantes décrivent l’ensemble de fonctionnalités qui se trouvent actuellement dans le `Insiders` ensemble de fonctionnalités et par conséquent, êtes prêt à évaluer une fois que vous modifiez le paramètre mentionnés ci-dessus :
+Pour créer une session réutilisable, procédez comme suit:
+1. Accédez à l' `Command Palette` utilisation`Ctrl+Shift+P`
+1. Tapez «SHA Live...» et cliquez sur le **_Live share: Commande de création d’une_liaison**de session réutilisable».
 
-## <a name="direct-user-invitations"></a>Invitations d’utilisateurs directe
+![vscode-reusablesessioncmd](../media/vscode-cmdpalette-createreusablelink.png)
 
-Actuellement, Visual Studio et Visual Studio Code fournissent un `Contacts` volet, ce qui permet les deux fonctions principales :
+3. Cette opération crée une session réutilisable et un lien vers celle-ci est copié dans le presse-papiers. Une fenêtre contextuelle de notification s’affiche dans l’angle inférieur droit de votre éditeur.
 
-1. Affiche une liste de `Suggested Contacts`, qui sont les développeurs qui ont contribué à votre projet actuellement ouvert dans les 30 derniers jours. Dans la pratique, il s’agit de l’équipe que vous êtes susceptible de vouloir collaborer avec, et par conséquent, nous vous suggérons les afin de faciliter la prise en main.
+![vscode-reusablesessionnotif](../media/vscode-notification-resuablesession.png)
 
-2. Fournir la liste des `Recent Contacts`, qui sont des développeurs avec lesquelles vous avez précédemment collaboré à l’aide de partage en direct. Dans la pratique, la plupart des développeurs collaborent souvent avec les mêmes personnes, et par conséquent, la liste des derniers permet un moyen plus répétable de travailler avec votre équipe/la classe/etc.
+4. Votre session réutilisable a été créée. Partagez le lien avec votre session et utilisez-le chaque fois pour accéder à la session!
 
-Toutefois, le `Contacts` liste actuellement uniquement vous permet d’inviter des contacts récents/suggérés par courrier électronique, ce qui nous en avons appris n’est pas aussi efficace que possible. Si vous installez la dernière mise à jour du partage Live et activez `Insiders` (comme décrit ci-dessus), vous allez maintenant être en mesure de **invitation de développeurs dans une session de collaboration directement à partir de l’IDE**! Notez que si vous utilisez Visual Studio Code, vous devez installer le [Insiders Build](https://code.visualstudio.com/insiders/) afin que cette fonctionnalité soit opérationnelle.
+> [!TIP] 
+>Un lien de session réutilisable est persistant et dure 30 jours à partir de sa date de création ou de la date de dernière utilisation. Cela signifie que si vous continuez à utiliser votre session au moins une fois tous les 30 jours, vous n’avez pas à vous soucier de son expiration. Enregistrez simplement le lien dans un endroit sûr où vous pouvez y accéder facilement!
+ 
+
+### <a name="direct-user-invitations"></a>**Invitations de l’utilisateur direct**
+
+À l’heure actuelle, Visual Studio et Visual Studio code `Contacts` fournissent un volet, qui active deux fonctions clés:
+
+1. Affichage d’une liste `Suggested Contacts`de, qui sont des développeurs qui ont contribué à votre projet actuellement ouvert au cours des 30 derniers jours. Dans la pratique, il s’agit des personnes avec lesquelles vous êtes susceptible de vouloir collaborer. par conséquent, nous vous suggérons de les suggérer afin de faciliter la prise en main.
+
+2. En fournissant la liste `Recent Contacts`des, qui sont les développeurs avec lesquels vous avez déjà collaboré avec Live share. Dans la pratique, la plupart des développeurs collaborent souvent avec les mêmes personnes et, par conséquent, la liste récente permet un moyen plus reproductible de travailler avec votre équipe/salle de classe/etc.
+
+Toutefois, la `Contacts` liste vous permet uniquement d’inviter des contacts récents/suggérés par courrier électronique, ce que nous avons appris n’est pas aussi efficace que possible. Si vous installez la dernière mise à jour de Live share `Insiders` et que vous activez (comme décrit ci-dessus), vous pourrez désormais **inviter des développeurs dans une session de collaboration directement à partir de l’IDE**. Notez que si vous utilisez Visual Studio Code, vous devez installer la [Build](https://code.visualstudio.com/insiders/) Insiders pour que cette fonctionnalité fonctionne.
 
 ![Invitatiosn directe](https://user-images.githubusercontent.com/116461/59691804-7ece0c00-9198-11e9-94fb-99ec89df91c9.gif)
 
-<em>Un hôte de partage en direct (à gauche) inviter directement un homologue (à droite) dans une session</em>
+<em>Un hôte de Live Share (à gauche) qui invite directement un homologue (à droite) dans une session</em>
 
-Une fois que les développeurs connectez-vous avec le partage en direct, leur état de disponibilité sera publiée à leurs homologues. Par conséquent, vous pouvez voir qu’une personne de votre équipe est en ligne et puis immédiatement commencer à collaborer avec eux. Ils obtiendront une notification toast qui leur donne la possibilité de participer la session ou non. Cette opération supprime le besoin d’échanger des URL de la session entièrement.
+Une fois que les développeurs se connectent avec Live Share, leur état de disponibilité est publié sur leurs pairs. Par conséquent, vous pouvez voir que quelqu’un de votre équipe est en ligne, puis commencer immédiatement à collaborer avec eux. Ils recevront une notification de Toast qui leur donne la possibilité de rejoindre la session. Cela élimine la nécessité d’échanger des URL de session entièrement.
 
-Après 5 minutes d’inactivité, votre statut passe automatiquement à `Away`, et lorsque vous êtes dans une session de partage en direct, votre état bascule automatiquement sur `Do not disturb` (notifications toast quels suprresses invitation). Une fois que vous redevient active ou quittez une session de partage en direct, votre état bascule automatiquement vers `Available`. Avec ce comportement, vous n’avez pas besoin de gérer l’état de votre partage Live. Il est simplement là pour activer les invitations directes et communiquer avec vos pairs si vous êtes disponible pour la collaboration ou non. Toutefois, vous pouvez définir toujours manuellement votre statut si vous préférez.
+Après 5 minutes d’inactivité, votre état passe automatiquement à `Away`et, lorsque vous êtes dans une session de Live Share, votre état passe automatiquement à `Do not disturb` (les notifications de Toast suprresses invitation). Une fois que vous êtes à nouveau actif et/ou que vous laissez une session Live Share, votre état `Available`repasse automatiquement à. Avec ce comportement, vous n’avez pas besoin de gérer réellement l’état de votre Live Share. C’est simplement là pour activer les invitations directes et communiquer avec vos pairs, que vous soyez ou non en collaboration. Toutefois, vous pouvez toujours définir manuellement votre état si vous préférez.
 
-Si vous souhaitez refuser de cette fonctionnalité, vous pouvez simplement désactiver le `Presence` définissant les paramètres de partage en direct dans Visual Studio et Visual Studio Code. Une fois désactivé, vous serez toujours en mesure de voir l’état de l’autre et de les inviter, mais ne sera pas publié votre état, et d’autres utilisateurs ne peuvent pas directement vous inviter.
+Si vous souhaitez refuser cette fonctionnalité, vous pouvez simplement désactiver le `Presence` paramètre dans les paramètres de Live share dans Visual Studio et Visual Studio code. Une fois désactivée, vous pouvez toujours voir l’état de l’autre et l’inviter, mais votre état n’est pas publié et d’autres personnes ne peuvent pas vous inviter directement.
+
+ 
+
+## Devenez un Insider <a name="BecomeanInsider"></a>
+
+Par défaut, après l’installation de l’extension Visual Studio Live Share, vous utilisez `Stable` l’ensemble de fonctionnalités, qui comprend toutes les fonctionnalités prêtes pour la production (par exemple, le co-édition, le débogage partagé, les terminaux). Toutefois, si vous souhaitez accéder en avant-première aux fonctionnalités sur lesquelles nous travaillons, vous pouvez vous abonner à l' `Insiders` ensemble de fonctionnalités en modifiant le paramètre suivant dans votre IDE:
+
+* Visual Studio
+
+    ![ensemble de fonctionnalités-vs](../media/feature-set-vs.png)
+
+* Visual Studio Code 
+
+    ![Feature-Set-vscode](../media/feature-set-vscode.png)
+
+Les sections suivantes décrivent l’ensemble des fonctionnalités qui se trouvent actuellement `Insiders` dans l’ensemble de fonctionnalités et sont donc prêtes à être évaluées une fois que vous avez modifié le paramètre susmentionné:
+
+
 
 ## <a name="see-also"></a>Voir aussi
 
