@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: eb631d2f3fecb07cb16b02d1cd02127221b0183d
-ms.sourcegitcommit: 94a6ec64e0054fe4829d554b7023a17a8c58a462
+ms.openlocfilehash: 65c48d1a95cc94bc7505c185be353e437e3c5ba1
+ms.sourcegitcommit: 6b46e300d76eda661ab34c67a3b909d5c162cd9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67501424"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70062301"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -99,7 +99,7 @@ Après avoir téléchargé et installé Visual Studio Live Share, suivez ces ét
 
     Une fois votre session de collaboration démarrée pour la première fois, vous verrez une fenêtre d’outil Visual Studio Live Share. Vérifiez que vous ancrez bien cette fenêtre pour vous assurer qu’elle s’affichera la prochaine fois que vous démarrerez une session Visual Studio Live Share.
 
-   ![Fenêtre Outil Visual Studio Live Share 72 x 561, 50 %](../media/vs-live-share-tool-window.png)
+   ![Fenêtre Outil Visual Studio Live Share](../media/vs-live-share-tool-window.png)
 
     > [!NOTE]
     > Vous pouvez être invité par votre logiciel de pare-feu de bureau à autoriser l’agent Live Share à ouvrir un port lors du premier partage. Cette autorisation est entièrement facultative mais permet à un « mode direct » sécurisé d’améliorer les performances lorsque la personne avec laquelle vous travaillez se trouve sur le même réseau que vous. Pour plus d’informations, voir [Modifier le mode de connexion](../reference/connectivity.md#changing-the-connection-mode).
