@@ -11,12 +11,12 @@ ms.author: fishah
 manager: JonathanCarter
 ms.workload:
 - liveshare
-ms.openlocfilehash: 4ed24b7c73767086e5b44909dd958c174b4f3398
-ms.sourcegitcommit: ee0d569c893c2a89374026fe7df70fa3027eac1a
+ms.openlocfilehash: ba2fd7558df2658efffda1c8578450f9c678d35d
+ms.sourcegitcommit: 21e564ac23293e373b515892fa881d049f333cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117906"
+ms.locfileid: "71127416"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -24,9 +24,9 @@ All rights reserved.
 Creative Commons Attribution 4.0 License (International): https://creativecommons.org/licenses/by/4.0/legalcode
 -->
 
-# <a name="how-to-do-technical-interviews-using-live-share"></a>Procédure : Effectuer des entretiens techniques à l’aide de Live Share
+# <a name="how-to-do-technical-interviews-using-live-share"></a>Guide pratique : Effectuer des entretiens techniques à l’aide de Live Share
 
-Avant de commencer à utiliser Live Share pour les entretiens techniques, vous devez effectuer une étape intégrale : **Téléchargez Visual Studio et le pack d’extension Live share à partir de la place de marché** en procédant comme [suit.](../use/vscode.md#Installation)
+Avant de commencer à utiliser Live Share pour les entretiens techniques, vous devez effectuer une étape intégrale : **Téléchargez Visual Studio code et le pack d’extension Live share à partir de la place de marché** en procédant comme [suit.](../use/vscode.md#Installation)
 
 Live Share vous offre la possibilité d’héberger des sessions réutilisables ! Cela signifie que vous pouvez planifier une session de Live Share à l’avance pour vos entretiens techniques et ne vous inquiétez pas du lien arrivant à expiration.
 
