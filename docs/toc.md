@@ -26,12 +26,15 @@
 ## [Codébogage](use/vs.md#co-debugging)
 ## [Partager un serveur](use/vs.md#share-a-server)
 ## [Partager un terminal](use/vs.md#share-a-terminal)
+# Guides pratiques : Entretiens techniques
+## [Entretiens techniques](use/technical-interviews.md)
 # Référence
 ## [Sécurité](reference/security.md)
 ## [Connectivité](reference/connectivity.md)
 ## [Langages pris en charge](reference/platform-support.md)
 ## [Extensions prises en charge](reference/extensions.md)
 ## [Cas d’usage courants](reference/use-cases.md)
+
 ## [Détails d’installation pour Linux](reference/linux.md)
 ## [Membres du programme Insider](reference/insiders.md)
 ## [Notes de publication](https://aka.ms/vsls-releases)
