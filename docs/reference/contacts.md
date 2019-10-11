@@ -11,12 +11,12 @@ ms.author: fishah
 manager: JonathanCarter
 ms.workload:
 - liveshare
-ms.openlocfilehash: a3b4c9f2b469e937d958e82df28a04044abf38d3
-ms.sourcegitcommit: 50069912a317f8685976013e80738bbaa403a3fe
-ms.translationtype: HT
+ms.openlocfilehash: c1b3e71578ed3ffb306060cec3354f33423928be
+ms.sourcegitcommit: 24eb903744b837dcedff67d8179f06862bd2aa61
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72178463"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250656"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -26,7 +26,7 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # <a name="contacts-in-live-share"></a>Contacts dans Live Share 
 
-Vous avez donc utilisé Live Share et vous remarquez que l’envoi de liens par le biais d’une application externe (par exemple, conversation ou courrier électronique) peut devenir l’ancien vraiment rapide ? Nous savons que si nous souhaitons encourager la collaboration, vous devez avoir le moins de frottement possible pour que vous l’aimeriez. C’est la raison pour laquelle Live Share a maintenant des **contacts** qui, à présent, expliquent comment connaître l' **État**.
+Vous avez donc utilisé Live Share et vous remarquez que l’envoi de liens par le biais d’une application externe (par exemple, conversation ou courrier électronique) peut devenir l’ancien vraiment rapide ? Nous savons que si nous souhaitons encourager la collaboration, vous devez avoir le moins de frottement possible pour que vous l’aimeriez. C’est pour cette raison que Live Share a maintenant des **contacts** avec l' **État** .
 
 >Les contacts seront automatiquement activés pour toutes les versions de **Live share v 1.0.950** .
 
@@ -60,12 +60,17 @@ Votre état peut être défini directement à partir de l’éditeur pour vous p
 **4. Hors connexion :**  Vous serez hors connexion une fois que vous êtes absent pendant une période prolongée, ou si vous choisissez de [refuser l’état de partage](##ManagingPresence)
 
 
-## Gestion de l'<a name="ManagingPresence"> </a> État du contact
+## Gestion des contacts et de<a name="ManagingPresence"> </a> l’état de partage
 
-Si vous souhaitez refuser cette fonctionnalité, vous pouvez simplement désactiver le paramètre d’État en choisissant d’être `offline`. Une fois désactivée, vous pouvez toujours voir l’état de l’autre et l’inviter, mais votre état n’est pas publié et d’autres personnes ne peuvent pas vous inviter directement.
+Si vous souhaitez désactiver cette fonctionnalité, vous pouvez le faire de deux manières.
+1. Vous pouvez désactiver le paramètre d’État en choisissant d’être `offline`. Une fois désactivée, vous pouvez toujours voir l’état de l’autre et l’inviter, mais votre état n’est pas publié et d’autres personnes ne peuvent pas vous inviter directement.
 Vous pouvez choisir de vous connecter en mode hors connexion en cliquant sur le cercle d’État qui affiche le menu déroulant suivant :
 
 ![dropdownstatus @ no__t-1 <em>indiquant la liste déroulante des États de présence</em>
+
+2. Vous pouvez ouvrir `user settings` et accéder à *Extensions > Visual Studio Live Share > Live share : Présence @ no__t-0 et désactivez le service de présence. Une fois désactivée, vous pouvez toujours voir l’état de l’autre et l’inviter, mais votre état n’est pas publié et d’autres personnes ne peuvent pas vous inviter directement.
+
+![presencesettings](../media/vscode-presence-setting.png)
 
 ## <a name="faqs"></a>FAQ 
 
