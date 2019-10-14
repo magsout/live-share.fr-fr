@@ -29,6 +29,7 @@
 # Guides pratiques : Entretiens techniques
 ## [Entretiens techniques](use/technical-interviews.md)
 # Référence
+## [Contacts](reference/contacts.md)
 ## [Sécurité](reference/security.md)
 ## [Connectivité](reference/connectivity.md)
 ## [Langages pris en charge](reference/platform-support.md)
