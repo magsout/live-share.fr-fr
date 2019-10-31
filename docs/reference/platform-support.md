@@ -1,6 +1,6 @@
 ---
-title: Support de plate-forme et langage - partage en direct de Visual Studio | Microsoft Docs
-description: Vue d’ensemble de la prise en charge de plateforme et le langage de Visual Studio Live de partage.
+title: Prise en charge des plateformes et des langues-Visual Studio Live Share | Microsoft Docs
+description: Vue d’ensemble de la prise en charge des plateformes et des langages pour Visual Studio Live share.
 ms.custom: ''
 ms.date: 04/25/2018
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.author: joncart
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 91e80df324a0b2f49fdf37a5270cf7b86fca5c7c
-ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
+ms.openlocfilehash: 386a8204787ed378413e1b35b7c2a80e0de678ce
+ms.sourcegitcommit: c6ef4e5a9aec4f682718819c58efeab599e2781b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73170089"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -24,166 +24,166 @@ All rights reserved.
 Creative Commons Attribution 4.0 License (International): https://creativecommons.org/licenses/by/4.0/legalcode
 -->
 
-# <a name="language-and-platform-support"></a>Prise en charge de langage et plateforme
+# <a name="language-and-platform-support"></a>Prise en charge de langues et de plateformes
 
-Fonctionnalités de Visual Studio Live du partage sont destinées à fonctionner sur un paysage de divers langages et plateformes d’application. Toutefois, étant donné le nombre élevé de variantes, certains langages et plateformes sont plus complètes que d’autres. Ce document décrit l’état d’un nombre de langages populaires plateformes et pour les fonctionnalités actuellement prises en charge connu actuel.
+Les fonctionnalités de Visual Studio Live Share sont destinées à fonctionner dans un paysage diversifié de langues et de plateformes d’application. Toutefois, étant donné le nombre important de variations, certaines plateformes et certains langages sont plus complets que d’autres. Ce document décrit l’état actuel connu d’un certain nombre de langages et plateformes populaires pour les fonctionnalités actuellement prises en charge.
 
-Consultez une langue ou la plateforme que vous avez besoin ? Vous souhaitez ajouter un que vous ne voyez pas ? [Voter ici.](https://github.com/MicrosoftDocs/live-share/issues/12)
+Vous voyez un langage ou une plateforme dont vous avez besoin ? Vous souhaitez en ajouter une qui ne s’affiche pas ? [Votez ici.](https://github.com/MicrosoftDocs/live-share/issues/12)
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
 
-Tous les langages / plateformes ont le même intellisense avec un fichier (lorsque l’extension respectif est installée), ainsi que la coloration et même édition prise en charge. Les listes ci-dessous couvre avancés des fonctionnalités actuellement sans prise en charge complète et universelle :
+Tous les langages/plateformes ont le même fichier IntelliSense (lorsque l’extension respective est installée), ainsi que la prise en charge de la colorisation et de la co-édition. Les listes ci-dessous traitent actuellement des fonctionnalités avancées sans prise en charge complète et universelle :
 
 ### <a name="languages"></a>Langages
 
-| Langue | Services de langage partagé | Partagé de débogage |
+| Langue | Services de langage partagé | Débogage partagé |
 |----------|--------------------------------|--------------|
-| Ansible | ✅ | *N/A* |
-| Ballerine | ✅ | ✅ |
+| Ansible | ✅ | *NON APPLICABLE* |
+| Ballerina | ✅ | ✅ |
 | Bash | ✅ | ✅ |
 | C++ | ✅ | ✅ |
 | C# | ✅ | ✅ |
 | Clojure | ✅ | *N/A* <sup>4</sup> |
 | [ColdFusion (CFML)](https://marketplace.visualstudio.com/items?itemName=KamasamaK.vscode-cfml) | ✅ | *N/A* <sup>4</sup> |
-| [Crystal](https://marketplace.visualstudio.com/items?itemName=faustinoaq.crystal-lang) | ✅ | *N/A* <sup>4</sup> |
+| [Crystal Reports](https://marketplace.visualstudio.com/items?itemName=faustinoaq.crystal-lang) | ✅ | *N/A* <sup>4</sup> |
 | CSHTML | *N/A* <sup>1</sup> | ✅ |
-| CSS | *N/A* | *N/A* |
-| DART | ✅ | ✅ |
-| Docker | ✅ | *N/A* |
+| CSS | *NON APPLICABLE* | *NON APPLICABLE* |
+| Fléchette | ✅ | ✅ |
+| Docker | ✅ | *NON APPLICABLE* |
 | Elixir | ✅ | ✅ |
 | Elm | ✅ |  *N/A* <sup>4</sup> |
 | Erlang | ✅ | ✅ |
 | F# | ✅ |  *N/A* <sup>4</sup> |
 | Flux | ✅ |  *N/A* <sup>4</sup> |
-| Fortran | ✅ | *N/A* |
+| Fortran | ✅ | *NON APPLICABLE* |
 | Go | ✅ | ✅ |
 | Gradle | ✅ | *N/A* <sup>4</sup> |
 | GraphQL | ✅ | *N/A* <sup>4</sup> |
 | Haskell | ✅ | ✅ |
-| HTML | *N/A* | <sup>2</sup> |
+| HTML | *NON APPLICABLE* | <sup>2</sup> |
 | Java | ✅ | ✅ |
-| JavaScript / TypeScript | ✅ | ✅ <sup>3</sup> |
+| JavaScript/machine à écrire | ✅ | ✅ <sup>3</sup> |
 | Julia | ✅ | *N/A* <sup>4</sup> |
-| [Kotlin](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin) | *N/A* | *N/A* <sup>4</sup> |
-| Lua | ✅ | ✅ |
-| Markdown | ✅ | *N/A* |
+| [Kotlin](https://marketplace.visualstudio.com/items?itemName=mathiasfrohlich.Kotlin) | *NON APPLICABLE* | *N/A* <sup>4</sup> |
+| Privilège | ✅ | ✅ |
+| Markdown | ✅ | *NON APPLICABLE* |
 | MATLAB |  ✅ | *N/A* <sup>4</sup> |
 | Objective-C | ✅ | *N/A* <sup>4</sup> |
-| Pascal | ✅ | *N/A* <sup>4</sup> |
+| Casse | ✅ | *N/A* <sup>4</sup> |
 | Perl | ✅ | ✅ |
 | PHP | ✅ | ✅ |
-| PowerShell | *N/A* | ✅ |
+| PowerShell | *NON APPLICABLE* | ✅ |
 | Python |  ✅ | ✅ |
 | PureScript | ✅ | *N/A* <sup>4</sup> |
 | R |  ✅ | *N/A* <sup>4</sup> |
-| [Reason/OCaml](https://marketplace.visualstudio.com/items?itemName=freebroccolo.reasonml) | ✅ | *N/A* <sup>4</sup> |
-| reStructuredText | ✅ | *N/A* |
+| [Raison/OCaml](https://marketplace.visualstudio.com/items?itemName=freebroccolo.reasonml) | ✅ | *N/A* <sup>4</sup> |
+| reStructuredText | ✅ | *NON APPLICABLE* |
 | Ruby | ✅ | ✅ |
 | Rust | ✅ | *N/A* <sup>4</sup> |
-| [Sass](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented) | ✅ | *N/A* |
+| [Sass](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented) | ✅ | *NON APPLICABLE* |
 | Scala | ✅ | *N/A* <sup>4</sup> |
-| Uniformité | ✅ | *N/A* <sup>4</sup> |
-| SQL / T-SQL | *N/A* | *N/A* <sup>4</sup> |
-| [Stylus](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) | ✅ | *N/A* |
+| Solidité | ✅ | *N/A* <sup>4</sup> |
+| SQL/T-SQL | *NON APPLICABLE* | *N/A* <sup>4</sup> |
+| [Stylet](https://marketplace.visualstudio.com/items?itemName=sysoev.language-stylus) | ✅ | *NON APPLICABLE* |
 | [Svelte](https://marketplace.visualstudio.com/items?itemName=JamesBirtles.svelte-vscode) | ✅ | *N/A* <sup>4</sup> |
 | Swift | ✅ | *N/A* <sup>4</sup> |
 | Terraform | ✅ | *N/A* <sup>4</sup> |
 | XML | ✅ | *N/A* <sup>4</sup> |
 | YAML | ✅ | *N/A* <sup>4</sup> |
 
-<sup>1</sup> prise en charge non CSHTML dans C# extension.<br />
-<sup>2</sup> JavaScript incorporé au format HTML est pris en charge lors de débogage du client.<br />
-<sup>3</sup> JavaScript / TypeScript de débogage pour le nœud ou le navigateur.<br />
-<sup>4</sup> l’extension respectif pour VS Code ne prend actuellement en charge le débogage. Dès qu’il est le cas, nous allons étudier lui ajoutant une prise en charge même emplacement de débogage. <br />
+<sup>1</sup> aucune prise en charge C# de cshtml dans l’extension.<br />
+<sup>2</sup> le JavaScript incorporé en HTML est pris en charge lors du débogage du client.<br />
+<sup>3</sup> débogage de code JavaScript/de la machine à écrire pour le nœud ou le navigateur.<br />
+<sup>4</sup> l’extension respective de vs code ne prend pas en charge le débogage pour le moment. Dès que c’est le cas, nous examinerons l’ajout de la prise en charge du débogage. <br />
 
 ### <a name="platforms"></a>Plateformes
 
-| Type de plateforme d’application | Partagé de débogage | Partage d’application |
+| Type d’application/plateforme | Débogage partagé | Partage d’applications |
 |-------------------|--------------|-------------|
-| Arduino | ✅ | *N/A* |
-| Azure App Service | ✅ | *N/A* |
+| Arduino | ✅ | *NON APPLICABLE* |
+| Azure App Service | ✅ | *NON APPLICABLE* |
 | Azure Dev Spaces | ✅ | ✅ <sup>1</sup> |
 | Azure Functions (local et distant) | ✅ | ✅ <sup>1</sup> |
 | Blockchain (Ethereum) | ✅ | ✅ <sup>1</sup> |
-| Console / CLI | ✅ | ✅ <sup>4</sup> |
+| Console/interface de commande | ✅ | ✅ <sup>4</sup> |
 | Bases de données | <sup>5</sup> | ✅ <sup>1</sup> |
-| Bureau (électrons/natif) | ✅ | <sup>9</sup> |
+| Bureau (électron/native) | ✅ | <sup>9</sup> |
 | Dynamics NAV 2018 | ✅ | ✅ <sup>1</sup> |
 | Jeux (Unity) | ✅ | <sup>9</sup> |
-| Jeux (Unreal) | ✅ | <sup>9</sup> |
+| Jeux (non réels) | ✅ | <sup>9</sup> |
 | Kubernetes (YAML, Helm) | ✅ |  ✅ <sup>1</sup> |
-| Markdown | *N/A* | ✅ <sup>6</sup> |
-| Mobile (Cordova) | ✅ | ✅ <sup>1,7</sup> |
+| Markdown | *NON APPLICABLE* | ✅ <sup>6</sup> |
+| Mobile (Cordova) | ✅ | ✅ <sup>1, 7</sup> |
 | Mobile (natif) | ✅ | <sup>9</sup> |
-| Mobile (React Native) | ✅ | ✅ <sup>1,8</sup> |
-| Application Web / API (Back-end) | ✅ | ✅ <sup>1</sup> |
-| Application Web (frontal) | ✅ <sup>2</sup> | ✅ <sup>3</sup> |
+| Mobile (REACT native) | ✅ | ✅ <sup>1, 8</sup> |
+| Application Web/API (serveur principal) | ✅ | ✅ <sup>1</sup> |
+| Application Web (frontale) | ✅ <sup>2</sup> | ✅ <sup>3</sup> |
 | Extensions de VS Code | | <sup>9</sup> |
 
-<sup>1</sup> via [serveur local partage](../use/vscode.md#share-a-server).<br />
-<sup>2</sup> débogage portant sur l’ordinateur hôte navigateur plutôt qu’invité.<br />
-<sup>3</sup> par partage de serveur principal.<br />
-<sup>4</sup> pris en charge par le biais de terminaux partagés.<br />
-<sup>5</sup> déboguer les procédures stockée de base de données est actuellement pas en charge <br />
-<sup>6</sup> via « preview ». Toutefois, les images n’apparaissent pas en raison du problème connu. [Vote (👍) ici.](https://github.com/MicrosoftDocs/live-share/issues/61)<br />
-<sup>7</sup> Cordova apps peuvent être partagées par le biais de la plateforme « navigateur »<br />
-<sup>8</sup> applications react Native peuvent être partagées via Expo et [serveurs partagés](../use/vscode.md#share-a-server).<br />
-<sup>9</sup> partage live ne prend actuellement en charge partage windows/écrans. [Vote (👍) ici.](https://github.com/MicrosoftDocs/live-share/issues/236)
+<sup>1</sup> via [partager un serveur local](../how-to-guides/vscode.md#share-a-server).<br />
+<sup>2</sup> le débogage se produit sur le navigateur de l’hôte au lieu de l’invité.<br />
+<sup>3</sup> en partageant le serveur principal.<br />
+<sup>4</sup> pris en charge via des terminaux partagés.<br />
+<sup>5</sup> les procédures stockées de base de données de débogage ne sont pas prises en charge actuellement <br />
+<sup>6</sup> via « preview ». Toutefois, les images ne s’affichent pas en raison d’un problème connu. [Vote (👍) ici.](https://github.com/MicrosoftDocs/live-share/issues/61)<br />
+<sup>7</sup> les applications Cordova peuvent être partagées via la plateforme « Browser »<br />
+<sup>8</sup> les applications natives REACT peuvent être partagées via les serveurs d’exposition et [partagés](../how-to-guides/vscode.md#share-a-server).<br />
+<sup>9</sup> Live share ne prend pas actuellement en charge le partage des fenêtres/écrans. [Vote (👍) ici.](https://github.com/MicrosoftDocs/live-share/issues/236)
 
 ## <a name="visual-studio"></a>Visual Studio
 
-Alors que la plupart des langages ont un seul fichier prise en charge Intellisense, il existe certaines restrictions décrites ci-dessous. Tous les langages/plateformes prennent en charge la même modification. Le reste de la liste couvre les fonctionnalités avancées actuellement sans prise en charge complète et universelle :
+Bien que la plupart des langages aient une prise en charge IntelliSense à fichier unique, certains avertissements sont décrits ci-dessous. Toutes les langues/plateformes prennent en charge la co-édition. Le reste de la liste couvre actuellement des fonctionnalités avancées sans prise en charge complète et universelle :
 
 ### <a name="languages"></a>Langages
 
-| Langue | Services de langage de fichier unique | Services de langage de l’échelle du projet | Même emplacement de débogage |
+| Langue | Services de langage à fichier unique | Services de langage à l’ensemble du projet | Co-débogage |
 |----------|-------------------------------|--------------------------------|--------------|
 | C# | ✅ | ✅ | ✅ |
-| CSHTML | ✅  <sup>1</sup> | | ✅ |
+| CSHTML | ✅<sup>1</sup> | | ✅ |
 | ASPX | ✅ <sup>1</sup> |  | ✅ |
-| HTML | ✅ | *N/A* | <sup>2</sup> |
-| CSS | ✅ | *N/A* | *N/A* |
-| JavaScript / TypeScript | ✅ | ✅ | ✅ <sup>3</sup> |
+| HTML | ✅ | *NON APPLICABLE* | <sup>2</sup> |
+| CSS | ✅ | *NON APPLICABLE* | *NON APPLICABLE* |
+| JavaScript/machine à écrire | ✅ | ✅ | ✅ <sup>3</sup> |
 | C++ | ✅ | ✅ | ✅ |
 | Python | ✅ | | ✅ |
-| Markdown | ✅ | *N/A* | *N/A* |
-| PowerShell | ✅ | *N/A* | ✅ |
+| Markdown | ✅ | *NON APPLICABLE* | *NON APPLICABLE* |
+| PowerShell | ✅ | *NON APPLICABLE* | ✅ |
 | VB.NET | ✅ | | ✅ |
 | VBHTML | ✅ <sup>1</sup> | | ✅ |
-| XAML | ✅ | *N/A* | <sup>4</sup> |
-| SQL / T-SQL | ✅ | *N/A* | |
+| XAML | ✅ | *NON APPLICABLE* | <sup>4</sup> |
+| SQL/T-SQL | ✅ | *NON APPLICABLE* | |
 | F# | ✅ | | ✅ |
-| R | ❌ <sup>5</sup> | *N/A* | ✅ |
+| R | ❌ <sup>5</sup> | *NON APPLICABLE* | ✅ |
 
-<sup>1</sup> gap : ASPX, CSHTML et VBHTML ont connu problèmes incorporé environ C#étant donné le code-behind de la prise en charge /VB C#/VB fichiers ne sont pas résolues en raison des fonctionnalités intellisense complètes non implémentée. [Vote (👍) ici sur CSHTML/VBHTML.](https://github.com/MicrosoftDocs/live-share/issues/59) [Vote (👍) ici sur ASPX.](https://github.com/MicrosoftDocs/live-share/issues/70)<br />
-<sup>2</sup> JavaScript incorporé au format HTML est pris en charge lors de débogage du client.<br />
-<sup>3</sup> JavaScript / TypeScript de débogage pour le nœud ou le navigateur.<br />
-<sup>4</sup> bien que le débogage de XAML lui-même est techniquement n/a, le débogage de code-behind est pris en charge.<br />
-<sup>5</sup> gap : Erreurs service de langage de R sur le côté de l’invité sur la jonction et après chaque saut de ligne. Non pris en charge. [Vote (👍) ici.](https://github.com/MicrosoftDocs/live-share/issues/72)<br />
+<sup>1</sup> écart : cshtml, VBHTML et aspx présentent des problèmes connus concernant la prise C#en charge des/VB incorporées C#. les fichiers/VB code-behind ne sont pas résolus en raison de la non-implémentation d’IntelliSense complète. [Vote (👍) ici sur CSHTML/VBHTML.](https://github.com/MicrosoftDocs/live-share/issues/59) [Vote (👍) ici sur ASPX.](https://github.com/MicrosoftDocs/live-share/issues/70)<br />
+<sup>2</sup> le JavaScript incorporé en HTML est pris en charge lors du débogage du client.<br />
+<sup>3</sup> débogage de code JavaScript/de la machine à écrire pour le nœud ou le navigateur.<br />
+<sup>4</sup> bien que le débogage du XAML lui-même soit techniquement N/a, le débogage du code-behind est pris en charge.<br />
+<sup>5</sup> écart : Erreurs du service de langage R côté invité lors de la jointure et après chaque saut de ligne. Non prise en charge. [Vote (👍) ici.](https://github.com/MicrosoftDocs/live-share/issues/72)<br />
 
 ### <a name="platforms"></a>Plateformes
 
-| Type de plateforme d’application | Codébogage | Partage d’application |
+| Type d’application/plateforme | Codébogage | Partage d’applications |
 |-------------------|--------------|-------------|
-| Application Web / API (Back-End) | ✅ | ✅ <sup>1</sup> |
-| Application Web (frontal) | ✅ <sup>2</sup> | ✅ <sup>3</sup> |
+| Application Web/API (serveur principal) | ✅ | ✅ <sup>1</sup> |
+| Application Web (frontale) | ✅ <sup>2</sup> | ✅ <sup>3</sup> |
 | Azure Functions | ✅  | ✅ <sup>5</sup> |
 | Azure Service Fabric | ✅ | ✅ <sup>5</sup> |
-| [Espaces de développement Azure](https://aka.ms/devspaces) | ✅ | ✅ <sup>1</sup> |
+| [Azure Dev Spaces](https://aka.ms/devspaces) | ✅ | ✅ <sup>1</sup> |
 | Bases de données | <sup>4</sup> | ✅ <sup>5</sup> |
-| Console / CLI | ✅ | ✅ <sup>6</sup> |
+| Console/interface de commande | ✅ | ✅ <sup>6</sup> |
 | Bureau (WinForms) | ✅ | |
-| Desktop (WPF) | ✅ | |
+| Bureau (WPF) | ✅ | |
 | Plateforme Windows universelle | ✅ |  |
 | Extensions VS | ✅ |  |
 
-<sup>1</sup> via [serveur local partage](../use/vs.md#share-a-server). Les applications Web ASP.NET peuvent également utiliser [partage d’application web automatique](../use/vs.md#automatic-web-app-sharing).<br />
-<sup>2</sup> débogage portant sur l’ordinateur hôte navigateur plutôt qu’invité.<br />
-<sup>3</sup> par partage de serveur principal.<br />
-<sup>4</sup> déboguer les procédures stockée de base de données est actuellement pas en charge <br />
-<sup>5</sup> via [serveur local partage](../use/vs.md#share-a-server). <br />
-<sup>6</sup> partiellement prises en charge par le biais de terminaux partagés.<br />
-<sup>?</sup> Pas encore validées.
+<sup>1</sup> via [partager un serveur local](../how-to-guides/vs.md#share-a-server). ASP.NET Web Apps peut également utiliser le [partage d’applications Web automatique](../how-to-guides/vs.md#automatic-web-app-sharing).<br />
+<sup>2</sup> le débogage se produit sur le navigateur de l’hôte au lieu de l’invité.<br />
+<sup>3</sup> en partageant le serveur principal.<br />
+<sup>4</sup> les procédures stockées de base de données de débogage ne sont pas prises en charge actuellement <br />
+<sup>5</sup> via [partager un serveur local](../how-to-guides/vs.md#share-a-server). <br />
+<sup>6</sup> partiellement pris en charge via des terminaux partagés.<br />
+<sup>?</sup> Pas encore validé.
 
 ## <a name="see-also"></a>Voir aussi
 

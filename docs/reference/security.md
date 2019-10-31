@@ -1,6 +1,6 @@
 ---
-title: Sécurité - partage en direct de Visual Studio | Microsoft Docs
-description: Informations sur les fonctionnalités de sécurité de partage en direct de Visual Studio.
+title: Sécurité-Visual Studio Live Share | Microsoft Docs
+description: Informations sur les fonctionnalités de sécurité de Visual Studio Live Share.
 ms.custom: ''
 ms.date: 12/17/2018
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 754a740118ef9e6de2463fb3bb0537af350409aa
-ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
+ms.openlocfilehash: 2f3a2adf0be13071f22a8ea7e33800af6f9099b5
+ms.sourcegitcommit: c6ef4e5a9aec4f682718819c58efeab599e2781b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640196"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73170101"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -24,21 +24,21 @@ All rights reserved.
 Creative Commons Attribution 4.0 License (International): https://creativecommons.org/licenses/by/4.0/legalcode
 -->
 
-# <a name="security-features-of-live-share"></a>Fonctionnalités de sécurité de partage en direct
+# <a name="security-features-of-live-share"></a>Fonctionnalités de sécurité de Live Share
 
-Sessions de collaboration dans le partage en direct de Visual Studio sont puissants car ils permettent à n’importe quel nombre de personnes pour participer à une session et en collaboration modifier, déboguer et bien plus encore. Toutefois, étant donné ce niveau d’accès, sans aucun doute on intéressé par les fonctionnalités de sécurité que propose de partage en direct. Dans cet article, nous allons fournir des recommandations et des options permettant de sécuriser votre environnement en fonction des besoins.
+Les sessions de collaboration dans Visual Studio Live Share sont puissantes en ce qu’elles permettent à un nombre quelconque de personnes de rejoindre une session et de modifier, déboguer et bien plus encore. Toutefois, étant donné ce niveau d’accès, vous serez sans aucun doute intéressé par les fonctionnalités de sécurité que Live Share fournit. Dans cet article, nous allons fournir des recommandations et des options pour sécuriser votre environnement en fonction des besoins.
 
-**Comme avec n’importe quel outil de collaboration, n’oubliez pas que vous devez uniquement partager votre code, de contenu et les applications avec les personnes que dignes de confiance.**
+**Comme pour n’importe quel outil de collaboration, n’oubliez pas que vous ne devez partager votre code, votre contenu et vos applications qu’avec des personnes dignes de confiance.**
 
 ## <a name="connectivity"></a>Connectivité
 
-Toutes les connexions dans le partage en direct de Visual Studio sont SSH ou SSL chiffrés et authentifiés par rapport à un service central pour vous assurer que seules dans la session de collaboration peuvent-ils accéder à son contenu. Par défaut, le partage Live tente une connexion directe et revient sur un relais cloud si une connexion entre l’invité et l’hôte ne peut pas être établie. Notez que les relais de cloud du partage en direct ne conserve pas tout le trafic acheminé vers lui et ne pas « surveillance » le trafic en aucune façon. Toutefois, si vous préférez ne doit ne pas utiliser le relais vous pouvez modifier les paramètres pour toujours vous connecter directement.
+Toutes les connexions dans Visual Studio Live Share sont chiffrées SSH ou SSL et authentifiées par rapport à un service central pour s’assurer que seuls les utilisateurs de la session de collaboration peuvent accéder à son contenu. Par défaut, Live Share tente une connexion directe et revient sur Cloud Relay si une connexion entre l’invité et l’ordinateur hôte ne peut pas être établie. Notez que le relais Cloud de Live Share ne rend pas persistant le trafic routé via ce dernier et ne « Snoope » pas le trafic de quelque manière que ce soit. Toutefois, si vous préférez ne pas utiliser le relais, vous pouvez modifier les paramètres pour toujours vous connecter directement.
 
-Pour en savoir plus sur la modification de ces comportements et les exigences de connectivité du partage en direct, consultez  **[exigences de connectivité pour le partage de Live](connectivity.md)**.
+Pour en savoir plus sur la modification de ces comportements et des exigences de connectivité de Live Share, consultez la page **[Configuration requise pour la connectivité pour Live share](connectivity.md)** .
 
-## <a name="invitations-and-join-access"></a>Invitations et accès de jointure
+## <a name="invitations-and-join-access"></a>Invitations et accès à la jointure
 
-Chaque fois que vous démarrez une nouvelle session de collaboration, Partage Live génère un **nouvel identificateur unique** qui est placé dans le lien d’invitation. Ces liens fournissent une base solide et sécurisée pour inviter des personnes de confiance dans la mesure où l’identificateur dans le lien est « non-à deviner » et est _valide uniquement pour la durée d’une session de collaboration unique_.
+Chaque fois que vous démarrez une nouvelle session de collaboration, Live Share génère un **nouvel identificateur unique** qui est placé dans le lien d’invitation. Ces liens fournissent une fondation solide et sécurisée pour inviter les personnes auxquelles vous faites confiance, car l’identificateur dans le lien est « non devinable » et n’est _valide que pour la durée d’une seule session de collaboration_.
 
 ### <a name="removing-an-unexpected-guest"></a>Suppression d’un invité inattendu
 
@@ -55,33 +55,33 @@ En tant qu’hôte, vous êtes automatiquement averti chaque fois qu’un invit�
 </tr>
 </table>
 
-Mieux encore, la notification vous donne la possibilité de supprimer un invité qui a joint si pour une raison quelconque vous ne connaissez pas les. (Par exemple, si votre lien est accidentellement validé sur un système de conversation de l’entreprise et joint un employé aléatoire.) Cliquez simplement sur le bouton « Supprimer » dans la notification qui s’affiche, et ils seront être supprimés du cache de la session de collaboration.
+Mieux encore, la notification vous donne la possibilité de supprimer un invité qui a rejoint si, pour une raison quelconque, vous ne le connaissez pas. (Par exemple, si vous avez accidentellement publié votre lien sur un système de conversation à l’entreprise et qu’un employé aléatoire est joint.) Cliquez simplement sur le bouton « supprimer » dans la notification qui s’affiche et qui seront éjectés de la session de collaboration.
 
-Dans **VS Code**, même si vous quittez une notification de jointure, vous avez également la possibilité de supprimer un participant après cela. En ouvrant la vue de partage en direct dans l’Explorateur ou de l’onglet personnalisé dans la barre d’activités de VS Code, vous pouvez survoler ou cliquez sur le nom d’un participant et sélectionnez l’icône de « Remove participant » ou l’option.
+Dans **vs code**, même si vous avez ignoré une notification de jointure, vous avez également la possibilité de supprimer un participant. En ouvrant la vue de Live Share dans l’Explorateur ou l’onglet personnalisé dans la barre d’activité VS Code, vous pouvez pointer sur le nom d’un participant ou cliquer dessus avec le bouton droit et sélectionner l’icône ou l’option « supprimer un participant ».
 
-![Supprimer le participant dans VS Code](../media/vscode-remove-participant.png)
+![Supprimer un participant dans VS Code](../media/vscode-remove-participant.png)
 
-### <a name="requiring-guest-approval"></a>Demander une approbation de l’invité
+### <a name="requiring-guest-approval"></a>Exiger l’approbation de l’invité
 
-En règle générale, les participants qui rejoindre une session de collaboration seront **connecté à un partage Live** à l’aide d’un Microsoft compte professionnel ou scolaire (AAD), compte Microsoft personnel ou compte GitHub. Alors que « notification + remove » par défaut pour les utilisateurs connecté fournit une bonne combinaison de vitesse et de contrôle pour ces invités, vous pouvez souhaiter **verrouiller les choses** un peu plus si vous effectuez une opération sensibles.
+En règle générale, les participants qui adhèrent à une session de collaboration sont **connectés à Live share** à l’aide d’un compte Microsoft professionnel ou scolaire (AAD), d’un compte Microsoft personnel ou d’un compte github. Alors que la valeur par défaut « notification + suppression » pour les utilisateurs connectés offre une bonne combinaison de vitesse et de contrôle pour ces invités, vous souhaiterez peut-être les réduire un peu plus si vous effectuez des **opérations** sensibles.
 
-En outre, dans certaines circonstances de forcer tous les invités à se connecter à une collaboration session peut être problématique. Exemples incluent une personne de nouveau au partage de Live pour joindre en tant qu’invité, apprentissage/scénarios, ou lorsqu’ils collaborent avec une personne qui n’a pas un des types de compte pris en charge. Pour ces raisons, Partage Live peut autoriser les utilisateurs qui sont **ne pas connecté** joindre aux sessions de collaboration en tant que **en lecture seule** invités. Alors que l’hôte doit **approuver** ces invités avant de pouvoir participer par défaut, vous souhaiterez toujours à la place les approuver ou interdire ces invités « anonymes ».
+En outre, dans certaines circonstances, forcer tous les invités à se connecter pour rejoindre une session de collaboration peut être problématique. Voici quelques exemples : demander à une personne de Live Share de participer en tant que visiteur, scénarios de classe/d’apprentissage ou de collaborer avec une personne qui ne dispose pas de l’un des types de compte pris en charge. Pour ces raisons, Live Share pouvez autoriser les utilisateurs qui **ne sont pas connectés** à joindre des sessions de collaboration en tant qu’invités **en lecture seule** . Alors que l’hôte doit **approuver** ces invités avant de pouvoir se joindre par défaut, vous souhaiterez peut-être interdire ces invités « anonymes » ou toujours les approuver à la place.
 
-#### <a name="requiring-guest-approval-for-signed-in-users"></a>Nécessitant une approbation invité pour connecter les utilisateurs
+#### <a name="requiring-guest-approval-for-signed-in-users"></a>Exiger l’approbation de l’invité pour les utilisateurs connectés
 
-Si vous souhaitez empêcher connecté invités de rejoindre votre collaboration sessions jusqu'à ce que vous avez « approved » les, modifiez le paramètre suivant :
+Si vous souhaitez empêcher les invités connectés de rejoindre vos sessions de collaboration jusqu’à ce que vous les ayez « approuvés », modifiez le paramètre suivant :
 
-* Dans **VS Code**, ajoutez le code suivant settings.json (fichier > Préférences > Paramètres) :
+* Dans **vs code**, ajoutez ce qui suit à Settings. JSON (paramètres de > de fichiers > paramètres) :
 
     ```json
     "liveshare.guestApprovalRequired": true
     ```
 
-* Dans **Visual Studio**, définir des outils > Options > Partage Live > « Exiger l’approbation invité » sur True.
+* Dans **Visual Studio**, définissez outils > Options > Live share > « exiger l’approbation de l’invité » sur true.
 
-    ![Fenêtre Paramètres de Visual Studio avec les invités d’approbation de paramètre en surbrillance](../media/vs-setting-guestapproval.png)
+    ![Fenêtre paramètres Visual Studio avec le paramètre approbation d’invité mis en surbrillance](../media/vs-setting-guestapproval.png)
 
-À ce stade, vous devrez approuver chaque invité qui joint.
+À partir de ce point, vous serez invité à approuver chaque invité joint.
 
 <table style="border: none;">
 <tr style="border: none;">
@@ -94,27 +94,27 @@ Si vous souhaitez empêcher connecté invités de rejoindre votre collaboration 
 </tr>
 </table>
 
-En tant qu’invité, si vous joignez une session où l’hôte a ce paramètre est activé, vous serez averti dans la barre d’état ou de joindre la boîte de dialogue Partage Live est en attente sur l’ordinateur hôte à approuver.
+En tant qu’invité, si vous rejoignez une session où ce paramètre est activé pour l’ordinateur hôte, vous êtes averti dans la barre d’État ou la boîte de dialogue de jointure que Live Share attend que l’hôte approuve.
 
-#### <a name="auto-rejecting-or-accepting-users-that-are-not-signed-in-anonymous"></a>Acceptation ou rejet d’automatique des utilisateurs qui ne sont pas signés dans (anonyme)
+#### <a name="auto-rejecting-or-accepting-users-that-are-not-signed-in-anonymous"></a>Rejet automatique ou acceptation d’utilisateurs qui ne sont pas connectés (anonymes)
 
-Comme décrit ci-dessus, le partage Live peut être configuré pour autoriser **les utilisateurs qui ne sont pas signés dans** rejoindre une session de collaboration en tant que **en lecture seule** invités.  Bien que ces **invités « anonymes » doivent entrer un nom** lors de la jointure, un nom simple ne fournit pas le même niveau d’assurance comme une connexion réelle. Par conséquent, **par défaut, l’hôte est invité à approuver** n’importe quel invité anonyme, quel que soit le « approbation invité » définition décrit ci-dessus.
+Comme décrit ci-dessus, Live Share peut être configuré pour autoriser **les utilisateurs qui ne sont pas connectés** à rejoindre une session de collaboration en tant qu’invités **en lecture seule** .  Bien que ces **invités « anonymes » doivent entrer un nom** lors de la jointure, un simple nom ne fournit pas le même niveau de garantie qu’une connexion réelle. Par conséquent, par **défaut, l’hôte est invité à approuver** tout invité anonyme, quel que soit le paramètre « exiger l’approbation de l’invité » décrit ci-dessus.
 
-Vous pouvez **toujours rejeter** (désactiver les invités anonymes) ou **toujours accepter** les utilisateurs anonymes à la place comme suit :
+Vous pouvez **toujours refuser** (désactiver les invités anonymes) ou **toujours accepter** les utilisateurs anonymes comme suit :
 
-* Dans **VS Code**, affectez la valeur `liveshare.anonymousGuestApproval` dans settings.json (fichier > Préférences > Paramètres) à `accept`, `reject`, ou `prompt` (la valeur par défaut) selon les besoins.
+* Dans **vs code**, définissez `liveshare.anonymousGuestApproval` dans Settings. JSON (préférences de > de fichier > paramètres) sur `accept`, `reject`ou `prompt` (valeur par défaut), le cas échéant.
 
-* Dans **Visual Studio**, définir des outils > Options > Partage Live > « approval invité anonyme » pour accepter, rejeter ou une invite (la valeur par défaut) en tant qu’appropriées.
+* Dans **Visual Studio**, définissez outils > Options > Live share > « approbation d’invité anonyme » sur accepter, rejeter ou demander (valeur par défaut), le cas échéant.
 
- **Malgré tout, n’oubliez pas que vous devez uniquement envoyer Partage Live invitation des liens vers des personnes que vous faites confiance.**
+ **N’oubliez pas que vous ne devez envoyer Live Share des liens d’invitation à des personnes de confiance.**
 
 ## <a name="controlling-file-access-and-visibility"></a>Contrôle de l’accès aux fichiers et visibilité
 
-En tant qu’invité, modèle distant du partage Live vous donne accès en lecture/écriture rapide aux fichiers et dossiers de que l’ordinateur hôte a partagé avec vous sans avoir à synchroniser tout le contenu d’un projet. Vous pouvez par conséquent indépendamment Parcourir et modifier des fichiers dans l’arborescence de la totalité du fichier partagé. **Toutefois, cette liberté pose certains risques à l’hôte.** Dans son concept, un développeur peut choisir d’aller dans et modifier du code source sans votre connaissance ou consultez le code source sensibles ou « secrets » situés quelque part dans l’arborescence des fichiers partagés. Par conséquent, en tant qu’hôte, vous souhaiterez peut-être pas toujours l’invité d’accéder à l’intégralité d’un projet que vous partagez. Heureusement, un autre avantage de ce modèle à distance est que vous pouvez choisir de « exclure les fichiers que vous ne souhaitez pas partager avec d’autres personnes sans sacrifier les fonctionnalités ». Vos invités peuvent toujours participer des éléments tels que les sessions qui exigeraient normalement accéder à ces fichiers lorsqu’ils souhaitaient faire dans leur propre de débogage.
+En tant qu’invité, le modèle distant de Live Share vous donne un accès en lecture/écriture rapide aux fichiers et dossiers que l’hôte a partagés avec vous sans avoir à synchroniser l’intégralité du contenu d’un projet. Par conséquent, vous pouvez parcourir et modifier les fichiers indépendamment dans l’intégralité de l’arborescence des fichiers partagés. **Toutefois, cette liberté présente des risques pour l’hôte.** D’un point de vue conceptuel, un développeur peut choisir d’accéder au code source et de le modifier sans que vous en soyez informé ou d’afficher le code source sensible ou les secrets situés quelque part dans l’arborescence des fichiers partagés. Par conséquent, en tant qu’hôte, vous ne voudrez peut-être pas toujours que l’invité ait accès à l’intégralité d’un projet que vous partagez. Heureusement, un avantage supplémentaire de ce modèle distant est que vous pouvez choisir d’exclure des fichiers que vous ne souhaitez pas partager avec quiconque sans sacrifier les fonctionnalités. Vos invités peuvent toujours participer à des opérations telles que le débogage de sessions qui nécessiteraient normalement l’accès à ces fichiers s’ils le souhaitent.
 
-Vous pouvez accomplir cela en ajoutant un **. vsls.json** fichier au dossier ou au projet que vous partagez. Les paramètres que vous ajoutez à ce fichier au format json modifie comment Partage Live traite les fichiers. En plus de vous fournir un contrôle direct, ces fichiers peuvent également être validées dans le contrôle de code source par conséquent, toute personne le clonage d’un projet pourront tirer parti de ces règles sans aucun effort supplémentaire de leur part.
+Pour ce faire, vous pouvez ajouter un fichier **. vsls. JSON** au dossier ou au projet que vous partagez. Les paramètres que vous ajoutez à ce fichier au format JSON modifient la façon dont Live Share traite les fichiers. En plus de vous fournir un contrôle direct, ces fichiers peuvent également être validés dans le contrôle de code source afin que toute personne qui clone un projet puisse tirer parti de ces règles sans aucun effort supplémentaire de leur part.
 
-Voici un exemple. vsls.json fichier :
+Voici un exemple de fichier. vsls. JSON :
 
 ```json
 {
@@ -134,25 +134,25 @@ Voici un exemple. vsls.json fichier :
 ```
 
 > [!NOTE]
-> Vous pouvez également rendre les tous les fichiers/dossiers vous partagez **en lecture seule** lorsque vous démarrez une session de collaboration. Consultez [ci-dessous](#read-only-mode) pour plus d’informations.
+> Vous pouvez également faire en sorte que tous les fichiers/dossiers que vous partagez soient **en lecture seule** lorsque vous démarrez une session de collaboration. Pour plus d’informations, voir [ci-dessous](#read-only-mode) .
 
-Nous allons étudier comment ces propriétés changent invités réalisables.
+Passons en revue la façon dont ces propriétés changent ce que les invités peuvent faire.
 
-### <a name="properties"></a>Properties
+### <a name="properties"></a>Propriétés
 
-Le **excludeFiles** propriété vous permet de spécifier une liste de modèles de fichier glob (comme ceux trouvé les fichiers .gitignore très) Partage Live qui empêche l’ouverture de certains fichiers ou dossiers pour les visiteurs. N’oubliez pas qu’il s’agit qui inclut des scénarios tels que d’un invité _suivant ou le passage à votre emplacement d’édition, pas à pas détaillé dans un fichier pendant le débogage collaboratifs, les fonctionnalités de navigation du code comme atteindre la définition et bien plus encore._ Il concerne les fichiers que vous souhaitez jamais partager les circonstances telles que celles contenant des secrets, des certificats ou des mots de passe. Par exemple, car ils contrôlent la sécurité,. vsls.json les fichiers sont toujours exclus.
+La propriété **excludeFiles** vous permet de spécifier une liste de modèles de fichier glob (à l’instar des fichiers. gitignore trouvés) qui empêche Live share d’ouvrir certains fichiers ou dossiers pour les invités. Sachez qu’il s’agit de scénarios inclusifs, tels qu’un invité _suivant ou le passage à votre emplacement de modification, l’exécution pas à pas d’un fichier lors du débogage collaboratif, de toutes les fonctionnalités de navigation du code telles que atteindre la définition, et bien plus encore._ Elle est destinée aux fichiers que vous ne souhaitez jamais partager dans toutes les circonstances telles que celles contenant des secrets, des certificats ou des mots de passe. Par exemple, étant donné qu’ils contrôlent la sécurité, les fichiers. vsls. JSON sont toujours exclus.
 
-Le **hideFiles** propriété est similaire, mais pas aussi stricte. Ces fichiers sont simplement masquées dans l’arborescence des fichiers. Par exemple, si vous avez à parcourir un de ces fichiers pendant le débogage, il est toujours ouvert dans l’éditeur. Cette propriété est particulièrement utile si vous n’avez pas d’un programme d’installation du fichier .gitignore (comme c’est le cas si vous utilisez un système de contrôle source différente) ou si vous souhaitez simplement augmenter ce qui existe déjà pour éviter l’encombrement ou toute confusion.
+La propriété **hideFiles** est similaire, mais elle n’est pas aussi stricte. Ces fichiers sont simplement masqués dans l’arborescence des fichiers. Par exemple, si vous parvenez à effectuer un pas à pas détaillé dans l’un de ces fichiers pendant le débogage, il est toujours ouvert dans l’éditeur. Cette propriété est surtout utile si vous n’avez pas de configuration de fichier. gitignore (comme c’est le cas si vous utilisez un système de contrôle de code source différent) ou si vous souhaitez simplement augmenter ce qui est déjà nécessaire pour éviter tout encombrement ou toute confusion.
 
-Le **gitignore** paramètre détermine comment Partage Live doit traiter le contenu des fichiers .gitignore dans des dossiers partagés. Par défaut, les modèles glob dans les fichiers .gitignore est traités comme s’ils ont été spécifiés dans la propriété « hideFiles ». Toutefois, vous pouvez choisir un comportement différent en utilisant l’une des valeurs suivantes :
+Le paramètre **gitignore** établit la manière dont Live share doit traiter le contenu des fichiers. gitignore dans des dossiers partagés. Par défaut, tout modèles glob trouvé dans les fichiers. gitignore est traité comme s’il avait été spécifié dans la propriété « hideFiles ». Toutefois, vous pouvez choisir un comportement différent en utilisant l’une des valeurs suivantes :
 
 | Option    | Résultat                                                                                                                 |
 | --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `none`    | contenu du fichier .gitignore est visibles pour les invités dans l’arborescence des fichiers (en supposant qu’ils ne sont pas filtrés en définissant un rédacteur en chef invité). |
-| `hide`    | **La valeur par défaut.** Modèles glob dans .gitignore est traitées comme si elles se trouvaient dans la propriété « hideFiles ».                   |
-| `exclude` | Modèles glob dans .gitignore est traitées comme si elles se trouvaient dans la propriété « excludeFiles ».                                 |
+| `none`    | le contenu de. gitignore est visible pour les invités dans l’arborescence de fichiers (en supposant qu’ils ne sont pas filtrés par un paramètre d’éditeur invité). |
+| `hide`    | **Valeur par défaut.** Les modèles glob dans. gitignore sont traités comme s’ils étaient dans la propriété « hideFiles ».                   |
+| `exclude` | Les modèles glob dans. gitignore sont traités comme s’ils étaient dans la propriété « excludeFiles ».                                 |
 
-Un inconvénient de la `exclude` paramètre est que le contenu des dossiers comme node_modules est fréquemment dans .gitignore mais peut être utile de pas à pas détaillé lors du débogage. Par conséquent, Partage Live prend en charge la possibilité pour inverser une à l’aide de la règle « ! » dans la propriété excludeFiles. Par exemple, cela. vsls.json fichier exclure tous les éléments de « .gitignore » à l’exception de node_modules :
+L’inconvénient du paramètre `exclude` est que le contenu de dossiers comme node_modules est souvent dans. gitignore, mais il peut être utile pour effectuer un pas à pas détaillé durant le débogage. Par conséquent, Live Share prend en charge la possibilité d’inverser une règle à l’aide de «  ! » dans la propriété excludeFiles. Par exemple, ce fichier. vsls. JSON exclut tous les éléments de « . gitignore » à l’exception de node_modules :
 
 ```json
 {
@@ -164,7 +164,7 @@ Un inconvénient de la `exclude` paramètre est que le contenu des dossiers comm
 }
 ```
 
-Les règles de masquer et d’exclusion sont traitées séparément, donc si vous souhaitez toujours masquer node_modules pour réduire l’encombrement sans réellement à l’exclusion, vous pouvez simplement modifier le fichier comme suit :
+Les règles de masquage et d’exclusion sont traitées séparément. par conséquent, si vous souhaitez toujours masquer node_modules pour réduire l’encombrement sans réellement l’exclure, vous pouvez simplement modifier le fichier comme suit :
 
 ```json
 {
@@ -179,93 +179,93 @@ Les règles de masquer et d’exclusion sont traitées séparément, donc si vou
 }
 ```
 
-### <a name="vslsjson-files-in-sub-folders"></a>. vsls.json des fichiers dans les sous-dossiers
+### <a name="vslsjson-files-in-sub-folders"></a>fichiers. vsls. JSON dans les sous-dossiers
 
-Enfin, tout comme .gitignore,. vsls.json fichiers peuvent être placés dans les sous-dossiers. Masquer/exclure des règles sont déterminées en commençant par le. fichier vsls.json dans le dossier racine que vous avez partagé (le cas échéant) et puis parcourant à chaque sous-dossier à partir de là pointe vers un fichier donné à rechercher. vsls.json fichiers traiter. Le contenu de. vsls.json fichiers des dossiers plus loin dans l’arborescence des fichiers puis compléter (ou le remplacement) règles établies à des niveaux supérieurs.
+Enfin, tout comme. gitignore, les fichiers. vsls. JSON peuvent être placés dans des sous-dossiers. Les règles de masquage/exclusion sont déterminées en commençant par le fichier. vsls. JSON dans le dossier racine que vous avez partagé (le cas échéant), puis en parcourant à chaque sous-dossier à partir d’un fichier donné pour rechercher les fichiers. vsls. JSON à traiter. Le contenu des fichiers. vsls. JSON dans des dossiers plus éloignés de l’arborescence de fichiers, puis complète (ou remplace) les règles établies à des niveaux supérieurs.
 
-### <a name="disabling-external-file-sharing"></a>Désactivation du partage de fichier externe
+### <a name="disabling-external-file-sharing"></a>Désactivation du partage de fichiers externe
 
-Par défaut, Partage Live partagent également tous les fichiers s’ouvre l’hôte qui sont externes au dossier partagé / solution. Cela facilite l’ouvrir rapidement les autres fichiers connexes sans avoir à partager de nouveau.
+Par défaut, Live Share partagera également tous les fichiers que l’hôte ouvre et qui sont externes au dossier/à la solution partagés. Cela facilite l’ouverture rapide d’autres fichiers associés sans devoir partager à nouveau.
 
 Si vous préférez désactiver cette fonctionnalité :
 
-* Dans **VS Code**, ajoutez le code suivant à settings.json :
+* Dans **vs code**, ajoutez ce qui suit à Settings. JSON :
 
     ```json
     "liveshare.shareExternalFiles": false
     ```
 
-* Dans **Visual Studio**, définir des outils &gt; Options &gt; Partage Live &gt; « Partage des fichiers externes » sur False
+* Dans **Visual Studio**, définissez outils &gt; Options &gt; Live share &gt; « partager des fichiers externes » sur false.
 
 ## <a name="read-only-mode"></a>Mode lecture seule
 
-Parfois, lorsque vous partagez votre code en tant qu’hôte, vous ne voulez vos invités pour apporter des modifications. Vous devrez peut-être votre invité à examiner une partie de votre code, ou vous affichent votre projet à un grand nombre d’invités et que vous ne souhaitez pas les modifications accidentelles ou inutiles qu’il veut. Partage en direct offre la possibilité de partager des projets en mode lecture seule.
+Parfois, lorsque vous partagez votre code en tant qu’ordinateur hôte, vous ne souhaitez pas que vos invités apportent des modifications. Vous aurez peut-être besoin de votre invité pour jeter un coup d’œil à une partie de votre code, ou vous affichez votre projet sur un grand nombre d’invités et ne souhaitez pas effectuer de modifications accidentelles ou accidentelles. Live Share offre la possibilité de partager des projets en mode lecture seule.
 
-En tant qu’hôte, lors du partage, vous avez la possibilité d’activer le mode lecture seule pour une session de collaboration. Lorsqu’un invité rejoint, ils ne seront pas en mesure d’apporter des modifications au code, bien que vous pouvez toujours voir les curseurs entre eux et met en évidence ainsi naviguez dans le projet.
+En tant qu’hôte, lors du partage, vous avez la possibilité d’activer le mode lecture seule pour une session de collaboration. Lorsqu’un invité se joint, il ne peut pas apporter de modifications au code, même si vous pouvez toujours voir les curseurs et les mises en surbrillance d’autres, ainsi que parcourir le projet.
 
-Vous pouvez toujours même déboguer avec invités en mode en lecture seule. Invités n’aura pas la possibilité de parcourir le processus de débogage, mais peuvent toujours ajouter ou supprimer des points d’arrêt et inspecter les variables. En outre, vous pouvez toujours partager des serveurs et terminaux (en lecture seule) avec les invités.
+Vous pouvez toujours déboguer avec des invités en mode lecture seule. Les invités n’ont pas la possibilité d’effectuer un pas à pas détaillé dans le processus de débogage, mais ils peuvent toujours ajouter ou supprimer des points d’arrêt et inspecter les variables. En outre, vous pouvez toujours partager des serveurs et des terminaux (en lecture seule) avec des invités.
 
-Pour plus d’informations sur le démarrage d’une session de collaboration en lecture seule : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#share-a-project) [![VS](../media/vs-icon-15x15.png)](../use/vs.md#share-a-project)
+Vous pouvez en savoir plus sur le démarrage d’une session de collaboration en lecture seule : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#share-a-project) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#share-a-project)
 
 ## <a name="co-debugging"></a>Codébogage
 
-Lorsque vous êtes confronté difficiles problèmes de codage ou des bogues, avoir une paire supplémentaire d’yeux lors du débogage peut être très utile. Partage en direct de Visual Studio permet à « débogage collaboratifs » ou « colocalisés débogage » en partageant la session de débogage avec tous les invités chaque fois que l’hôte démarre le débogage.
+Lorsque vous rencontrez des problèmes de codage difficile ou des bogues, il peut être très utile d’avoir une paire d’yeux pour le débogage. Visual Studio Live share active le « débogage collaboratif » ou le « débogage » en partageant la session de débogage avec tous les invités chaque fois que l’hôte démarre le débogage.
 
-En tant qu’hôte, vous êtes dans un contrôle complet sur lors du démarrage d’une session de débogage ou s’arrête, mais que le même emplacement de débogage pose certains risques si vous partagez avec une personne n’est pas fiable. Partage en direct permet aux invités vous inviter à exécuter des commandes de console/REPL et il est donc **un risque d’un acteur malveillant exécutant une commande que vous souhaiteriez pas qu’exécuter**.
+En tant qu’ordinateur hôte, vous avez un contrôle total sur le démarrage ou l’arrêt d’une session de débogage, mais le débogage pose des risques si vous partagez avec une personne à laquelle vous n’êtes pas sûr. Live Share permet aux invités que vous invitez d’exécuter des commandes de console/REPL. il y a donc **un risque qu’un acteur malveillant exécute une commande que vous ne voulez pas qu’il exécute**.
 
-Par conséquent, vous devez **déboguer uniquement conjointement avec des personnes de confiance.**
+Par conséquent, vous **ne devez co-déboguer que les personnes avec lesquelles vous faites confiance.**
 
-Pour en savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#co-debugging) [![VS](../media/vs-icon-15x15.png)](../use/vs.md#co-debugging)
+En savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#co-debugging) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#co-debugging)
 
 ## <a name="sharing-a-local-server"></a>Partage d’un serveur local
 
-Lors du codébogage, il peut être très utile de pouvoir accéder aux différentes parties de l’application prise en charge par l’hôte pendant la session de débogage. Voulez-vous accéder à l’application dans un navigateur, accéder à une base de données locale ou appuyez sur un point de terminaison REST à partir de vos outils. Partage en direct vous permet de « partage un serveur » qui mappe un port local sur l’ordinateur de l’hôte sur le même port exact sur l’ordinateur de l’invité. En tant qu’invité, vous pouvez alors interagir avec l’application comme s’il s’exécutait localement sur votre ordinateur (par exemple, l’hôte et l’invité peuvent à la fois accéder à une application web s’exécutant sur http://localhost:3000).
+Lors du codébogage, il peut être très utile de pouvoir accéder aux différentes parties de l’application prise en charge par l’hôte pendant la session de débogage. Vous pouvez accéder à l’application dans un navigateur, accéder à une base de données locale ou atteindre un point de terminaison REST à partir de vos outils. Live Share vous permet de « partager un serveur » qui mappe un port local sur l’ordinateur de l’ordinateur hôte vers le même port sur l’ordinateur de l’invité. En tant qu’invité, vous pouvez interagir avec l’application exactement comme si elle était exécutée localement sur votre ordinateur (par exemple, l’hôte et l’invité peuvent tous deux accéder à une application Web s’exécutant sur http://localhost:3000).
 
-Toutefois, en tant qu’hôte, vous devez **être très sélective avec les ports que vous partagez** avec les invités et de partage uniquement application ports plutôt des ports système. Du côté des invités, les ports partagés se comportent exactement comme si le serveur/service était en cours d’exécution sur leur propre ordinateur. Cette fonction est très utile, mais il faut éviter tout risque de partager le mauvais port. Pour cette raison, le partage en direct ne fait pas d’hypothèses concernant ce qui doit ou ne doit pas être partagé sans un paramètre de configuration et de l’hôte qui effectue une action.
+Toutefois, en tant qu’hôte, vous devez **être très sélectif avec les ports que vous partagez avec les** invités et partager des ports d’application plutôt que des ports système. Du côté des invités, les ports partagés se comportent exactement comme si le serveur/service était en cours d’exécution sur leur propre ordinateur. Cette fonction est très utile, mais il faut éviter tout risque de partager le mauvais port. C’est la raison pour laquelle Live Share n’effectue aucune supposition quant à ce qui doit ou ne doit pas être partagé sans paramètre de configuration et l’hôte effectuant une action.
 
-Dans Visual Studio, le **port de l’application web** spécifié dans les projets ASP.NET est **automatiquement partagés pendant le débogage uniquement** pour faciliter l’accès invité à l’application web lors de l’exécution. Toutefois, vous pouvez désactiver cette automatisation en définissant des outils > Options > Partage Live > « Partage web app sur debug » sur « False » si vous préférez.
+Dans Visual Studio, le **port d’application Web** spécifié dans les projets ASP.net est **automatiquement partagé pendant le débogage uniquement** pour faciliter l’accès invité à l’application Web lors de l’exécution. Toutefois, vous pouvez désactiver cette automatisation en définissant outils > Options > Live Share > « partager l’application Web lors du débogage » en « false », si vous préférez.
 
-Dans Visual Studio Code, Live partager tente de **détecter les ports d’application appropriée** et de les partager. Toutefois, vous pouvez le désactiver en ajoutant le code suivant à settings.json :
+Dans Visual Studio Code, Live Share tente de **détecter les ports d’application appropriés** et de les partager. Toutefois, vous pouvez désactiver ce paramètre en ajoutant le code suivant à Settings. JSON :
 
         liveshare.autoShareServers: false
 
-Dans les deux cas, soyez vigilant lorsque vous partagez des ports supplémentaires.
+Dans les deux cas, soyez prudent lorsque vous partagez des ports supplémentaires.
 
-Pour plus d’informations sur la configuration de la fonctionnalité ici : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#share-a-server) [![VS](../media/vs-icon-15x15.png)](../use/vs.md#share-a-server)
+Vous pouvez en savoir plus sur la configuration de la fonctionnalité ici : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#share-a-server) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#share-a-server)
 
 ## <a name="sharing-a-terminal"></a>Partage d’un terminal
 
-Aujourd’hui, le développement utilise couramment un large éventail d’outils en ligne de commande. Heureusement, Live Share vous permet de « partager un terminal » avec vos invités en tant qu’hôte. Le terminal partagé peut fonctionner en lecture seule ou en collaboration totale, auquel cas tant l’hôte que les invités ont la possibilité d’exécuter des commandes et de voir les résultats. En tant que l’ordinateur hôte, vous êtes en mesure d’autoriser les autres collaborateurs soit voir simplement la sortie ou pour utiliser n’importe quel numéro de ligne de commande Outils pour exécuter des tests, builds, ou même de triage des problèmes spécifiques à l’environnement.
+Aujourd’hui, le développement utilise couramment un large éventail d’outils en ligne de commande. Heureusement, Live Share vous permet de « partager un terminal » avec vos invités en tant qu’hôte. Le terminal partagé peut fonctionner en lecture seule ou en collaboration totale, auquel cas tant l’hôte que les invités ont la possibilité d’exécuter des commandes et de voir les résultats. En tant qu’hôte, vous pouvez autoriser d’autres collaborateurs à voir simplement la sortie ou à utiliser un nombre quelconque d’outils en ligne de commande pour exécuter des tests, générer ou même trier des problèmes spécifiques à l’environnement.
 
-Seuls les ordinateurs hôtes peuvent démarrer des terminaux partagées pour empêcher les invités à partir d’un démarrage et de faire quelque chose vous ne sont pas attendu ou l’observation des. Lorsque vous démarrez un terminal partagé en tant qu’hôte, vous pouvez spécifier si elle doit être en lecture seule ou lecture/écriture. Dans le deuxième cas, tout le monde, y compris l’hôte, peut taper dans le terminal, ce qui permet d’intervenir si un invité effectue une action indésirable. Dans un souci de sécurité toutefois, **ne donnez un accès en lecture/écriture qu’aux invités qui en ont réellement besoin** et tenez-vous-en aux terminaux en lecture seule si vous souhaitez simplement qu’ils voient le résultat des commandes exécutées.
+Seuls les hôtes peuvent démarrer des terminaux partagés pour empêcher les invités de démarrer un et d’effectuer une tâche que vous n’attendez pas ou que vous ne souhaitez pas regarder. Lorsque vous démarrez un terminal partagé en tant qu’ordinateur hôte, vous pouvez spécifier s’il doit être en lecture seule ou en lecture/écriture. Dans le deuxième cas, tout le monde, y compris l’hôte, peut taper dans le terminal, ce qui permet d’intervenir si un invité effectue une action indésirable. Dans un souci de sécurité toutefois, **ne donnez un accès en lecture/écriture qu’aux invités qui en ont réellement besoin** et tenez-vous-en aux terminaux en lecture seule si vous souhaitez simplement qu’ils voient le résultat des commandes exécutées.
 
-Dans Visual Studio, les terminaux ne sont pas partagées par défaut. Dans VS Code, terminaux sont automatiquement partagées **en lecture seule** par défaut. Toutefois, vous pouvez le désactiver en ajoutant le code suivant à settings.json :
+Dans Visual Studio, les terminaux ne sont pas partagés par défaut. Dans VS Code, les terminaux sont automatiquement partagés par défaut en **lecture seule** . Toutefois, vous pouvez désactiver ce paramètre en ajoutant le code suivant à Settings. JSON :
 
 ```json
 "liveshare.autoShareTerminals": false
 ```
 
-Pour en savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#share-a-terminal) [![VS](../media/vs-icon-15x15.png)](../use/vs.md#share-a-terminal)
+En savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#share-a-terminal) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#share-a-terminal)
 
 ## <a name="aad-admin-consent"></a>Consentement de l’administrateur AAD
 
-Lorsque la connexion à l’aide d’un Microsoft soutenu **Professionnel ou scolaire d’adresse de messagerie** peut s’afficher un message indiquant **« Besoin d’approbation administrateur »** lors de la connexion. Il s’agit, car le partage Live nécessite un accès en lecture aux informations de l’utilisateur pour ses fonctionnalités de sécurité et de votre client Azure AD est configuré pour exiger des « consentement de l’administrateur » pour accéder au contenu du répertoire de nouvelles applications.
+Lorsque vous vous connectez à l’aide d’une **adresse de messagerie professionnelle ou scolaire** Microsoft, vous pouvez voir un message indiquant **« nécessite l’approbation de l’administrateur »** lors de la connexion. Cela est dû au fait que Live Share nécessite un accès en lecture aux informations utilisateur pour ses fonctionnalités de sécurité et que votre locataire Azure AD est configuré pour exiger le « consentement de l’administrateur » pour les nouvelles applications qui accèdent au contenu de l’annuaire.
 
-Votre administrateur AD devra résoudre ce problème à l’aide des informations suivantes :
+Votre administrateur AD doit résoudre ce cas pour vous en utilisant les informations suivantes :
 
-* **Nom de l’application**: Partage en direct de Visual Studio (Insiders)
-* **Type d’application**: Application web
-* **État de l’application**: Production
-* **Autorisations déléguées**: User.Read
-* **URL de l’application**: https://insiders.liveshare.vsengsaas.visualstudio.com/
-* **L’URL de réponse**: https://insiders.liveshare.vsengsaas.visualstudio.com/auth/redirect/windowslive/
+* **Nom**de l’Application : Visual Studio Live Share (Insiders)
+* **Type d’application**: application Web
+* **État des applications**: production
+* **Autorisations déléguées**: User. Read
+* **URL**de l’Application : https://insiders.liveshare.vsengsaas.visualstudio.com/
+* **URL de réponse**: https://insiders.liveshare.vsengsaas.visualstudio.com/auth/redirect/windowslive/
 
-Cela aurait uniquement besoin d’être effectuée qu’une fois pour toute personne utilisant le partage en direct. Consultez [ici](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#admin-restricted-scopes) et [ici](https://stackoverflow.com/questions/39861830/azure-ad-admin-consent-from-the-azure-portal) pour plus d’informations.
+Cette opération ne doit être effectuée qu’une seule fois pour toute personne utilisant Live Share. Pour plus d’informations, voir [ici](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#admin-restricted-scopes) et [ici](https://stackoverflow.com/questions/39861830/azure-ad-admin-consent-from-the-azure-portal) .
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Guide pratique : Collaborer à l’aide de Visual Studio Code](../use/vscode.md)
-* [Guide pratique : Collaborer à l’aide de Visual Studio](../use/vs.md)
+* [Comment : collaborer à l’aide de Visual Studio Code](../how-to-guides/vscode.md)
+* [Comment : collaborer à l’aide de Visual Studio](../how-to-guides/vs.md)
 * [Exigences de connectivité pour Live Share](connectivity.md)
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting.md) ou [fournir des commentaires](../support.md).

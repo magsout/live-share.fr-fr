@@ -1,6 +1,6 @@
 ---
-title: Support de plate-forme et langage - partage en direct de Visual Studio | Microsoft Docs
-description: Vue d’ensemble de la prise en charge de plateforme et le langage de Visual Studio Live de partage.
+title: Prise en charge des plateformes et des langues-Visual Studio Live Share | Microsoft Docs
+description: Vue d’ensemble de la prise en charge des plateformes et des langages pour Visual Studio Live share.
 ms.custom: ''
 ms.date: 03/22/2018
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: d220be7e4722d45ecd1511ec1c054a174ba195f0
-ms.sourcegitcommit: 100fce9b9bbcd7e6f68d40659bd2760e9537de37
+ms.openlocfilehash: 36cd7cc5923e593c6bbd3220b5f4ba92a7ca6130
+ms.sourcegitcommit: c6ef4e5a9aec4f682718819c58efeab599e2781b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73170068"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -26,17 +26,17 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # <a name="contributing-feedback-and-support"></a>Contribution, commentaires et support
 
-Avez des questions ou commentaires ? Il existe de nombreuses façons de contribuer. Nous souhaitons connaître votre opinion !
+Vous avez des questions ou des commentaires ? Il existe de nombreuses façons de contribuer. Nous souhaitons vous faire part de vos commentaires !
 
 ## <a name="tldr"></a>TLDR
 
 En résumé :
 
-- **Problèmes connus :** Consultez [bogues](https://aka.ms/vsls-bugs) ou [demandes de fonctionnalités](https://aka.ms/vsls-feature-requests) et à l’aide de voter une 👍 réaction.
-- **Les bogues de VS Code :** [Connecter un nouveau problème](https://aka.ms/vsls-new-issue). Utilisez le « Live partage : Commande Exporter les journaux » et [glisser-déplacer le fichier zip](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/) sur le bogue ou [les envoyez par e-mail](mailto:vsls-feedback@microsoft.com).
-- **Bogues de Visual Studio :** [Aide > envoyer des commentaires > signaler un problème...](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) Reproduire le problème avant d’envoyer et de journaux sera attachement automatique.
-- **Demandes de fonctionnalités :** [Enregistrer une demande de nouveau](https://aka.ms/vsls-new-issue) ou utiliser un 👍 réaction à [voter pour un](https://aka.ms/vsls-feature-requests).
-- **Nous contacter :** [ vsls-feedback@microsoft.com ](mailto:vsls-feedback@microsoft.com), [#vsliveshare](https://aka.ms/vsls-twitter), ou de la Communauté exécuter [Slack](https://aka.ms/vsls-slack).
+- **Problèmes connus :** Consultez les [bogues](https://aka.ms/vsls-bugs) ou les [demandes de fonctionnalités](https://aka.ms/vsls-feature-requests) et votez avec une réaction de 👍.
+- **Bogues vs code :** [consigner un nouveau problème](https://aka.ms/vsls-new-issue). Utilisez la commande « Live Share : exporter les journaux » et [Glissez-déposez le fichier zip](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/) sur le bogue ou envoyez-le [par courrier électronique](mailto:vsls-feedback@microsoft.com).
+- **Vs bogues :** [aide > envoyer des commentaires > signaler un problème...](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) Reproduisez le problème avant que l’envoi et les journaux soient automatiquement attachés.
+- **Demandes de fonctionnalités :** [consignez une nouvelle demande](https://aka.ms/vsls-new-issue) ou utilisez une réaction 👍 pour [voter](https://aka.ms/vsls-feature-requests)une nouvelle demande.
+- **Contactez-nous :** [vsls-feedback@microsoft.com](mailto:vsls-feedback@microsoft.com), [#vsliveshare](https://aka.ms/vsls-twitter)ou la [marge](https://aka.ms/vsls-slack)de série de la communauté.
 
 Plus de détails ci-dessous.
 
@@ -50,30 +50,30 @@ Certains de nos documents de référence peuvent avoir ce dont vous avez besoin�
 - [Résolution des problèmes](troubleshooting.md)
 - [FAQ](faq.md)
 
-## <a name="issues-and-requests"></a>Problèmes et des demandes
+## <a name="issues-and-requests"></a>Problèmes et demandes
 
-Problèmes GitHub et les rapports de problème de Visual Studio sont un excellent moyen de se connecter avec nous.
+Les problèmes GitHub et les rapports de problèmes Visual Studio sont un excellent moyen de se connecter avec nous.
 
-- [Voter pour une fonctionnalité ou demander une nouvelle](https://aka.ms/vsls-feature-requests)
-- [Voir si quelqu'un déjà atteint votre problème en effectuant une recherche connecté des bogues](https://aka.ms/vsls-bugs)
+- [Faire voter une fonctionnalité ou en demander une nouvelle](https://aka.ms/vsls-feature-requests)
+- [Vérifiez si quelqu’un a déjà rencontré votre problème en effectuant une recherche dans les bogues journalisés](https://aka.ms/vsls-bugs)
 - [Signaler un problème pour Visual Studio](https://aka.ms/vsls-vsproblem)
-- [Signaler un problème pour VS Code ou l’ensemble du service](https://aka.ms/vsls-vscodeproblem)
-- [Découvrez des conseils sur le partage.](https://aka.ms/vsls-problemtips)
+- [Signaler un problème pour VS Code ou le service global](https://aka.ms/vsls-vscodeproblem)
+- [Découvrez les conseils de contribution !](https://aka.ms/vsls-problemtips)
 
 ## <a name="other"></a>Autre
 
-- **email :** [vsls-feedback@microsoft.com](mailto:vsls-feedback@microsoft.com)
-- **Twitter :** Nous appuyez sur sur Twitter à l’aide [#vsliveshare](https://aka.ms/vsls-twitter)!
-- **Slack :** Nous avons également passer du temps sur la Communauté exécuter [Slack de partage Live](https://aka.ms/vsls-slack).
+- **Adresse de messagerie :** [vsls-feedback@microsoft.com](mailto:vsls-feedback@microsoft.com)
+- **Twitter :** Appuyez-nous sur Twitter à l’aide de [#vsliveshare](https://aka.ms/vsls-twitter)!
+- **Marge :** Nous nous détenons également de la [marge de Live share](https://aka.ms/vsls-slack)de la communauté.
 
 ## <a name="see-also"></a>Voir aussi
 
-Démarrages rapides
+Guides de démarrage rapide
 
 - [Partager votre premier projet](quickstart/share.md)
 - [Rejoindre votre première session](quickstart/join.md)
 
 Articles Comment faire
 
-- [Collaborer à l’aide de Visual Studio Code](use/vscode.md)
-- [Collaborer à l’aide de Visual Studio](use/vs.md)
+- [Collaborer à l’aide de Visual Studio Code](how-to-guides/vscode.md)
+- [Collaborer à l’aide de Visual Studio](how-to-guides/vs.md)

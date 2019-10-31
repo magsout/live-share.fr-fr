@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: afa11a77156fd0227c9d9cfd5ce701ae0211386e
-ms.sourcegitcommit: 5e0d384c71793a83b58023352f56f0a24783a2e4
+ms.openlocfilehash: 087c3b209c8762e08b8d663f7c0a6fb3a40fee19
+ms.sourcegitcommit: c6ef4e5a9aec4f682718819c58efeab599e2781b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72531044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73170040"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -95,8 +95,8 @@ Guides de démarrage rapide
 
 Articles Comment faire
 
-- [Collaborer à l’aide de Visual Studio Code](use/vscode.md)
-- [Collaborer à l’aide de Visual Studio](use/vs.md)
+- [Collaborer à l’aide de Visual Studio Code](how-to-guides/vscode.md)
+- [Collaborer à l’aide de Visual Studio](how-to-guides/vs.md)
 
 Reference
 
