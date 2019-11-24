@@ -37,7 +37,7 @@ Live Share pouvez désormais héberger des sessions réutilisables ! Les sessio
 
 Pour créer une session réutilisable, procédez comme suit :
 1. Accédez au `Command Palette` à l’aide de `Ctrl+Shift+P`
-1. Tapez « SHA Live... » et cliquez sur le partage «** @ no__t-1Live : Crée une commande de liaison de session réutilisable @ no__t-0 @ no__t-1.
+1. Tapez « SHA Live... » et cliquez sur la commande « **_Live share : créer un lien de session réutilisable_** ».
 
 ![vscode-reusablesessioncmd](../media/vscode-cmdpalette-createreusablelink.png)
 
@@ -54,7 +54,7 @@ Pour créer une session réutilisable, procédez comme suit :
 
 ## Devenez un Insider <a name="BecomeanInsider"></a>
 
-Par défaut, après l’installation de l’extension de Visual Studio Live Share, vous utilisez le jeu de fonctionnalités `Stable`, qui comprend toutes les fonctionnalités prêtes pour la production (par exemple, le co-édition, le débogage partagé, les terminaux). Toutefois, si vous souhaitez accéder en avant-première aux fonctionnalités sur lesquelles nous travaillons, vous pouvez vous abonner à l’ensemble de fonctionnalités `Insiders` en modifiant le paramètre suivant dans votre IDE :
+Par défaut, après l’installation de l’extension de Visual Studio Live Share, vous utilisez l’ensemble de fonctionnalités `Stable`, qui comprend toutes les fonctionnalités prêtes pour la production (par exemple, le co-édition, le débogage partagé, les terminaux). Toutefois, si vous souhaitez accéder en avant-première aux fonctionnalités sur lesquelles nous travaillons, vous pouvez vous abonner à l’ensemble de fonctionnalités `Insiders` en modifiant le paramètre suivant dans votre IDE :
 
 * Visual Studio
 
@@ -64,7 +64,7 @@ Par défaut, après l’installation de l’extension de Visual Studio Live Shar
 
     ![Feature-Set-vscode](../media/feature-set-vscode.png)
 
-Les sections suivantes décrivent l’ensemble des fonctionnalités qui se trouvent actuellement dans le jeu de fonctionnalités `Insiders`. par conséquent, elles sont prêtes à être évaluées une fois que vous avez modifié le paramètre susmentionné :
+Les sections suivantes décrivent l’ensemble des fonctionnalités qui se trouvent actuellement dans l’ensemble de fonctionnalités `Insiders` et sont donc prêtes à être évaluées une fois que vous avez modifié le paramètre susmentionné :
 
 
 
