@@ -11,15 +11,15 @@ ms.author: fubaduba
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 10679c4ef44e2bdaeb4d8a8f25107b10b5f52243
-ms.sourcegitcommit: c2ff6f29393990e91390875bb065bb811c071353
+ms.openlocfilehash: e74268abd215fd17ec67028d94de69f18685f808
+ms.sourcegitcommit: 382f069abbd81ed258d497a974b30379be36b4f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76978899"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508557"
 ---
 <!--
-Copyright © Microsoft Corporation
+Copyright &copy; Microsoft Corporation
 All rights reserved.
 Creative Commons Attribution 4.0 License (International): https://creativecommons.org/licenses/by/4.0/legalcode
 -->
@@ -33,7 +33,7 @@ Bienvenue dans Visual Studio Live Share ! Live Share vous permet d’éditer et 
 Prêt pour le départ ? Dans cet article, nous allons vous présenter quelques concepts et vous expliquer comment installer les extensions nécessaires. Si vous recherchez une version abrégée, consultez les démarrages rapides [partager](quickstart/share.md) et [rejoindre](quickstart/join.md).
 
 > [!TIP]
-> Saviez-vous que vous pouvez *rejoindre votre propre session de collaboration* ? Cela vous permet d’essayer Live Share seul ou de faire fonctionner une instance de Visual Studio ou VS Code, et de vous y connecter à distance ! Vous pouvez même utiliser la même identité sur les deux instances. À tester dès maintenant !
+> Saviez-vous que vous pouvez *rejoindre une session Live Share à partir du navigateur* ? Cela signifie que vous n’avez plus besoin d’installer un client de bureau pour collaborer. Cliquez simplement sur le lien partagé avec vous pour bénéficier d’une expérience complète de l’éditeur VS Code dans le navigateur. Apprenez-en davantage [ici](quickstart/browser-join.md).
 
 ## <a name="install-visual-studio-live-share"></a>Installation de Visual Studio Live Share
 

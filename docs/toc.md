@@ -6,6 +6,7 @@
 # Démarrages rapides
 ## [Partager votre premier projet](quickstart/share.md)
 ## [Rejoindre votre première session](quickstart/join.md)
+## [Rejoindre à partir du navigateur](quickstart/browser-join.md)
 # Guides pratiques : VS Code
 ## [Vue d’ensemble](use/vscode.md)
 ## [Installation](use/vscode.md#installation)
