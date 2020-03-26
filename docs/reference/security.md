@@ -11,12 +11,12 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 2f3a2adf0be13071f22a8ea7e33800af6f9099b5
-ms.sourcegitcommit: c6ef4e5a9aec4f682718819c58efeab599e2781b
+ms.openlocfilehash: 2d471a6d5ba84efb192073799444a13f2be62279
+ms.sourcegitcommit: 6bf13781dc42a2bf51a19312ede37dff98ab33ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73170101"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80295971"
 ---
 <!--
 Copyright © Microsoft Corporation
@@ -32,9 +32,21 @@ Les sessions de collaboration dans Visual Studio Live Share sont puissantes en c
 
 ## <a name="connectivity"></a>Connectivité
 
-Toutes les connexions dans Visual Studio Live Share sont chiffrées SSH ou SSL et authentifiées par rapport à un service central pour s’assurer que seuls les utilisateurs de la session de collaboration peuvent accéder à son contenu. Par défaut, Live Share tente une connexion directe et revient sur Cloud Relay si une connexion entre l’invité et l’ordinateur hôte ne peut pas être établie. Notez que le relais Cloud de Live Share ne rend pas persistant le trafic routé via ce dernier et ne « Snoope » pas le trafic de quelque manière que ce soit. Toutefois, si vous préférez ne pas utiliser le relais, vous pouvez modifier les paramètres pour toujours vous connecter directement.
+Lors du lancement d’une session entre homologues, Live Share tente d’établir une connexion d’égal à égal, et seulement si cela n’est pas possible (par exemple, en raison des pare-feu/NAT), fait appel à l’utilisation d’un relais Cloud. Toutefois, dans les deux types de connexion (P2P ou relais), toutes les données transmises entre homologues sont chiffrées de bout en bout à l’aide du protocole SSH. Dans le cas d’une connexion de relais, le chiffrement SSH est superposé sur les WebSockets chiffrés par TLS. Cela signifie que Live Share ne dépend pas du service Cloud Relay pour la sécurité. Même si le relais a été compromis, il n’a pas pu déchiffrer les communications Live Share.
+
+Le rôle du service Live Share est limité à l’authentification utilisateur et à la découverte de session. Le service lui-même ne stocke pas ou n’a jamais accès au contenu d’une session. Tout le contenu utilisateur de Live Share est transmis via la session SSH. Cela comprend le code, les terminaux, les serveurs partagés et toutes les autres fonctionnalités de collaboration fournies par Live Share ou les extensions qui s’y appuient.
 
 Pour en savoir plus sur la modification de ces comportements et des exigences de connectivité de Live Share, consultez la page **[Configuration requise pour la connectivité pour Live share](connectivity.md)** .
+
+### <a name="wire-encryption"></a>Chiffrement câble 
+
+Le protocole SSH utilise une clé Diffie-Hellman-Exchange pour établir un secret partagé pour la session et dérive de cette clé pour le chiffrement symétrique AES. La clé de chiffrement est régulièrement pivotée tout au long de la durée de la session. La clé secrète de la session partagée et toutes les clés de chiffrement sont uniquement conservées en mémoire par les deux côtés et ne sont valides que pendant la durée de la session. Elles ne sont jamais écrites sur le disque ou envoyées à un service (y compris Live Share).
+
+### <a name="peer-authentication"></a>Authentification d’homologue
+
+La session SSH est également authentifiée de manière bidirectionnelle. L’hôte (rôle de serveur SSH) utilise l’authentification par clé publique/privée, comme c’est le cas pour le protocole SSH. Lorsqu’un hôte partage une session de Live Share, il génère une paire de clés publique/privée RSA unique pour la session. La clé privée de l’hôte est conservée uniquement en mémoire dans le processus hôte ; elle n’est jamais écrite sur le disque ou envoyée à un service, y compris le service Live Share. La clé publique de l’ordinateur hôte est publiée dans le service Live Share avec les informations de connexion de session (point de terminaison d’adresse IP et/ou de relais) auxquelles les invités peuvent accéder via le lien d’invitation. Lorsqu’un invité se connecte à la session SSH de l’hôte, ce dernier utilise le protocole d’authentification de l’hôte SSH pour vérifier que l’hôte contient la clé privée correspondant à la clé publique publiée (sans que l’invité ait réellement à voir la clé privée).
+
+L’invité utilise un jeton Live Share pour s’authentifier auprès de l’hôte. Le jeton est un jeton JWT signé émis par le service Live Share qui comprend les revendications relatives à l’identité de l’utilisateur (obtenues via MSA, AAD ou la connexion GitHub). Le jeton a également des revendications qui indiquent que l’invité est autorisé à accéder à cette session de Live Share spécifique (parce qu’il avait le lien d’invitation et/ou qu’il a été spécifiquement invité par l’hôte). L’hôte valide ce jeton et vérifie les revendications (et selon les options peuvent inviter l’utilisateur hôte) avant d’autoriser l’invité à rejoindre la session.
 
 ## <a name="invitations-and-join-access"></a>Invitations et accès à la jointure
 
@@ -146,13 +158,13 @@ La propriété **hideFiles** est similaire, mais elle n’est pas aussi stricte.
 
 Le paramètre **gitignore** établit la manière dont Live share doit traiter le contenu des fichiers. gitignore dans des dossiers partagés. Par défaut, tout modèles glob trouvé dans les fichiers. gitignore est traité comme s’il avait été spécifié dans la propriété « hideFiles ». Toutefois, vous pouvez choisir un comportement différent en utilisant l’une des valeurs suivantes :
 
-| Option    | Résultat                                                                                                                 |
+| Option    | Résultats                                                                                                                 |
 | --------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `none`    | le contenu de. gitignore est visible pour les invités dans l’arborescence de fichiers (en supposant qu’ils ne sont pas filtrés par un paramètre d’éditeur invité). |
 | `hide`    | **Valeur par défaut.** Les modèles glob dans. gitignore sont traités comme s’ils étaient dans la propriété « hideFiles ».                   |
 | `exclude` | Les modèles glob dans. gitignore sont traités comme s’ils étaient dans la propriété « excludeFiles ».                                 |
 
-L’inconvénient du paramètre `exclude` est que le contenu de dossiers comme node_modules est souvent dans. gitignore, mais il peut être utile pour effectuer un pas à pas détaillé durant le débogage. Par conséquent, Live Share prend en charge la possibilité d’inverser une règle à l’aide de «  ! » dans la propriété excludeFiles. Par exemple, ce fichier. vsls. JSON exclut tous les éléments de « . gitignore » à l’exception de node_modules :
+L’inconvénient du paramètre `exclude` est que le contenu de dossiers comme node_modules est fréquemment dans. gitignore, mais peut être utile pour effectuer un pas à pas détaillé durant le débogage. Par conséquent, Live Share prend en charge la possibilité d’inverser une règle à l’aide de «  ! » dans la propriété excludeFiles. Par exemple, ce fichier. vsls. JSON exclut tout ce qui se trouve dans « . gitignore », à l’exception de node_modules :
 
 ```json
 {
@@ -197,7 +209,7 @@ Si vous préférez désactiver cette fonctionnalité :
 
 * Dans **Visual Studio**, définissez outils &gt; Options &gt; Live share &gt; « partager des fichiers externes » sur false.
 
-## <a name="read-only-mode"></a>Mode lecture seule
+## <a name="read-only-mode"></a>Mode Lecture seule
 
 Parfois, lorsque vous partagez votre code en tant qu’ordinateur hôte, vous ne souhaitez pas que vos invités apportent des modifications. Vous aurez peut-être besoin de votre invité pour jeter un coup d’œil à une partie de votre code, ou vous affichez votre projet sur un grand nombre d’invités et ne souhaitez pas effectuer de modifications accidentelles ou accidentelles. Live Share offre la possibilité de partager des projets en mode lecture seule.
 
@@ -205,7 +217,7 @@ En tant qu’hôte, lors du partage, vous avez la possibilité d’activer le mo
 
 Vous pouvez toujours déboguer avec des invités en mode lecture seule. Les invités n’ont pas la possibilité d’effectuer un pas à pas détaillé dans le processus de débogage, mais ils peuvent toujours ajouter ou supprimer des points d’arrêt et inspecter les variables. En outre, vous pouvez toujours partager des serveurs et des terminaux (en lecture seule) avec des invités.
 
-Vous pouvez en savoir plus sur le démarrage d’une session de collaboration en lecture seule : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#share-a-project) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#share-a-project)
+Vous pouvez en savoir plus sur le démarrage d’une session de collaboration en lecture seule : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#share-a-project) [![et](../media/vs-icon-15x15.png)](../use/vs.md#share-a-project)
 
 ## <a name="co-debugging"></a>Codébogage
 
@@ -215,7 +227,7 @@ En tant qu’ordinateur hôte, vous avez un contrôle total sur le démarrage ou
 
 Par conséquent, vous **ne devez co-déboguer que les personnes avec lesquelles vous faites confiance.**
 
-En savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#co-debugging) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#co-debugging)
+En savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#co-debugging) [![et](../media/vs-icon-15x15.png)](../use/vs.md#co-debugging)
 
 ## <a name="sharing-a-local-server"></a>Partage d’un serveur local
 
@@ -231,7 +243,7 @@ Dans Visual Studio Code, Live Share tente de **détecter les ports d’applicati
 
 Dans les deux cas, soyez prudent lorsque vous partagez des ports supplémentaires.
 
-Vous pouvez en savoir plus sur la configuration de la fonctionnalité ici : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#share-a-server) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#share-a-server)
+Vous pouvez en savoir plus sur la configuration de la fonctionnalité ici : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#share-a-server) [![et](../media/vs-icon-15x15.png)](../use/vs.md#share-a-server)
 
 ## <a name="sharing-a-terminal"></a>Partage d’un terminal
 
@@ -245,7 +257,7 @@ Dans Visual Studio, les terminaux ne sont pas partagés par défaut. Dans VS Cod
 "liveshare.autoShareTerminals": false
 ```
 
-En savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../how-to-guides/vscode.md#share-a-terminal) [![et](../media/vs-icon-15x15.png)](../how-to-guides/vs.md#share-a-terminal)
+En savoir plus : [![VS Code](../media/vscode-icon-15x15.png)](../use/vscode.md#share-a-terminal) [![et](../media/vs-icon-15x15.png)](../use/vs.md#share-a-terminal)
 
 ## <a name="aad-admin-consent"></a>Consentement de l’administrateur AAD
 
@@ -258,14 +270,14 @@ Votre administrateur AD doit résoudre ce cas pour vous en utilisant les informa
 * **État des applications**: production
 * **Autorisations déléguées**: User. Read
 * **URL**de l’Application : https://insiders.liveshare.vsengsaas.visualstudio.com/
-* **URL de réponse**: https://insiders.liveshare.vsengsaas.visualstudio.com/auth/redirect/windowslive/
+* **URL de réponse** : https://insiders.liveshare.vsengsaas.visualstudio.com/auth/redirect/windowslive/
 
 Cette opération ne doit être effectuée qu’une seule fois pour toute personne utilisant Live Share. Pour plus d’informations, voir [ici](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#admin-restricted-scopes) et [ici](https://stackoverflow.com/questions/39861830/azure-ad-admin-consent-from-the-azure-portal) .
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Comment : collaborer à l’aide de Visual Studio Code](../how-to-guides/vscode.md)
-* [Comment : collaborer à l’aide de Visual Studio](../how-to-guides/vs.md)
+* [Comment : collaborer à l’aide de Visual Studio Code](../use/vscode.md)
+* [Comment : collaborer à l’aide de Visual Studio](../use/vs.md)
 * [Exigences de connectivité pour Live Share](connectivity.md)
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting.md) ou [fournir des commentaires](../support.md).
