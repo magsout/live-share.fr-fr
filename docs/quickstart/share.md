@@ -11,11 +11,11 @@ ms.author: clantz
 manager: AmandaSilver
 ms.workload:
 - liveshare
-ms.openlocfilehash: 32fc12da3b26ccb1f6d5b984915dfd0cc6afd647
-ms.sourcegitcommit: c6ef4e5a9aec4f682718819c58efeab599e2781b
+ms.openlocfilehash: e65656c604a9dbc479a03a503fe01d7e2d938072
+ms.sourcegitcommit: 6bf13781dc42a2bf51a19312ede37dff98ab33ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "73170015"
 ---
 <!--
@@ -24,7 +24,7 @@ All rights reserved.
 Creative Commons Attribution 4.0 License (International): https://creativecommons.org/licenses/by/4.0/legalcode
 -->
 
-# <a name="quickstart-share-your-first-project"></a>Démarrage rapide : partager votre premier projet
+# <a name="quickstart-share-your-first-project"></a>Quickstart : Partagez votre premier projet
 
 Bienvenue dans Visual Studio Live Share ! Live Share vous permet d’éditer et de déboguer en collaboration avec d’autres utilisateurs en temps réel, quels que soient les langages de programmation que vous utilisez ou les types d’applications que vous créez. Cette solution vous permet de partager instantanément et en toute sécurité votre projet en cours, puis de partager au besoin des sessions de débogage, des instances de terminal, des applications web localhost, des appels vocaux, etc.
 
@@ -37,7 +37,7 @@ Suivez ces étapes pour commencer le partage.
 <!--
 Change the instructions to Install extension for VS Code and in-tool for VS?
 -->
-## <a name="1-install-the-extension"></a>1. installer l’extension
+## <a name="1-install-the-extension"></a>1. Installer l’extension
 
 L’extension est facile à installer. Procédez comme suit :
 
@@ -46,18 +46,18 @@ L’extension est facile à installer. Procédez comme suit :
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="../media/vs-code.svg" width="128px" alt="Visual Studio Code logo"/></td>
     <td style="border:none;">
         <strong>Visual Studio Code (1.22.0+)</strong><br />
-        1.Installez <a href="https://code.visualstudio.com/">Visual Studio Code</a> pour Windows (7, 8.1 ou 10), macOS <b>(Sierra+)</b>, Linux 64 bits <b>(<a href="../how-to-guides/vscode.md#installation">détails</a>)</b><br />
+        1.Installez <a href="https://code.visualstudio.com/">Visual Studio Code</a> pour Windows (7, 8.1 ou 10), macOS <b>(Sierra+)</b>, Linux 64 bits <b>(<a href="../use/vscode.md#installation">détails</a>)</b><br />
         2. Téléchargez et installez l’extension Visual Studio Live Share depuis le Marketplace. <br />
         3. Rechargez et attendez que les dépendances soient téléchargées et installées (voir la barre d’état).<br />
-        4. <strong>Linux</strong>: Si vous êtes invité à <a href="../reference/linux.md#install-linux-prerequisites">installer les bibliothèques</a>, cliquez sur installer, entrez le mot de passe, redémarrez vs code lorsque vous avez terminé.<br />
+        4. <strong>Linux</strong>: Si vous êtes invité à <a href="../reference/linux.md#install-linux-prerequisites">installer des bibliothèques,</a>cliquez sur installer, entrez mot de passe, redémarrez le code VS une fois terminé.<br />
         <a href="https://aka.ms/vsls-dl/vscode"><img src="../media/download.png" alt="Download button"></a>
     </td>
 </tr>
 <tr style="border:none;">
     <td width="128px" style="width: 128px; text-align: center; border:none;"><img src="../media/vs-ide-2019.svg" width="128px" alt="Visual Studio 2019 logo" /></td>
     <td  style="border:none;">
-        <strong>Visual Studio 2019 </strong><br />
-        1.Installez <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019</a>.<br/>
+        <strong>Studio visuel 2019</strong><br />
+        1.Installer <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019</a>.<br/>
         2. Installez une <a href="../reference/platform-support.md">charge de travail prise en charge</a>. (par exemple, ASP.NET, .NET Core, C++, Python et/ou Node.js)<br />
         3. Visual Studio Live Share est installé par défaut avec ces charges de travail. <br />
     </td>
@@ -98,13 +98,13 @@ Dans **VS Code**, votre navigateur se lance tandis qu’une notification s’aff
 
 ![Notification toast demandant de se connecter à l’aide d’un navigateur Web](../media/vscode-sign-in-toast.png)
 
-> **Utilisateurs Linux :** Vous pouvez être invité à entrer un code utilisateur si vous utilisez une version antérieure de Live Share (v 0.3.295 ou versions antérieures). Mettez à jour vers la dernière version de l’extension ou cliquez sur le lien « Vous rencontrez des problèmes ? » après vous être connecté pour afficher le code. Cliquez [ici pour plus de détails](../how-to-guides/vscode.md#sign-in-using-a-user-code).
+> **Utilisateurs de Linux:** Vous pouvez être invité à entrer un code utilisateur si vous utilisez une ancienne version de Live Share (v0.3.295 ou ci-dessous). Mettez à jour vers la dernière version de l’extension ou cliquez sur le lien « Vous rencontrez des problèmes ? » après vous être connecté pour afficher le code. Voir [ici pour plus de détails](../use/vscode.md#sign-in-using-a-user-code).
 
 Dans **Visual Studio**, Live Share utilise automatiquement votre [compte de personnalisation](https://docs.microsoft.com/en-us/visualstudio/ide/signing-in-to-visual-studio). Par conséquent, vous pouvez simplement vous connecter comme vous le feriez normalement. Toutefois, si vous préférez utiliser d’autres informations d’identification que celles de votre compte de personnalisation Visual Studio, accédez à **Outils &gt; Options &gt; Live Share &gt; Compte d’utilisateur** et sélectionnez des informations d’identification différentes.
 
 Consultez la section [Résolution des problèmes](../troubleshooting.md#sign-in) si vous rencontrez toujours des problèmes.
 
-## <a name="3-open-a-folder-project-or-solution"></a>3. ouvrir un dossier, un projet ou une solution
+## <a name="3-open-a-folder-project-or-solution"></a>3. Ouvrez un dossier, un projet ou une solution
 
 Utilisez votre flux de travail habituel pour ouvrir un dossier, un projet ou une solution que vous souhaitez partager dans Visual Studio ou Visual Studio Code.
 
@@ -112,7 +112,7 @@ Utilisez votre flux de travail habituel pour ouvrir un dossier, un projet ou une
 
 Par défaut, Live Share **masque** tous les fichiers/dossiers référencés dans les fichiers .gitignore dans vos dossiers partagés. **Masquer** un fichier l’empêche d’apparaître dans l’arborescence des fichiers de l’invité. **L’exclusion** d’un fichier applique une règle plus stricte qui empêche Live Share de l’ouvrir pour l’invité dans des situations comme « Atteindre la définition » ou si vous parcourez le fichier pendant le débogage ou le « suivi ». Pour masquer/exclure différents fichiers, ajoutez à votre projet un fichier **.vsls.json** comportant ces paramètres. Pour plus d’informations, voir [Contrôler l’accès aux fichiers et leur visibilité](../reference/security.md#controlling-file-access-and-visibility).
 
-## <a name="5-start-a-collaboration-session"></a>5. démarrer une session de collaboration
+## <a name="5-start-a-collaboration-session"></a>5. Démarrer une session de collaboration
 
 <!--
 -->
@@ -153,13 +153,13 @@ Dans **VS Code**, vous pouvez également démarrer une session en lecture seule 
 
 ![Notification toast demandant de se connecter à l’aide d’un navigateur Web](../media/vscode-read-only-viewlet.png)
 
-### <a name="7-send-someone-the-invite-link"></a>7. envoyer une personne au lien d’invitation
+### <a name="7-send-someone-the-invite-link"></a>7. Envoyer à quelqu’un le lien d’invitation
 
 Envoyez le lien par courrier électronique, Slack, Skype, etc. à ceux que vous souhaitez inviter. Ouvrir le lien dans un navigateur leur permet de rejoindre la session de collaboration qui partage le contenu du dossier, du projet ou de la solution que vous avez ouvert. Étant donné le niveau d’accès que les sessions Live Share peuvent offrir aux invités, **limitez les partages aux personnes de confiance** et pensez aux implications de ce que vous partagez.
 
-> **Astuce de sécurité :** Vous souhaitez comprendre les implications en matière de sécurité de certaines fonctionnalités de Live Share ? Consultez l’article [Sécurité](../reference/security.md).
+> **Conseil de sécurité:** Vous voulez comprendre les implications en matière de sécurité de certaines fonctionnalités de Live Share ? Consultez l’article [Sécurité](../reference/security.md).
 
-Si l’invité que vous avez invité a des questions, le Guide de [démarrage rapide : joindre votre première session](join.md) fournit plus d’informations sur l’installation et l’exécution en tant qu’invité.
+Si l’invité que vous avez invité a des questions, le [Quickstart: Joignez-vous à votre](join.md) article de première session fournit quelques informations plus sur se lever et courir en tant qu’invité.
 
 ## <a name="8-optional-approve-the-guest"></a>8. [Facultatif] Approuver l’invité
 
@@ -180,9 +180,9 @@ Vous pouvez également choisir d’exiger une « approbation » explicite pour t
 
 Consultez [Demande d’approbation de l’invité](../reference/security.md#requiring-guest-approval) pour plus d’informations sur la façon d’activer cette fonctionnalité.
 
-## <a name="9-collaborate"></a>9. collaborer !
+## <a name="9-collaborate"></a>9. Collaborer!
 
-C’est tout ! Voici quelques éléments à essayer une fois qu’un invité vous a rejoint :
+Et voilà ! Voici quelques éléments à essayer une fois qu’un invité vous a rejoint :
 
 1. Se déplacer dans plusieurs fichiers dans le projet de manière indépendante et leur apporter des modifications
 1. Suivre l’invité et l’observer faire défiler, apporter des modifications et accéder à différents fichiers
@@ -190,7 +190,7 @@ C’est tout ! Voici quelques éléments à essayer une fois qu’un invité vou
 1. Partager un serveur pour vérifier une application Web en cours d’exécution sur leur machine
 1. Partager un terminal et exécuter des commandes
 
-Consultez les documents d’extension [Visual Studio Code](../how-to-guides/vscode.md) et [Visual Studio](../how-to-guides/vs.md) pour plus d’informations sur la manière d’effectuer ces actions et bien plus encore.
+Consultez les documents d’extension [Visual Studio Code](../use/vscode.md) et [Visual Studio](../use/vs.md) pour plus d’informations sur la manière d’effectuer ces actions et bien plus encore.
 
 Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting.md) ou [fournir des commentaires](../support.md).
 
@@ -198,13 +198,13 @@ Vous rencontrez des problèmes ? Voir la section [dépannage](../troubleshooting
 
 Pour plus d’informations, voir ces articles complémentaires.
 
-- [Démarrage rapide : rejoindre votre première session de collaboration](join.md)
-- [Comment : collaborer à l’aide de Visual Studio Code](../how-to-guides/vscode.md)
-- [Comment : collaborer à l’aide de Visual Studio](../how-to-guides/vs.md)
+- [Quickstart : Joignez-vous à votre première session de collaboration](join.md)
+- [Comment faire : Collaborer à l’aide du code Visual Studio](../use/vscode.md)
+- [Comment faire : Collaborer à l’aide de Visual Studio](../use/vs.md)
 
-Reference
+Informations de référence
 
 - [Exigences de connectivité pour Live Share](../reference/connectivity.md)
 - [Fonctionnalités de sécurité de Live Share](../reference/security.md)
 - [Prise en charge de langues et de plateformes](../reference/platform-support.md)
-- [Extensions prises en charge](../reference/extensions.md)
+- [Soutien d’extension](../reference/extensions.md)
