@@ -3,6 +3,7 @@
 ## [Introduction](index.md)
 ## [Fonctionnalités](overview/features.md)
 ## [Cas d’usage courants](reference/use-cases.md)
+## [Nouveautés](overview/what's-new.md)
 # Démarrages rapides
 ## [Partager votre premier projet](quickstart/share.md)
 ## [Rejoindre votre première session](quickstart/join.md)
