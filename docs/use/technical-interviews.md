@@ -11,12 +11,12 @@ ms.author: fubaduba
 manager: JonathanCarter
 ms.workload:
 - liveshare
-ms.openlocfilehash: 0ac1ba213c59df2dc3b1d05d89e4186c823a250f
-ms.sourcegitcommit: 6bf13781dc42a2bf51a19312ede37dff98ab33ea
+ms.openlocfilehash: db2365b92f5b18198a2f976e1c6ce3d5abb755c5
+ms.sourcegitcommit: d7f923c1bcd0430b48065ea2c0902b470f530987
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80295962"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83569520"
 ---
 <!--
 Copyright &copy; Microsoft Corporation
@@ -35,15 +35,15 @@ Pour interviewer un candidat avec Live Share vous devez d’abord utiliser l’u
 Installer [Visual Studio](../use/vs.md) qui est intégré à l’extension Live share
 
 >[!TIP] 
-> Veillez à activer les Insiders pour Live Share en accédant à *outils > Options > Live Share > fonctionnalités > avancées*. Cela vous permettra d’utiliser la prise en charge de l’appel audio intégré pour les entretiens.
+> Veillez à activer les Insiders pour Live Share en accédant à *outils> Options > Live Share > fonctionnalités > avancées*. Cela vous permettra d’utiliser la prise en charge de l’appel audio intégré pour les entretiens.
 
-Ou installez [Visual Studio code](../.use/vscode.md) et téléchargez le [pack d’extension Live share]() à partir de la place de marché. Le pack d’extension vous fournira la prise en charge audio pour les entretiens. 
+Ou installez [Visual Studio code](../use/vscode.md) et téléchargez le [pack d’extension Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) à partir de la place de marché. Le pack d’extension vous fournira la prise en charge audio pour les entretiens. 
 
 ## <a name="scheduling-an-interview"></a>Planification d’un entretien 
 
 **Live share dans vs code** vous permet de créer des sessions Live shares à l’avance. Vous pouvez utiliser les étapes suivantes pour créer une session à l’avance :
 
-1. Accédez au `Command Palette` à l’aide de `Ctrl+Shift+P`
+1. Accédez à l' `Command Palette` utilisation`Ctrl+Shift+P`
 1. Tapez « SHA Live... » et cliquez sur la commande «_Live share : créer un lien de session réutilisable_».
 
 ![vscode-reusablesessioncmd](../media/vscode-cmdpalette-createreusablelink.png)
