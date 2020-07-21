@@ -265,11 +265,11 @@ Lorsque vous vous connectez à l’aide d’une **adresse de messagerie professi
 
 Votre administrateur AD doit résoudre ce cas pour vous en utilisant les informations suivantes :
 
-* **Nom**de l’Application : Visual Studio Live Share (Insiders)
+* **Nom** de l’Application : Visual Studio Live Share (Insiders)
 * **Type d’application**: application Web
 * **État des applications**: production
 * **Autorisations déléguées**: User. Read
-* **URL**de l’Application : https://insiders.liveshare.vsengsaas.visualstudio.com/
+* **URL** de l’Application : https://insiders.liveshare.vsengsaas.visualstudio.com/
 * **URL de réponse** : https://insiders.liveshare.vsengsaas.visualstudio.com/auth/redirect/windowslive/
 
 Cette opération ne doit être effectuée qu’une seule fois pour toute personne utilisant Live Share. Pour plus d’informations, voir [ici](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#admin-restricted-scopes) et [ici](https://stackoverflow.com/questions/39861830/azure-ad-admin-consent-from-the-azure-portal) .
